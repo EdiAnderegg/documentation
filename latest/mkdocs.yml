@@ -20,5 +20,5 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
 nav:
-  - Home: index.html
+  - Home: index.md
 copyright: "Version: latest-${BUILD_VERSION}"
