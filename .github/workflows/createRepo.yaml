@@ -1,0 +1,64 @@
+on:
+  workflow_call:
+
+jobs:
+  create-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Download build page
+        uses: actions/download-artifact@v3
+        with:
+          name: public-page
+
+      - name: Get Version
+        uses: actions/download-artifact@v3
+        with:
+          name: BUILD_VERSION
+
+      - name: Get Version
+        uses: actions/download-artifact@v3
+        with:
+          name: TAG_TYPE
+
+      - name: ZIP the folder
+        run: |
+          VERSION=$(cat version.txt)
+          TAG=$(cat tag.txt)
+          zip -r public.zip . -x *.git* -x *.github* -x TAG -x tag.txt -x version.txt
+
+      - name: Output Tag Value
+        id: values
+        run: |
+          TAG=$(cat tag.txt)
+          if [ "$TAG" = "beta" ]; then
+            echo "STATE=true" >> $GITHUB_OUTPUT
+          else
+            echo "STATE=false" >> $GITHUB_OUTPUT
+          fi
+
+          echo "VERSION=$(cat version.txt)" >> $GITHUB_OUTPUT
+
+      - name: Create Release/Pre-Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        with:
+          tag_name: ${{ github.run_number }}
+          release_name: ${{ github.ref }}
+          draft: false
+          prerelease: ${{steps.values.outputs.STATE}}
+
+      - name: Upload Asset to Release/Pre-Release
+        id: upload_release_asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        with:
+          upload_url: ${{steps.create_release.outputs.upload_url}}
+          asset_path: ./public.zip
+          asset_name: DevOps-Demo-${{steps.values.outputs.VERSION}}.zip
+          asset_content_type: application/zip

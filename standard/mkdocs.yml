@@ -1,0 +1,24 @@
+site_name: Latest Seite von Edi
+site_url: http://gbs.niederer.swiss/dta23/eduard
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+nav:
+  - Home: index.html
+copyright: "Version: latest-${BUILD_VERSION}"

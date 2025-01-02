@@ -1,0 +1,43 @@
+on:
+  workflow_call:
+
+jobs:
+  build-page:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🐈‍⬛ Get code from repository
+        uses: actions/checkout@v3
+
+      - name: Get Version
+        uses: actions/download-artifact@v3
+        with:
+          name: BUILD_VERSION
+          path: ./
+
+      - name: Get Tag
+        uses: actions/download-artifact@v3
+        with:
+          name: TAG_TYPE
+          path: ./
+
+      - name: Add Version to Web Page
+        run: |
+          VERSION=$(cat version.txt)
+          TAG=$(cat tag.txt)
+          sed -i "s/\${BUILD_VERSION}/$VERSION/" "$TAG/mkdocs.yml"
+
+      - name: 🪄 Building web page
+        run: |
+          TAG=$(cat tag.txt)
+
+          pip install mkdocs mkdocs-material
+          cd $TAG
+          mkdocs build --site-dir "../public/"
+
+      - name: 📁 Storing generated page as an Artifact for later usage
+        uses: actions/upload-artifact@v3
+        with:
+          name: public-page
+          path: public
+          retention-days: 0

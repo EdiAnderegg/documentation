@@ -1,0 +1,20 @@
+on:
+  workflow_call:
+jobs:
+  set-variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract version
+        run: |
+          echo ${GITHUB_REF##*/} > version.txt
+
+      - name: Log version.txt
+        run: |
+          cat version.txt
+
+      - name: Upload Version as Artifakt
+        uses: actions/upload-artifact@v3
+        with:
+          name: BUILD_VERSION
+          path: ./
+          retention-days: 0

@@ -1,0 +1,35 @@
+name: 🚀 Deploy Website and Release WebSite
+on:
+  push:
+    tags:
+      - "release/*"
+      - "beta/*"
+      - "standard/*"
+
+jobs:
+  set-tag:
+    name: Set Tag
+    uses: ./.github/workflows/buildTag.yaml
+    # this steps creates an Artifakt depending on the tag either latest or beta
+
+  set-version:
+    name: Set Version
+    uses: ./.github/workflows/buildVersion.yaml
+    # this steps crates an Artifakt of the given tag version
+  compileMk:
+    name: 🏗️ Compile MarkDown
+    needs: [set-version, set-tag]
+    uses: ./.github/workflows/compileMk.yaml
+
+  deploySite:
+    name: 🎉 Deploy
+    needs: [compileMk]
+    uses: ./.github/workflows/deployWeb.yaml
+    secrets: inherit
+
+  deployRepo:
+    permissions:
+      contents: write
+    name: 🎊 Create Repo
+    needs: [compileMk]
+    uses: ./.github/workflows/createRepo.yaml

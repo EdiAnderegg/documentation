@@ -1,0 +1,27 @@
+on:
+  workflow_call:
+jobs:
+  set-variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract version
+        run: |
+          IFS='/' read -ra ADDR <<< "${GITHUB_REF}"
+          len=${#ADDR[@]}
+          prefix=${ADDR[$len-2]}
+          if [ "$prefix" = "release" ]; then
+            echo "latest" > tag.txt
+          else
+            echo "$prefix" > tag.txt
+          fi
+
+      - name: Log tag.txt
+        run: |
+          cat tag.txt
+
+      - name: Upload Tag as Artifakt
+        uses: actions/upload-artifact@v3
+        with:
+          name: TAG_TYPE
+          path: ./
+          retention-days: 0
