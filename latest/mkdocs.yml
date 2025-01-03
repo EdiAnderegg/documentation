@@ -22,5 +22,5 @@ theme:
 nav:
   - Home: index.md
   - API:
-      - NodeJs: NodeJs.md
+      - NodeJs: ./API/NodeJs.md
 copyright: "Version: latest-${BUILD_VERSION}"
