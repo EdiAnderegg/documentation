@@ -20,9 +20,24 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
 nav:
-  - Home: index.md
+  - Home:
+      - index: ./docs/index.md
   - Server:
-      - SSR: ./Server/SSR.md
+      - SSR: ./docs/Server/SSR.md
+  - API:
+      - NodeJs: ./docs/API/NodeJs.md
 copyright: "Version: latest-${BUILD_VERSION}"
-  - C::
-      - Users: ./C:/Users/eduard/OneDrive/Dokumente/docs/Server/SSR.md
+
+
+
+
+
+
+
+
+
+
+
+
+
+
