@@ -22,12 +22,8 @@ theme:
 nav:
   - Home:
       - index: ./index.md
-  - Server:
-      - NodeJS: ./Server/NodeJS.md
-      - SSR: ./Server/SSR.md
-  - API:
-      - NodeJs: ./API/NodeJs.md
 copyright: "Version: latest-${BUILD_VERSION}"
+
 
 
 
