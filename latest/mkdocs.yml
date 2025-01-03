@@ -20,9 +20,10 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
 nav:
-  - Server:
+  - Home:
       - index: ./index.md
 copyright: "Version: latest-${BUILD_VERSION}"
+
 
 
 
