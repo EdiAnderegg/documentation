@@ -1,4 +1,3 @@
-## This is a Test 
+# The Index of all Themes
 
-
-Bla Bla 
+Here is then some text
