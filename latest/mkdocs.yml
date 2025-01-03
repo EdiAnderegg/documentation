@@ -23,6 +23,8 @@ nav:
   - Home: index.md
   - API:
       - NodeJs: ./API/NodeJs.md
+  - Server:
+      - SSR: ./Server/SSR.md
 copyright: "Version: latest-${BUILD_VERSION}"
   - C::
       - Users: ./C:/Users/eduard/OneDrive/Dokumente/docs/Server/SSR.md
