@@ -21,12 +21,13 @@ theme:
     - navigation.top
 nav:
   - Home:
-      - index: ./docs/index.md
+      - index: ./index.md
   - Server:
-      - SSR: ./docs/Server/SSR.md
+      - SSR: ./Server/SSR.md
   - API:
-      - NodeJs: ./docs/API/NodeJs.md
+      - NodeJs: ./API/NodeJs.md
 copyright: "Version: latest-${BUILD_VERSION}"
+
 
 
 
