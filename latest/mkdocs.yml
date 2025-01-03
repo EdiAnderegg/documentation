@@ -21,4 +21,5 @@ theme:
     - navigation.top
 nav:
   - Home: index.md
+  - Nodejs: Nodejs.md
 copyright: "Version: latest-${BUILD_VERSION}"
