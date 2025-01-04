@@ -22,42 +22,6 @@ theme:
 nav:
   - Home:
       - index: ./index.md
-copyright: "Version: latest-${BUILD_VERSION}"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+copyright: "Version: ${BUILD_VERSION}"
 
 
