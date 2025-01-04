@@ -25,3 +25,36 @@ nav:
 copyright: "Version: ${BUILD_VERSION}"
 
 
+
+
+
+site_name: Documents
+site_url: https://eduardanderegg.ch
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+nav:
+  - Home:
+      - index: ./index.md
+copyright: "Version: ${BUILD_VERSION}"
+
+
+
+
+
