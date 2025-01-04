@@ -236,6 +236,11 @@ if (Get-Notepad-Running) {
 
         Write-Host "Monitoring $SourcePath for changes to .md files. Press Ctrl+C to stop."
         while ($true) {
+            if (-not (Get-Notepad-Running)) {
+                Write-Host "Notepad is no longer running. Exiting script."
+                Show-Notification -Title "Script Stopped" -Message "Notepad has closed. Exiting script."
+                break  # Exit the loop
+            }
             Start-Sleep -Seconds 1
         }
     } catch {
