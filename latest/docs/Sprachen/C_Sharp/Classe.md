@@ -2,6 +2,7 @@
 
 
 ´´´c#
+
     public class Rezept
     { 
         //Eigenschaften Classe
@@ -75,6 +76,5 @@
 	.
        
     }
-
 
 ´´´
