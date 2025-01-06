@@ -10,4 +10,4 @@ For Each objProcess in colProcesses
 Next
 
 ' Start the PowerShell script
-objShell.Run "powershell -ExecutionPolicy Bypass -File ""C:\Users\eduard\Local\Auto_Scripts\nomkgit\Notepad_MKDocs_Push_to_Github.ps1""", 0, False
+objShell.Run "powershell -ExecutionPolicy Bypass -File ""C:\Users\eduard\Local\Project\blog\documentation\Scripts\nomkgit\Notepad_MKDocs_Push_to_Github.ps1""", 0, False
