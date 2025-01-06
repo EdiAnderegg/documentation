@@ -22,7 +22,10 @@ theme:
 nav:
   - Home:
       - index: ./index.md
+  - Server:
+      - API: ./Server/API.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
