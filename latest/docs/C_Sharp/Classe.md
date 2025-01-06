@@ -1,4 +1,4 @@
-# Struktur einer Classe in C#
+# Struktur einer Classe in C Sharp
 
 
 ```cs
