@@ -16,7 +16,7 @@ $SourcePath = "C:\Users\eduard\OneDrive\Dokumente\docs"  # Directory with source
 $GitRepoPath = "C:\Users\eduard\Local\Project\blog\documentation"  # Git repository path
 $MkDocsYmlPath = Join-Path $GitRepoPath "latest\mkdocs.yml"
 $DestinationPath = Join-Path $GitRepoPath "latest\docs"  # Subdirectory in the repo where .md files go
-$ErrorLogPath = "C:\Users\eduard\Local\Auto_Scripts\nomkgit\error.log"
+$ErrorLogPath = "C:\Users\eduard\Local\Project\blog\documentation\Scripts\nomkgit\error.log"
 
 # Function to send notifications
 function Show-Notification {
