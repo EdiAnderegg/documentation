@@ -22,12 +22,13 @@ theme:
 nav:
   - Home:
       - index: ./index.md
+  - C_Sharp:
+      - Classe: ./C_Sharp/Classe.md
   - Server:
       - API: ./Server/API.md
       - MVC: ./Server/MVC.md
-  - Sprachen:
-      - C_Sharp: ./Sprachen/C_Sharp/Classe.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
