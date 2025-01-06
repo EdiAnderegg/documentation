@@ -1,7 +1,7 @@
 # Struktur einer Classe in C#
 
 
-´´´c#
+```cs
 
     public class Rezept
     { 
@@ -77,4 +77,4 @@
        
     }
 
-´´´
+```
