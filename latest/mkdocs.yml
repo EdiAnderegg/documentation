@@ -24,7 +24,10 @@ nav:
       - index: ./index.md
   - Server:
       - API: ./Server/API.md
+  - Sprachen:
+      - C_Sharp: ./Sprachen/C_Sharp/Classe.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
