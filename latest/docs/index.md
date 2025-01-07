@@ -5,16 +5,16 @@
 Auf dieser Seite finden Sie wichtige Informationen über Server-Architekturen sowie Best Practices mit Code-Beispielen.
 
 ###Mathe
-- [1.1]: ./Mathe/Formeln/index.html "Formeln"
+- [Formel](https://eduardanderegg.ch/Mathe/Formeln/index.html)
 
 ###Programmierung
-- [2.1]: ./CS/MVC/index.html "MVC"
+- [MVC](https://eduardanderegg.ch/CS/MVC/index.html)
 
 **C#**
-- [2.2]: ./CS/Klasse/index.html "Klasse"
+- [Klasse](https://eduardanderegg.ch/CS/Klasse/index.html)
 
 ###Netzwerktechnik und Sicherheit
-- [3.1]: ./NetSec/Topologie/index.html "Topologie"
+- [Topologie](https://eduardanderegg.ch/NetSec/Topologie/index.html)
 
 ###Web-Entwicklung
-- [4.1]: ./Server/MVC/index.html "MVC"
+- [MVC](https://eduardanderegg.ch/Server/MVC/index.html)
