@@ -23,11 +23,13 @@ nav:
   - Home:
       - index: ./index.md
   - CS:
-      - Classe: ./CS/Classe.md
+      - Klasse: ./CS/Klasse.md
+      - MVC: ./CS/MVC.md
   - Server:
       - API: ./Server/API.md
       - MVC: ./Server/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 

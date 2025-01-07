@@ -8,10 +8,10 @@ Auf dieser Seite finden Sie wichtige Informationen über Server-Architekturen so
 - [1.1]: ./Mathe/Formeln/index.html "Formeln"
 
 ###Programmierung
-- [2.1]: ./CSharp/MVC/index.html "MVC"
+- [2.1]: ./CS/MVC/index.html "MVC"
 
 **C#**
-- [2.2]: ./CSharp/Klasse/index.html "Klasse"
+- [2.2]: ./CS/Klasse/index.html "Klasse"
 
 ###Netzwerktechnik und Sicherheit
 - [3.1]: ./NetSec/Topologie/index.html "Topologie"
