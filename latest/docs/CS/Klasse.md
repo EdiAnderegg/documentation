@@ -1,7 +1,7 @@
 # Struktur einer Klasse in C Sharp
 
 
-```cs
+```csharp
 
     public class Rezept
     { 
