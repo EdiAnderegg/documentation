@@ -6,7 +6,7 @@
     public class Rezept
     { 
         //Eigenschaften Klasse
-        private string _rezeptname = "";
+        private string _rezeptname = ""; 
         private int _zeitaufwand = 0;
         private string _zutaten = "";
 
