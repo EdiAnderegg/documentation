@@ -13,7 +13,7 @@
         //Konstruktor Klasse
         public Rezept(string name, int zeit, string zutaten) 
         {
-            Name = name;
+            Name = name; 
             Zeit = zeit;
             Zutaten = zutaten;
         }
