@@ -1,16 +1,16 @@
-# Struktur einer Classe in C Sharp
+# Struktur einer Klasse in C Sharp
 
 
-```cs
+```csharp
 
     public class Rezept
     { 
-        //Eigenschaften Classe
+        //Eigenschaften Klasse
         private string _rezeptname = "";
         private int _zeitaufwand = 0;
         private string _zutaten = "";
 
-        //Konstruktor Classe
+        //Konstruktor Klasse
         public Rezept(string name, int zeit, string zutaten) 
         {
             Name = name;
@@ -18,8 +18,7 @@
             Zutaten = zutaten;
         }
 
-        //Equals Methode für Kontrolle von Duplikaten
-        //Wichtig angewöhnen mit dem Equals Methode 
+        //Equals-Methode zur Kontrolle von Duplikaten
         public bool Equals(Rezept other)
         {
             if (other == null)
