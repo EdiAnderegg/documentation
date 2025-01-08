@@ -5,13 +5,13 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: deep purple
+      primary: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep purple
+      primary: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -19,6 +19,16 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+    - content.code.copy
+    - content.code.select
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 nav:
   - Home:
       - index: ./index.md
@@ -29,46 +39,4 @@ nav:
       - API: ./Server/API.md
       - MVC: ./Server/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
