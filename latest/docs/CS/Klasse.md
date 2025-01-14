@@ -1,6 +1,8 @@
 ---
 Title: Struktur einer SuperKlasse in C Sharp
 ---
+#Struktur einer SuperKlasse in C Sharp
+...
 
 ```cs
 
@@ -66,3 +68,4 @@ Title: Struktur einer SuperKlasse in C Sharp
 
 
 ```
+
