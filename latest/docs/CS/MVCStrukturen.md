@@ -10,4 +10,5 @@ subtitle: Einfaches MVC (Windows Forms)
 ---
 - **Model:** Reine Objekte
 - **View:** Forms (Windows Forms)
-- **Controller:** Speichert daten in eine Liste
+- **Controller:** Speichert Daten in eine Liste
+
