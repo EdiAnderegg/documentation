@@ -1,6 +1,7 @@
 ---
 title: MVC Strukturen
 ---
+
 # MVC Strukturen
 ...
 
@@ -10,7 +11,8 @@ title: MVC Strukturen
 ---
 subtitle: Einfaches MVC (Windows Forms)
 ---
- ## Einfaches MVC (Windows Forms)
+
+## Einfaches MVC (Windows Forms)
 ...
 
 - **Model:** Reine Objekte
