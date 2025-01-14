@@ -1,4 +1,4 @@
-# Meine Bibel
+#Meine Bibel
 
 *Diese Seite ist mein Dokumentationsbegleiter während meines Informatikstudiums. Die Informationen werden nach und nach ergänzt.*
 
@@ -18,4 +18,4 @@ Auf dieser Seite finden Sie wichtige Informationen über Server-Architekturen so
 - [Topologie](https://eduardanderegg.ch/NetSec/Topologie/index.html)
 
 **Web-Entwicklung**  
-[MVC](https://eduardanderegg.ch/Server/MVC/index.html)
+- [MVC](https://eduardanderegg.ch/Server/MVC/index.html)
