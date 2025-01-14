@@ -8,4 +8,6 @@ title: MVC Strukturen
 ---
 subtitle: Einfaches MVC (Windows Forms)
 ---
-
+- **Model:** Reine Objekte
+- **View:** Forms (Windows Forms)
+- **Controller:** Speichert daten in einer Liste
