@@ -17,7 +17,7 @@
         }
 
         //Equals-Methode zur Kontrolle von Duplikaten
-        public bool Equals(Rezept other)
+        public bool Equals(EineKlasse other)
         {
             if (other == null)
             {
