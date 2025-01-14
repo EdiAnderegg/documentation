@@ -5,7 +5,7 @@ Title: Struktur einer SuperKlasse in C Sharp
 ```cs
 
     public class EineKalsse
-    { 
+    {
         //Eigenschaften Klasse
 	
         private static int _counter;
@@ -63,5 +63,6 @@ Title: Struktur einer SuperKlasse in C Sharp
 	.
        
     }
+
 
 ```
