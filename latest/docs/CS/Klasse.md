@@ -6,16 +6,14 @@
     public class Rezept
     { 
         //Eigenschaften Klasse
-        private string _rezeptname = ""; 
-        private int _zeitaufwand = 0;
-        private string _zutaten = "";
+        private string _string = ""; 
+        private int _integer = 0;
 
         //Konstruktor Klasse
-        public Rezept(string name, int zeit, string zutaten) 
+        public Rezept(string someString, int SomeInteger) 
         {
-            Name = name;  
-            Zeit = zeit;
-            Zutaten = zutaten;
+            String = someString;  
+            Integer = someInteger;
         }
 
         //Equals-Methode zur Kontrolle von Duplikaten
