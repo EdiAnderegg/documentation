@@ -42,9 +42,11 @@ nav:
   - CS:
       - Klasse: ./CS/Klasse.md
       - MVC: ./CS/MVC.md
+      - MVCStrukturen: ./CS/MVCStrukturen.md
   - Server:
       - API: ./Server/API.md
       - MVC: ./Server/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
