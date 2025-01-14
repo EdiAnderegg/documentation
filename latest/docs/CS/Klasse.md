@@ -1,4 +1,5 @@
-# Struktur einer Klasse in C Sharp
+
+# Struktur einer SuperKlasse in C Sharp
 
 
 ```cs
