@@ -1,19 +1,14 @@
 ---
 title: MVC Strukturen
 ---
-
 # MVC Strukturen
-...
 
-**Die MVC-Strukturen Möglichkeiten**
+
+**Die MVC-Strukturen Möglichkeiten**  
 *gotta catch em all*
 
----
-subtitle: Einfaches MVC (Windows Forms)
----
 
-## Einfaches MVC (Windows Forms)
-...
+##Einfaches MVC (Windows Forms)
 
 - **Model:** Reine Objekte
 - **View:** Forms (Windows Forms)
