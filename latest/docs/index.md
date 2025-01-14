@@ -1,4 +1,4 @@
-#Index
+# Meine Bibel
 
 *Diese Seite ist mein Dokumentationsbegleiter während meines Informatikstudiums. Die Informationen werden nach und nach ergänzt.*
 
