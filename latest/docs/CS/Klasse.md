@@ -31,7 +31,7 @@
         }
 
         //Getters and Setters
-        public string Name
+        public string String
         {
             get
             {
@@ -43,7 +43,7 @@
                 _string = value;
             }
         }
-        private int Zeit
+        private int Integer
         {
             get
             {
@@ -54,19 +54,6 @@
                 if (value >= 0)_integer = value;
             }
         }
-        private string Zutaten
-        {
-            get
-            {
-                return _zutaten;
-            }
-            set
-            {
-                if (value == "") { return; };
-                _zutaten = value;
-            }
-        }
-
 	//Methoden
 	.
 	.
