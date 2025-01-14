@@ -3,7 +3,7 @@
 
 ```cs
 
-    public class Rezept
+    public class EineKalsse
     { 
         //Eigenschaften Klasse
         private string _string = ""; 
