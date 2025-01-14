@@ -17,11 +17,14 @@ theme:
         name: Switch to light mode
   features:
     - navigation.tabs
-    - navigation.tabs.sticky
+    - header.autohide
     - navigation.top
     - content.code.copy
     - content.code.select
 markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -43,18 +46,4 @@ nav:
       - API: ./Server/API.md
       - MVC: ./Server/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
