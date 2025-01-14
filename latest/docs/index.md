@@ -12,6 +12,7 @@ Auf dieser Seite finden Sie wichtige Informationen über Server-Architekturen so
 
 **C#**  
 [Klasse](https://eduardanderegg.ch/CS/Klasse/index.html)
+[MVC Strukturen](https://eduardanderegg.ch/CS/MVC/index.html)
 
 ####Netzwerktechnik und Sicherheit
 [Topologie](https://eduardanderegg.ch/NetSec/Topologie/index.html)
