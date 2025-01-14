@@ -17,7 +17,7 @@ subtitle: Einfaches MVC (Windows Forms)
 ```cs
 
     public class EineKalsse
-    { 
+    {
         //Eigenschaften Klasse
 	
         private static int _counter;
