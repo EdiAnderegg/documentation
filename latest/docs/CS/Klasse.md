@@ -1,5 +1,5 @@
 ---
-Struktur einer SuperKlasse in C Sharp
+Title: Struktur einer SuperKlasse in C Sharp
 ---
 
 ```cs
