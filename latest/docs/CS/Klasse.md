@@ -23,7 +23,7 @@
             {
                 return false;
             }
-            else if (Name == other.Name && Zeit == other.Zeit)
+            else if (String == other.String && Integer == other.Integer)
             {
                 return true;
             }
