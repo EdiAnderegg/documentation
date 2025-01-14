@@ -7,12 +7,14 @@
     { 
         //Eigenschaften Klasse
 	
+        private static int _counter;
         private string _string = ""; 
         private int _integer = 0;
 
         //Konstruktor Klasse
         public Rezept(string someString, int SomeInteger) 
         {
+            Counter++;
             String = someString;  
             Integer = someInteger;
         }
@@ -36,33 +38,24 @@
         //Counter Variable
 	public static int Counter
         {
-           get { return counter; }
-           private set { counter=value; }
+            get { return _counter; }
+            private set { _counter=value; }
         }
-
+        
+        
         public string String
         {
-            get
-            {
-                return _string;
-            }
-            set
-            {
-                if (value == ""){ return;}
-                _string = value;
-            }
+            get { return _string; }
+            set { if (value == ""){ return; } _string = value; }
         }
-        private int Integer
+
+        public int Integer
         {
-            get
-            {
-                return _integer;
-            }
-            set
-            {
-                if (value >= 0)_integer = value;
-            }
+            get { return _integer; }
+            set { if (value >= 0)_integer = value; }
         }
+
+
 	//Methoden
 	.
 	.
