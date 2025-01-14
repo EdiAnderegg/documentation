@@ -10,7 +10,7 @@ Auf dieser Seite finden Sie wichtige Informationen über Server-Architekturen so
 - [Formel](https://eduardanderegg.ch/Mathe/Formeln/index.html)
 
 **Programmierung**  
-- [Klasse](https://eduardanderegg.ch/CS/Klasse/index.html)
+- [Klasse](https://eduardanderegg.ch/CS/Klasse/index.html)  
 - [MVC Strukturen](https://eduardanderegg.ch/CS/MVC/index.html)
 
 **Netzwerktechnik und Sicherheit**  
