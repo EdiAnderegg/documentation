@@ -1,7 +1,7 @@
 ---
 Title: Struktur einer SuperKlasse in C Sharp
 ---
-# Struktur einer SuperKlasse in C Sharp
+#Struktur einer SuperKlasse in C Sharp
 
 
 
