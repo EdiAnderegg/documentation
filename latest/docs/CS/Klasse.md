@@ -6,6 +6,7 @@
     public class EineKalsse
     { 
         //Eigenschaften Klasse
+	
         private string _string = ""; 
         private int _integer = 0;
 
@@ -31,6 +32,14 @@
         }
 
         //Getters and Setters
+
+        //Counter Variable
+	public static int Counter
+        {
+           get { return counter; }
+           private set { counter=value; }
+        }
+
         public string String
         {
             get
