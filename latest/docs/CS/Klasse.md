@@ -35,23 +35,23 @@
         {
             get
             {
-                return _rezeptname;
+                return _string;
             }
             set
             {
                 if (value == ""){ return;}
-                _rezeptname = value;
+                _string = value;
             }
         }
         private int Zeit
         {
             get
             {
-                return _zeitaufwand;
+                return _integer;
             }
             set
             {
-                if (value >= 0)_zeitaufwand = value;
+                if (value >= 0)_integer = value;
             }
         }
         private string Zutaten
