@@ -1,5 +1,5 @@
 site_name: Documents
-site_url: https://eduardanderegg.ch
+site_url: https://document.eduardanderegg.ch
 theme:
   name: material
   palette:
@@ -46,39 +46,4 @@ nav:
       - API: ./Server/API.md
       - MVC: ./Server/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
