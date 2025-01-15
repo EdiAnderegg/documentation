@@ -5,7 +5,7 @@
 Auf dieser Seite finden Sie wichtige Informationen über Server-Architekturen sowie Best Practices mit Code-Beispielen.
 
 ---
-
+ 
 **Mathe**  
 - [Formel](https://eduardanderegg.ch/Mathe/Formeln/index.html)
 
