@@ -16,7 +16,7 @@ Title: Struktur einer SuperKlasse in C Sharp
         private int _integer = 0;
 
         //Konstruktor Klasse
-        public Rezept(string someString, int someInteger) 
+        public EineKlasse(string someString, int someInteger) 
         {
             Counter++;
             String = someString;  
