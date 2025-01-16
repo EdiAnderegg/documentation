@@ -55,3 +55,10 @@ title: MVC Strukturen
     }
 
 ```
+
+=== "View"
+
+
+```cs
+
+```
