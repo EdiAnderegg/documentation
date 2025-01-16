@@ -27,7 +27,7 @@ title: MVC Strukturen
         private int _integer = 0;
 
         //Konstruktor Klasse
-        public Rezept(string someString, int SomeInteger) 
+        public Rezept(string someString, int someInteger) 
         {
             Counter++;
             String = someString;  
