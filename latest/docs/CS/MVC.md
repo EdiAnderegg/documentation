@@ -67,7 +67,7 @@ title: MVC Strukturen
 </div>
 
 
-<div class="result" markdown>
+<div class="result" markdown>  
 
 !!! example
 
