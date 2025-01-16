@@ -18,7 +18,7 @@ title: MVC Strukturen
 
 ```cs
 
-    public class ModelObject
+    public class ModelClass
     {
 	
         private static int _counter;
