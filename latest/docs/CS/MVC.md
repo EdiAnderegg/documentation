@@ -16,7 +16,7 @@ title: MVC Strukturen
 - **View:** Forms (Windows Forms)
 - **Controller:** Speichert Daten in eine Liste
 
-==="Model"
+=== "Model"
 
 ```cs
 
@@ -58,7 +58,7 @@ title: MVC Strukturen
 
 ```
 
-==="View"
+=== "View"
 
 
 ```cs
