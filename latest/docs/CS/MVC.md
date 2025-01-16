@@ -14,8 +14,6 @@ title: MVC Strukturen
 - **View:** Forms (Windows Forms)
 - **Controller:** Speichert Daten in eine Liste
 
-<div class="result" markdown>
-
 === "Model"
 
 ```cs
@@ -64,11 +62,7 @@ title: MVC Strukturen
 ```cs
 
 ```
-</div>
 
-
-
-!!! example
 
     === "Unordered List"
 
