@@ -58,6 +58,6 @@ title: MVC Strukturen
 
 === "View"
 
-```c++
+```cs
 
 ```
