@@ -26,7 +26,7 @@ title: MVC Strukturen
         private int _integer = 0;
 
 
-        public Rezept(string someString, int someInteger) 
+        public ModelClass(string someString, int someInteger) 
         {
             Counter++;
             String = someString;  
