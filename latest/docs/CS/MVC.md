@@ -18,15 +18,14 @@ title: MVC Strukturen
 
 ```cs
 
-    public class EineKalsse
+    public class ModelObject
     {
-        //Eigenschaften Klasse
 	
         private static int _counter;
         private string _string = ""; 
         private int _integer = 0;
 
-        //Konstruktor Klasse
+
         public Rezept(string someString, int someInteger) 
         {
             Counter++;
@@ -34,23 +33,6 @@ title: MVC Strukturen
             Integer = someInteger;
         }
 
-        //Equals-Methode zur Kontrolle von Duplikaten
-        public bool Equals(EineKlasse other)
-        {
-            if (other == null)
-            {
-                return false;
-            }
-            else if (String == other.String && Integer == other.Integer)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        //Getters and Setters
-
-        //Counter Variable
 	public static int Counter
         {
             get { return _counter; }
@@ -69,12 +51,6 @@ title: MVC Strukturen
             get { return _integer; }
             set { if (value >= 0)_integer = value; }
         }
-
-
-	//Methoden
-	.
-	.
-	.
        
     }
 
