@@ -21,6 +21,7 @@ theme:
     - navigation.top
     - content.code.copy
     - content.code.select
+    - content.tabs.link
 markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
@@ -46,5 +47,4 @@ nav:
       - API: ./Server/API.md
       - MVC: ./Server/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
-
 
