@@ -17,17 +17,14 @@ title: MVC Strukturen
 - **Controller:** Speichert Daten in eine Liste
 
 === "Model"
-
 	```cs
-//Model
+	//Model
 	```
-
 === "View"
-
 	```cs
-//View
+	//View
 	```
 === "Controller"
 	```cs
-//Controller
+	//Controller
 	```
