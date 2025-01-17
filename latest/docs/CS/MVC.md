@@ -6,8 +6,6 @@
 
 === "View"
 
-
 	```cs
 	//Some Code
-
 	```
