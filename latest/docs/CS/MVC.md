@@ -15,7 +15,7 @@
             Counter++;
             String = someString;  
             Integer = someInteger;
-        }
+        } 
 
 	public static int Counter
         {
