@@ -20,7 +20,7 @@ title: MVC Strukturen
 	```cs
 	//Model
 	```
-=== "View"
+=== "View" 
 	```cs
  
 	```
