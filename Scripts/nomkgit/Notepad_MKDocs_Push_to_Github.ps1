@@ -166,6 +166,7 @@ function Update-MkDocsYml {
 }
 
 # Function to execute Git commands
+# Function to execute Git commands
 function Start-GitCommands {
     param (
         [string]$GitRepoPath,
@@ -175,8 +176,14 @@ function Start-GitCommands {
         Write-Host "Switching to Git repository: $GitRepoPath"
         Set-Location $GitRepoPath
 
+        Write-Host "Stashing local changes (if any)..."
+        git stash push -m "Auto-stash: $(Get-Date -Format yyyyMMdd-HHmm)" 2>&1 | Write-Host
+
         Write-Host "Pulling latest changes..."
-        git pull 2>&1 | Write-Host
+        git pull --rebase 2>&1 | Write-Host
+
+        Write-Host "Applying stashed changes (if any)..."
+        git stash pop 2>&1 | Write-Host
 
         Write-Host "Adding changes to Git..."
         git add . 2>&1 | Write-Host
@@ -184,13 +191,18 @@ function Start-GitCommands {
         Write-Host "Committing changes..."
         git commit -m $CommitMessage 2>&1 | Write-Host
 
-        Write-Host "Creating release tag..."
+        Write-Host "Checking for existing tag..."
         $TagName = "release/$(Get-Date -Format yyyyMMdd-HHmm)"
-        git tag -a $TagName -m "Auto-generated release tag" 2>&1 | Write-Host
+        if (git tag | Select-String -Pattern $TagName) {
+            Write-Host "Tag $TagName already exists. Skipping tag creation."
+        } else {
+            Write-Host "Creating release tag..."
+            git tag -a $TagName -m "Auto-generated release tag" 2>&1 | Write-Host
+        }
 
         Write-Host "Pushing changes to repository..."
         git push 2>&1 | Write-Host
-        git push origin $TagName 2>&1 | Write-Host
+        git push origin --tags 2>&1 | Write-Host
 
         Write-Host "Changes committed and pushed with tag: $TagName"
         Show-Notification -Title "Git Sync" -Message "Changes committed and pushed successfully!"

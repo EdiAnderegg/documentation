@@ -17,7 +17,7 @@ title: MVC Strukturen
 - **Controller:** Speichert Daten in eine Liste
 
 === "Model"
-	```cs
+	```cs 
 	//Model
 	```
 === "View" 
