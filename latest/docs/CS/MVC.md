@@ -66,7 +66,7 @@ title: MVC Strukturen
 	        private static void Meldung(string message, string caption)
 	        {
 	             MessageBox.Show(
-	                 message,
+	                 message, 
 	                 caption,
 	                 MessageBoxButtons.OK,
 	                 MessageBoxIcon.Warning

@@ -1,14 +1,8 @@
 <#
 Author: Eduard Anderegg
 Date: January 3, 2025
-Description: 
-    This script monitors a directory for changes to Markdown (.md) files. 
-    When changes are detected, it synchronizes the files with a destination directory, updates an mkdocs.yml file for a documentation site, and commits the changes to a GitHub repository with a release tag. 
-    The script includes:
-        - Notifications for status updates (success, errors).
-        - Error logging to an error.log file.
-        - Conditional execution only when Notepad is running.
-        - Integration with Task Scheduler or as a background process.
+Description:
+    This script monitors a directory for changes to Markdown (.md) files. It synchronizes the files with a destination directory, updates an mkdocs.yml file for a documentation site, and manages Git operations, including pulling updates to avoid conflicts, committing, tagging, and pushing changes.
 #>
 
 # Paths
@@ -35,7 +29,7 @@ function Show-Notification {
 }
 
 # Function to log errors
-function Write-Error {
+function Write-ErrorLog {
     param (
         [string]$ErrorMessage
     )
@@ -43,7 +37,7 @@ function Write-Error {
 }
 
 # Function to check if Notepad is running
-function Get-Notepad-Running {
+function IsNotepadRunning {
     Get-Process | Where-Object { $_.ProcessName -eq "notepad" } | ForEach-Object { return $true }
     return $false
 }
@@ -96,7 +90,7 @@ function Sync-Folders {
     } catch {
         Write-Host "Error during synchronization: $_" -ForegroundColor Red
         Show-Notification -Title "Error" -Message "Synchronization failed. Check error.log."
-        Write-Error "Synchronization Error: $_"
+        Write-ErrorLog "Synchronization Error: $_"
     }
 }
 
@@ -167,7 +161,7 @@ function Update-MkDocsYml {
     } catch {
         Write-Host "Error updating mkdocs.yml: $_" -ForegroundColor Red
         Show-Notification -Title "Error" -Message "Failed to update mkdocs.yml. Check error.log."
-        Write-Error "MkDocs Update Error: $_"
+        Write-ErrorLog "MkDocs Update Error: $_"
     }
 }
 
@@ -180,6 +174,9 @@ function Start-GitCommands {
     try {
         Write-Host "Switching to Git repository: $GitRepoPath"
         Set-Location $GitRepoPath
+
+        Write-Host "Pulling latest changes..."
+        git pull 2>&1 | Write-Host
 
         Write-Host "Adding changes to Git..."
         git add . 2>&1 | Write-Host
@@ -200,12 +197,12 @@ function Start-GitCommands {
     } catch {
         Write-Host "Error during Git operations: $_" -ForegroundColor Red
         Show-Notification -Title "Git Error" -Message "Git operations failed. Check error.log."
-        Write-Error "Git Error: $_"
+        Write-ErrorLog "Git Error: $_"
     }
 }
 
 # Main monitoring logic
-if (Get-Notepad-Running) {
+if (IsNotepadRunning) {
     try {
         Show-Notification -Title "Sync Script" -Message "Script started and monitoring for changes."
 
@@ -236,7 +233,7 @@ if (Get-Notepad-Running) {
 
         Write-Host "Monitoring $SourcePath for changes to .md files. Press Ctrl+C to stop."
         while ($true) {
-            if (-not (Get-Notepad-Running)) {
+            if (-not (IsNotepadRunning)) {
                 Write-Host "Notepad is no longer running. Exiting script."
                 Show-Notification -Title "Script Stopped" -Message "Notepad has closed. Exiting script."
                 break  # Exit the loop
@@ -246,7 +243,7 @@ if (Get-Notepad-Running) {
     } catch {
         Write-Host "Error in script: $_" -ForegroundColor Red
         Show-Notification -Title "Error" -Message "Script encountered an error. Check error.log."
-        Write-Error "Script Error: $_"
+        Write-ErrorLog "Script Error: $_"
     }
 } else {
     Show-Notification -Title "Script Stopped" -Message "Notepad is not running. Exiting script."
