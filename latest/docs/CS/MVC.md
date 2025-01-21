@@ -18,7 +18,7 @@ title: MVC Strukturen
 
 === "Model"
 	```cs 
-	//Model
+	//Model  
 	```
 === "View" 
 	```cs
