@@ -13,7 +13,7 @@ title: MVC Strukturen
 ##Einfaches MVC (Windows Forms)
 
 - **Model:** Reine Objekte
-- **View:** Forms (Windows Forms)
+- **View:** Forms (Windows Forms) 
 - **Controller:** Speichert Daten in eine Liste
 
 === "Model"
