@@ -1,6 +1,6 @@
 # Meine Begleitdokumentation für meine Weiterbildung in Informatik
 --------
-### Dieses Repository enthält Wissen/Themen, die während des Digital Talent Program gelernt wurden. 
+### Dieses Repository wurde mit dem Wissen und den Erfahrungen, die ich bei GBS gesammelt habe, erstellt. 
 ----------
 ## Beschreibung:
 Mit diesem Programm kann ich Markdown-Dateien von meinem Notepad auf meinen DokumentenWeb-Server hochladen. 
