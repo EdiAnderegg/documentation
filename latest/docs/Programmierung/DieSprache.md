@@ -16,8 +16,9 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 
 <sup>(1)</sup>
-
-1.  ```cs int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'  ```
+	```cs 
+		int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'  
+	```
 
 2. ```cs
 	using System;
