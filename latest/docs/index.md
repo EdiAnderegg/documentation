@@ -15,4 +15,4 @@ Auf dieser Seite finden Sie wichtige Informationen über Server-Architekturen so
 **Netzwerktechnik und Sicherheit**  
 
 **Web-Entwicklung**  
-- [MVC](https://document.eduardanderegg.ch/Server/MVC/index.html)
+- [MVC](https://document.eduardanderegg.ch/Server/MVC/index.html) 
