@@ -2,6 +2,8 @@ site_name: Documents
 site_url: https://document.eduardanderegg.ch
 theme:
   name: material
+  icon:
+    annotation: material/application-braces-outline
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -48,49 +50,3 @@ nav:
       - Klasse: ./Programmierung/Klasse.md
       - MVC: ./Programmierung/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
