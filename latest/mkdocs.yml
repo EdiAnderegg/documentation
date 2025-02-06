@@ -40,13 +40,15 @@ markdown_extensions:
 nav:
   - Home:
       - index: ./index.md
-  - CS:
-      - Klasse: ./CS/Klasse.md
-      - MVC: ./CS/MVC.md
   - Server:
       - API: ./Server/API.md
       - MVC: ./Server/MVC.md
+  - Programmierung:
+      - Die Sprache: ./Programmierung/Die Sprache.md
+      - Klasse: ./Programmierung/Klasse.md
+      - MVC: ./Programmierung/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
