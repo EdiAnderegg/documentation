@@ -10,11 +10,12 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 | Term                | Beschreibung |
 |---------------------|-------------|
-| **Syntaktischer Fehler** | Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen. (1)  { .annotate } |
+| **Syntaktischer Fehler** | Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen. <sup>(1)</sup> |
 | **Logischer Fehler** | Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartete Ausgaben oder akzeptiert unerwartete Eingaben! (2) { .annotate }|
 
 
 
+<sup>(1)</sup>
 
 1.  ```cs int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'  ```
 
