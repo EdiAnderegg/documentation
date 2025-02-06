@@ -10,8 +10,26 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 | Term                | Beschreibung | Beispiel |
 |---------------------|-------------|----------|
-| **Syntaktischer Fehler** | Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen. | ```cs int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int' ``` |
-| **Logischer Fehler** | Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartete Ausgaben oder akzeptiert unerwartete Eingaben! | ```cs using System; class Program { static void Main() { int x = 10; if (x > 10) { Console.WriteLine("x ist größer als 10"); } else { Console.WriteLine("x ist kleiner als 10"); } } } ``` |
+| **Syntaktischer Fehler** | Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen. | <pre><code class="language-cs">int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'</code></pre> |
+| **Logischer Fehler** | Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartete Ausgaben oder akzeptiert unerwartete Eingaben! | <pre><code class="language-cs">using System;
+
+class Program
+{
+    static void Main()
+    {
+        int x = 10;
+        if (x > 10)
+        {
+            Console.WriteLine("x ist größer als 10");
+        }
+        else
+        {
+            Console.WriteLine("x ist kleiner als 10");
+        }
+    }
+}
+</code></pre> |
+
 
 
 
