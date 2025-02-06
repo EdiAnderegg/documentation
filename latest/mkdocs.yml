@@ -44,10 +44,11 @@ nav:
       - API: ./Server/API.md
       - MVC: ./Server/MVC.md
   - Programmierung:
-      - Die Sprache: ./Programmierung/Die Sprache.md
+      - DieSprache: ./Programmierung/DieSprache.md
       - Klasse: ./Programmierung/Klasse.md
       - MVC: ./Programmierung/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
