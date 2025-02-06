@@ -10,7 +10,7 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 | Term                | Beschreibung |
 |---------------------|-------------|
-| **Syntaktischer Fehler** | Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen. (1) <script>{ .annotate }</script> |
+| **Syntaktischer Fehler** | Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen. (1) <br> <script>{ .annotate }</script> |
 | **Logischer Fehler** | Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartete Ausgaben oder akzeptiert unerwartete Eingaben! |
 
 
