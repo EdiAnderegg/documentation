@@ -10,13 +10,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Get Version
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: BUILD_VERSION
           path: ./
 
       - name: Get Tag
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: TAG_TYPE
           path: ./

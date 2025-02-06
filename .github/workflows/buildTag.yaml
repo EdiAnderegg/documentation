@@ -20,7 +20,7 @@ jobs:
           cat tag.txt
 
       - name: Upload Tag as Artifakt
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: TAG_TYPE
           path: ./
