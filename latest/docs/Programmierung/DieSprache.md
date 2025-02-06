@@ -15,12 +15,13 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 
 ###Syntaktischer Fehler:
-Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen. (1) 
-{ .annotate }
+Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen.
 
-1.	```cs
-	int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'
-   	```
+```cs
+int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'
+```
+
+
 
 
 
