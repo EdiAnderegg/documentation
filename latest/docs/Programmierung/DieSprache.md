@@ -19,14 +19,6 @@ some text in with an annotation (1)
 { .annotate }
 
 1.  Hello im an annotation !!
- 
 
-| Column 1 | Column 2 |
-|----------|----------|
-| Data A (1) | Data B (2) |
-
-!!! note "Annotations"
-    1. Explanation for Data A  
-    2. Explanation for Data B
 
 
