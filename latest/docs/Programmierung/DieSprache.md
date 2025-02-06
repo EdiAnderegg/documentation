@@ -15,10 +15,10 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 
 
-some text in with an annotation (2) 
+some text in with an annotation (1) 
 { .annotate }
 
-2.  Hello im an annotation !!
+1.  Hello im an annotation !!
  
 
 
