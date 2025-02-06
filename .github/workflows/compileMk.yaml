@@ -36,7 +36,7 @@ jobs:
           mkdocs build --site-dir "../public/"
 
       - name: 📁 Storing generated page as an Artifact for later usage
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: public-page
           path: public
