@@ -8,10 +8,11 @@ Auf dieser Seite finden Sie wichtige Informationen über Server-Architekturen so
 
 
 **Programmierung**  
-- [Klasse](https://document.eduardanderegg.ch/CS/Klasse/index.html)  
-- [MVC Strukturen](https://document.eduardanderegg.ch/CS/MVC/index.html)  
+- [Klasse](https://document.eduardanderegg.ch/Programmierung/Klasse/index.html)  
+- [MVC Strukturen](https://document.eduardanderegg.ch/Programmierung/MVC/index.html)  
+- [Die Sprache](https://document.eduardaneregg.ch/Programmierung/Die Sprache/index.html)  
 
 **Netzwerktechnik und Sicherheit**  
 
 **Web-Entwicklung**  
-- [MVC](https://document.eduardanderegg.ch/Server/MVC/index.html)  
+- [MVC](https://document.eduardanderegg.ch/Server/MVC/index.html)
