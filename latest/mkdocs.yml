@@ -50,3 +50,4 @@ nav:
       - Klasse: ./Programmierung/Klasse.md
       - MVC: ./Programmierung/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
+
