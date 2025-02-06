@@ -10,6 +10,11 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 ---
 
+###Deklaration
+Um sicherzustellen, dass genügend Speicherplatz für einen Wert reserviert ist, müssen Variablen deklariert werden.
+Eine Deklaration legt fest, welche Art von Wert gespeichert werden soll und wie viel Platz für den Wert reserviert werden soll.
+
+
 ###Syntaktischer Fehler
 Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen.
 ```cs
@@ -37,4 +42,5 @@ class Program
     }
 }
 ```
+
 
