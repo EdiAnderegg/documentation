@@ -12,6 +12,7 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 ###Code Konventionen
 Codierungskonventionen dienen den folgenden Zwecken:  
+
 - Sie sorgen für ein einheitliches Erscheinungsbild des Codes. Dadurch wird der Fokus auf den Inhalt gelenkt.  
 - Sie ermöglichen, den Code Schneller zu verstehen, da Rückschlüsse basierend auf den bisherigen Erfahrungen gezogen werden können.  
 - Sie erleichtern die Bearbeitung, Dokumentation und Speicherung des Codes.  
