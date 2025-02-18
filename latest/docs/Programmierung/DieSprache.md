@@ -88,14 +88,17 @@ alter = 35;
 ```
 
 
-###Syntaktischer Fehler
+###Fehler
+
+
+####Syntaktischer Fehler
 Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen.
 ```cs
 int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'
 ```
 
 
-###Logischer Fehler
+####Logischer Fehler
 Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartet Ausgaben oder akzeptiert unerwartete Eingaben! 
 ```cs
 using System;
@@ -116,6 +119,48 @@ class Program
     }
 }
 ```
+
+
+###Operatoren
+Ein Ausdruck ist die kleinste ausführbare Einheit eines Programms und setzt mindestens einen Operator voraus.
+```cs
+// Ausdruck
+
+     int value      =         22;
+//  | Operant | Operator | Operant |
+```
+Ein Ausdruck wird immer aus mindestens einem Operanden und einem Operator gebildet. Der Operator im Beispiel oben ist der Zuweisungsoperator, als Operand gilt sowohl die Konstante "22" als auch die Variable "int value". Operatoren verknüpfen Operanden miteinander und führen Berechnungen durch. 
+
+####Arithmetische Operatoren
+| Operator | Beschreibung |
+|----------|-------------|
+| + | Hat zwei Funktionalitäten: Als Additionsoperator bildet er die Summe zweier Operanden (x + y). Als Vorzeichenoperator beschreibt er eine positive Zahl (+x), ist also ein einstelliger (unärer) Operator. |
+| - | Hat ebenfalls zwei Funktionalitäten: Als Subtraktionsoperator eingesetzt, bildet er die Differenz zweier Operanden (x - y). Als unärer Vorzeichenoperator beschreibt er eine negative Zahl (-x). |
+| * | Multiplikationsoperator; multipliziert zwei Operanden (x * y). |
+| / | Divisionsoperator; dividiert zwei Operanden (x / y), behält den Nachkommateil der Division. |
+| % | Restwertoperator; dividiert zwei Operanden und liefert als Ergebnis den Restwert der Operation (x % y). |
+| ++ | Erhöht den Inhalt des Operanden um 1. Das Ergebnis der Operation ++x ist der Wert des Operanden nach der Erhöhung. Das Ergebnis der Operation x++ ist der Wert des Operanden vor der Erhöhung. |
+| -- | Verringert den Inhalt des Operanden um 1. Das Ergebnis der Operation --x ist der Wert des Operanden nach der Verringerung. Das Ergebnis der Operation x-- ist der Wert des Operanden vor der Verringerung. |
+
+####Vergleichsoperatoren
+| Operator | Beschreibung |
+|----------|-------------|
+| a == b | Prüft, ob der Ausdruck `a` dem Ausdruck `b` entspricht, und gibt in diesem Fall `true` zurück. |
+| a != b | Ergebnis der Operation ist `true`, wenn `a` ungleich `b` ist. |
+| a > b | Ergebnis der Operation ist `true`, wenn `a` größer `b` ist. |
+| a < b | Ergebnis der Operation ist `true`, wenn `a` kleiner `b` ist. |
+| a <= b | Ergebnis der Operation ist `true`, wenn `a` kleiner oder gleich `b` ist. |
+| a >= b | Ergebnis der Operation ist `true`, wenn `a` größer oder gleich `b` ist. |
+
+####Logische Operatoren
+| Operator | Beschreibung |
+|----------|-------------|
+| ! | Unärer Negationsoperator. Der Ausdruck `!a` ist `true`, wenn `a` einen unwahren Wert beschreibt, und `false`, wenn `a` wahr ist. |
+| & | (And-Operator, 1. Variante) Der Ausdruck `a & b` ist dann `true`, wenn sowohl `a` als auch `b` `true` sind. Dabei werden in jedem Fall beide Ausdrücke ausgewertet. |
+| \| | (Or-Operator, 1. Variante) Der Ausdruck `a | b` ist `true`, wenn entweder `a` oder `b` wahr ist. Dabei werden in jedem Fall beide Ausdrücke ausgewertet. |
+| ^ | (Xor-Operator) Der Ausdruck `a ^ b` ist `true`, wenn die beiden beteiligten Operanden unterschiedliche Wahrheitswerte haben. |
+| && | (And-Operator, 2. Variante) Der Ausdruck `a && b` ist `true`, wenn sowohl `a` als auch `b` `true` sind. Zuerst wird `a` ausgewertet. Sollte `a` `false` sein, ist in jedem Fall der Gesamtausdruck unabhängig von `b` auch `false`. `b` wird dann nicht mehr ausgewertet. |
+| \|\| | (Or-Operator, 2. Variante) Der Ausdruck `a || b` ist `true`, wenn entweder `a` oder `b` `true` ist. Zuerst wird `a` ausgewertet. Sollte `a` bereits `true` sein, ist in jedem Fall der Gesamtausdruck unabhängig von `b` auch `true`. `b` wird dann nicht mehr ausgewertet. |
 
 
 ###Typenkonvertierungen
