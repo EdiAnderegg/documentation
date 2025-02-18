@@ -63,9 +63,28 @@ public class CodeConvention
  
 
 ###Deklaration
-Um sicherzustellen, dass genügend Speicherplatz für einen Wert reserviert ist, müssen Variablen deklariert werden.
+Um sicherzustellen, dass genügend Speicherplatz für einen **Wert** reserviert ist, müssen Variablen deklariert werden.
 Eine Deklaration legt fest, welche Art von Wert gespeichert werden soll und wie viel Platz für den Wert reserviert werden soll.
+Dies wird mittels eines **Datentyps** erreicht.  
 
+Nachdem eine Variable deklariert, indem der **Datentyp** sowie der **Bezeichner** gewählt wurden, kann der Speicher via dem Bezeichner beschrieben werden.
+Dies gesschieht durch den **Zuweisungsoperator** =.
+
+```cs
+ // Die Deklaration einer Variablen
+ 
+ /*
+   DatenTyp: int
+   Bezeichner: alter
+   Zuweisungsoperator: =
+   Wert: 35
+ */
+
+int alter;
+
+alter = 35;
+
+```
 
 
 ###Syntaktischer Fehler

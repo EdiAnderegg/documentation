@@ -39,6 +39,9 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.blocks.caption
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 nav:
   - Home:
       - index: ./index.md
@@ -50,25 +53,4 @@ nav:
       - Klasse: ./Programmierung/Klasse.md
       - MVC: ./Programmierung/MVC.md
 copyright: "Version: ${BUILD_VERSION}"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
