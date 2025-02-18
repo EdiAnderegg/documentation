@@ -13,6 +13,10 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 ###Enumeration
 Enumerationen erlauben es, **konstante Werte** bzw. unter einem eigenen Datentype zusammenzufassen!
+
+*Als Analogie zu Enumeration kann man den Datentype bool hinzuziehen. Diesem sind auch nur zwei reservierte Namen zuzuweisen (`true` oder `false`).  
+Intern kann der Compiler aber auch nicht mit diesen namenbasierenden Werten operieren, trotzdem stehen diese zur Vereinfachung zur Verfügung!*
+
 ```cs
 
 
