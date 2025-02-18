@@ -15,6 +15,7 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 Enumerationen erlauben es, **konstante Werte** bzw. unter einem eigenen Datentype zusammenzufassen!
 ```cs
 
+
 enum Wochentag
 {
     Montag,     // Standardmässig 0
@@ -26,14 +27,31 @@ enum Wochentag
     Sonntag     // 6
 }
 
+
+/*
+ Einem Enumerator explizit einen Wert zuweisen
+
+enum Wochentag : int
+{
+    Montag = 1,     //1
+    Dienstag = 2,   // 2
+    Mittwoch = 3,   // 3
+    Donnerstag = 4, // 4
+    Freitag = 5,    // 5
+    Samstag = 6,    // 6
+    Sonntag = 7     // 7
+}
+*/
+
+
 // Enum-Wert zuweisen
-Wochentag heute = Wochentag.Dienstag;
+Wochentag heute = Wochentag.Dienstag;  // Dienstag als Wert
 
 // Umwandlung Enum → Zahl
-int nummer = (int)heute;
+int nummer = (int)heute;  // 1 als Wert
 
 // Umwandlung Zahl → Enum
-Wochentag tagVonNummer = (Wochentag)4;
+Wochentag tagVonNummer = (Wochentag)4;  // Freitag als Wert
 
 ```
 
