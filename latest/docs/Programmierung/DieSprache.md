@@ -147,7 +147,8 @@ Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen.
 int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'
 ```
 
-####Laufzeitfehler ( Runtime Error )
+####Laufzeitfehler 
+( Runtime Error )
 Dies ist ein Fehler, der während der Ausführung eines Programms auftritt, nachdem es erfolgreich kompiliert wurde.
 ```cs
 class Program
@@ -169,7 +170,8 @@ class Program
 
 ```
 
-####Logischer Fehler ( semantischer Fehler )
+####Logischer Fehler 
+( semantischer Fehler )
 Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartet Ausgaben oder akzeptiert unerwartete Eingaben! 
 ```cs
 class Program
