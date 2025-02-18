@@ -10,6 +10,34 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 ---
 
+
+###Enumeration
+Enumerationen erlauben es, **konstante Werte** bzw. unter einem eigenen Datentype zusammenzufassen!
+```cs
+
+enum Wochentag
+{
+    Montag,     // Standardmässig 0
+    Dienstag,   // 1
+    Mittwoch,   // 2
+    Donnerstag, // 3
+    Freitag,    // 4
+    Samstag,    // 5
+    Sonntag     // 6
+}
+
+// Enum-Wert zuweisen
+Wochentag heute = Wochentag.Dienstag;
+
+// Umwandlung Enum → Zahl
+int nummer = (int)heute;
+
+// Umwandlung Zahl → Enum
+Wochentag tagVonNummer = (Wochentag)4;
+
+```
+
+
 ###Code Konventionen
 Codierungskonventionen dienen den folgenden Zwecken:  
 
@@ -129,7 +157,7 @@ Ein Ausdruck ist die kleinste ausführbare Einheit eines Programms und setzt min
      int value      =         22;
 //  | Operant | Operator | Operant |
 ```
-Ein Ausdruck wird immer aus mindestens einem Operanden und einem Operator gebildet. Der Operator im Beispiel oben ist der Zuweisungsoperator, als Operand gilt sowohl die Konstante "22" als auch die Variable "int value". Operatoren verknüpfen Operanden miteinander und führen Berechnungen durch. 
+Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator gebildet. Der Operator im Beispiel oben ist der Zuweisungsoperator, als Operand gilt sowohl die Konstante "22" als auch die Variable "int value". Operatoren verknüpfen Operanden miteinander und führen Berechnungen durch. 
 
 ####Arithmetische Operatoren
 | Operator | Beschreibung |
