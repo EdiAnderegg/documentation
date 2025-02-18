@@ -10,9 +10,61 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 ---
 
+###Code Konventionen
+Codierungskonventionen dienen den folgenden Zwecken:
+- Sie sorgen für ein einheitliches Erscheinungsbild des Codes. Dadurch wird der Fokus auf den Inhalt gelenkt.
+- Sie ermöglichen, den Code Schneller zu verstehen, da Rückschlüsse basierend auf den bisherigen Erfahrungen gezogen werden können.
+- Sie erleichtern die Bearbeitung, Dokumentation und Speicherung des Codes.
+
+| Name der Bezeichnung | Schreibweise | Beispiel |
+|:---|:---|:---|
+|- KlassenName <br> - InterfaceName <br> - EnumsName | - PascalCase <br> - Singular | ```class DasIstEinAussagekraeftigerName{ }``` |
+|- MethodenName <br> - PropertyName |- PascalCase | ```public string BesserWennDerMethodenNameDieFunktionErklaert(){}``` |
+|- _klassenVariabeln |- _camelCase | ```private string _ichWillNichtUnbedingt = "öffentlich sein"``` |
+|- lokaleVariabeln |- camelCase | ```string ichHabeEinenOriginellenNamen = '"puff", zum Glück bin ich lokal'``` |
+```cs
+
+// Sortierreihenfolge
+
+/*
+  Hier sehen wir eine Klasse, 
+  die übersichtlich angeordnet ist!
+
+
+  Warum sind die Eigenschaften nach oben angeordnet ?
+*/
+
+public class CodeConvention 
+{
+
+   // Eigenschaften
+   private int _classVariable = 0;
+
+   // Konstruktor
+   public CodeConvention() {}
+
+
+   // Getters und Setters
+   public string MyPublicProperty { get; set; }
+
+
+   private string MyPrivateProperty { get; set; }
+
+   
+   // Methoden
+   public void MyPublicMethod(){}
+
+
+   private void MyPrivateMethod(){}
+   
+}
+```
+
+
 ###Deklaration
 Um sicherzustellen, dass genügend Speicherplatz für einen Wert reserviert ist, müssen Variablen deklariert werden.
 Eine Deklaration legt fest, welche Art von Wert gespeichert werden soll und wie viel Platz für den Wert reserviert werden soll.
+
 
 
 ###Syntaktischer Fehler
