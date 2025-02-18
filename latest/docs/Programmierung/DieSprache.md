@@ -152,7 +152,7 @@ int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to '
 
 
 ####Laufzeitfehler 
-( Runtime Error )
+( Runtime Error )  
 Dies ist ein Fehler, der während der Ausführung eines Programms auftritt, nachdem es erfolgreich kompiliert wurde.
 ```cs
 class Program
@@ -176,7 +176,7 @@ class Program
 
 
 ####Logischer Fehler 
-( semantischer Fehler )
+( semantischer Fehler )  
 Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartet Ausgaben oder akzeptiert unerwartete Eingaben! 
 ```cs
 class Program
