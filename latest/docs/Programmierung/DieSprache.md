@@ -59,6 +59,7 @@ Wochentag tagVonNummer = (Wochentag)4;  // Freitag als Wert
 
 ```
 
+---
 
 ###Code Konventionen
 Codierungskonventionen dienen den folgenden Zwecken:  
@@ -111,7 +112,8 @@ public class CodeConvention
    
 }
 ```
- 
+
+---
 
 ###Deklaration
 Um sicherzustellen, dass genügend Speicherplatz für einen **Wert** reserviert ist, müssen Variablen deklariert werden.
@@ -137,6 +139,7 @@ alter = 35;
 
 ```
 
+---
 
 ###Fehlerarten
 
@@ -146,6 +149,7 @@ Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen.
 ```cs
 int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'
 ```
+
 
 ####Laufzeitfehler 
 ( Runtime Error )
@@ -170,6 +174,7 @@ class Program
 
 ```
 
+
 ####Logischer Fehler 
 ( semantischer Fehler )
 Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartet Ausgaben oder akzeptiert unerwartete Eingaben! 
@@ -191,6 +196,7 @@ class Program
 }
 ```
 
+---
 
 ###Operatoren
 Ein Ausdruck ist die kleinste ausführbare Einheit eines Programms und setzt mindestens einen Operator voraus.
@@ -201,6 +207,7 @@ Ein Ausdruck ist die kleinste ausführbare Einheit eines Programms und setzt min
 //  | Operant | Operator | Operant |
 ```
 Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator gebildet. Der Operator im Beispiel oben ist der Zuweisungsoperator, als Operand gilt sowohl die Konstante "22" als auch die Variable "int value". Operatoren verknüpfen Operanden miteinander und führen Berechnungen durch. 
+
 
 ####Arithmetische Operatoren
 | Operator | Beschreibung |
@@ -213,6 +220,7 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 | ++ | Erhöht den Inhalt des Operanden um 1. Das Ergebnis der Operation ++x ist der Wert des Operanden nach der Erhöhung. Das Ergebnis der Operation x++ ist der Wert des Operanden vor der Erhöhung. |
 | -- | Verringert den Inhalt des Operanden um 1. Das Ergebnis der Operation --x ist der Wert des Operanden nach der Verringerung. Das Ergebnis der Operation x-- ist der Wert des Operanden vor der Verringerung. |
 
+
 ####Vergleichsoperatoren
 | Operator | Beschreibung |
 |----------|-------------|
@@ -222,6 +230,7 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 | a < b | Ergebnis der Operation ist `true`, wenn `a` kleiner `b` ist. |
 | a <= b | Ergebnis der Operation ist `true`, wenn `a` kleiner oder gleich `b` ist. |
 | a >= b | Ergebnis der Operation ist `true`, wenn `a` größer oder gleich `b` ist. |
+
 
 ####Logische Operatoren
 | Operator | Beschreibung |
@@ -233,6 +242,7 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 | && | (And-Operator, 2. Variante) Der Ausdruck `a && b` ist `true`, wenn sowohl `a` als auch `b` `true` sind. Zuerst wird `a` ausgewertet. Sollte `a` `false` sein, ist in jedem Fall der Gesamtausdruck unabhängig von `b` auch `false`. `b` wird dann nicht mehr ausgewertet. |
 | \|\| | (Or-Operator, 2. Variante) Der Ausdruck `a || b` ist `true`, wenn entweder `a` oder `b` `true` ist. Zuerst wird `a` ausgewertet. Sollte `a` bereits `true` sein, ist in jedem Fall der Gesamtausdruck unabhängig von `b` auch `true`. `b` wird dann nicht mehr ausgewertet. |
 
+---
 
 ###Typenkonvertierungen
 Wenn ein Wert eines bestimmten Typs in einen anderen Typ umgewandelt werden soll, spricht man von Typkonvertierungen oder in engl. type conversion bzw. type casting
