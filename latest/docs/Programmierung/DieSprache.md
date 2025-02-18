@@ -138,7 +138,7 @@ alter = 35;
 ```
 
 
-###Fehler
+###Fehlerarten
 
 
 ####Syntaktischer Fehler
@@ -147,12 +147,31 @@ Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen.
 int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'
 ```
 
+####Laufzeitfehler ( Runtime Error )
+Dies ist ein Fehler, der während der Ausführung eines Programms auftritt, nachdem es erfolgreich kompiliert wurde.
+```cs
+class Program
+{
+    static void Main()
+    {
+        int[] zahlen = { 1, 2, 3 };
 
-####Logischer Fehler
+        try
+        {
+            Console.WriteLine(zahlen[5]); // Fehler wird abgefangen
+        }
+        catch (IndexOutOfRangeException ex)
+        {
+            Console.WriteLine("Fehler: Zugriff außerhalb des gültigen Indexbereichs!");
+        }
+    }
+}
+
+```
+
+####Logischer Fehler ( semantischer Fehler )
 Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartet Ausgaben oder akzeptiert unerwartete Eingaben! 
 ```cs
-using System;
-
 class Program
 {
     static void Main()
