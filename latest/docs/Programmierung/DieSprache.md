@@ -127,7 +127,7 @@ Wenn ein Wert eines bestimmten Typs in einen anderen Typ umgewandelt werden soll
 | **Explizite Typenkonvertierung** | Der Programmierer muss den Compiler dazu "zwingen", den ursprünglichen Typen in einen Zieltypen umzuwandeln. | ```long zahl3 = 44;``` <br> ```int zahl4 = (int)zahl3;```|
 
 
-Warum ist das so ? 
+Warum ist das so ?  
 Warum funktioniert es von ```int``` zu ```long```, aber nicht umgekehrt ?  
 
 
