@@ -22,6 +22,7 @@ Codierungskonventionen dienen den folgenden Zwecken:
 |- MethodenName <br> - PropertyName |- PascalCase | ```public string BesserWennDerMethodenNameDieFunktionErklaert(){}``` |
 |- _klassenVariabeln |- _camelCase | ```private string _ichWillNichtUnbedingt = "öffentlich sein"``` |
 |- lokaleVariabeln |- camelCase | ```string ichHabeEinenOriginellenNamen = '"puff", zum Glück bin ich lokal'``` |
+
 ```cs
 
 // Sortierreihenfolge
