@@ -11,17 +11,17 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 ---
 
 ###Code Konventionen
-Codierungskonventionen dienen den folgenden Zwecken:
-- Sie sorgen für ein einheitliches Erscheinungsbild des Codes. Dadurch wird der Fokus auf den Inhalt gelenkt.
-- Sie ermöglichen, den Code Schneller zu verstehen, da Rückschlüsse basierend auf den bisherigen Erfahrungen gezogen werden können.
-- Sie erleichtern die Bearbeitung, Dokumentation und Speicherung des Codes.
+Codierungskonventionen dienen den folgenden Zwecken:  
+- Sie sorgen für ein einheitliches Erscheinungsbild des Codes. Dadurch wird der Fokus auf den Inhalt gelenkt.  
+- Sie ermöglichen, den Code Schneller zu verstehen, da Rückschlüsse basierend auf den bisherigen Erfahrungen gezogen werden können.  
+- Sie erleichtern die Bearbeitung, Dokumentation und Speicherung des Codes.  
 
 | Name der Bezeichnung | Schreibweise | Beispiel |
 |:---|:---|:---|
-|- KlassenName <br> - InterfaceName <br> - EnumsName | - PascalCase <br> - Singular | ```class DasIstEinAussagekraeftigerName{ }``` |
-|- MethodenName <br> - PropertyName |- PascalCase | ```public string BesserWennDerMethodenNameDieFunktionErklaert(){}``` |
-|- _klassenVariabeln |- _camelCase | ```private string _ichWillNichtUnbedingt = "öffentlich sein"``` |
-|- lokaleVariabeln |- camelCase | ```string ichHabeEinenOriginellenNamen = '"puff", zum Glück bin ich lokal'``` |
+|-  KlassenName <br> -  InterfaceName <br> -  EnumsName | -  PascalCase <br> - Singular | ```class DasIstEinAussagekraeftigerName{ }``` |
+|-  MethodenName <br> -  PropertyName |-  PascalCase | ```public string BesserWennDerMethodenNameDieFunktionErklaert(){}``` |
+|-  _klassenVariabeln |-  _camelCase | ```private string _ichWillNichtUnbedingt = "öffentlich sein"``` |
+|-  lokaleVariabeln |-  camelCase | ```string ichHabeEinenOriginellenNamen = '"puff", zum Glück bin ich lokal'``` |
 
 ```cs
 
