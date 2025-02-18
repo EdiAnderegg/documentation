@@ -59,7 +59,7 @@ public class CodeConvention
    
 }
 ```
-
+ 
 
 ###Deklaration
 Um sicherzustellen, dass genügend Speicherplatz für einen Wert reserviert ist, müssen Variablen deklariert werden.
