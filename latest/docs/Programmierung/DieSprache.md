@@ -93,6 +93,7 @@ Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen.
 int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'
 ```
 
+
 ###Logischer Fehler
 Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartet Ausgaben oder akzeptiert unerwartete Eingaben! 
 ```cs
@@ -115,9 +116,11 @@ class Program
 }
 ```
 
+
 ###Typenkonvertierungen
 Wenn ein Wert eines bestimmten Typs in einen anderen Typ umgewandelt werden soll, spricht man von Typkonvertierungen oder in engl. type conversion bzw. type casting
 
+|Name|Beschreibung|Beispiel|
 |:---|:---|:---|
 | Implizite Typenkonvertierung | Der Compiler übernimmt die Umwandlung des ursprünglichen Typs zum Zieltyp automatisch. | ```int zahl1 = 33;``` <br> ```long zahl2 = zahl1;```|
 | Explizite Typenkonvertierung | Der Programmierer muss den Compiler dazu "zwingen", den ursprünglichen Typen in einen Zieltypen umzuwandeln. | ```long zahl3 = 44;``` <br> ```int zahl4 = (int)zahl3;```|
