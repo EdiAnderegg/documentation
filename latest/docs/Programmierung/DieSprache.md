@@ -410,10 +410,28 @@ ArrayList list = new ArrayList();
 
 ```
  
-####Hashtable + Dictionary
+####Dictionary
 - Implementiert das Interface "IDictionary"
 - Verwenden anstelle eines Index ein Schlüssel
 - Der Schlüssel darf nicht mehrfach vorkommen
+
+```cs
+var dic = new Dictionary<string, string>();
+dic.Add("one","Dog");
+dic.Add("two","Cat");
+dic.Remove("two");
+
+int anz = dic.Count; // Anzahl gespeicherter Elemente
+
+foreach (string element in dic.Values) {
+   Console.WriteLine(element + ", "); // Liefert Elemente
+}
+
+foreach (string key in dic.Keys) {
+   Console.WriteLine(key + ", ");  // Liefert Keys
+}
+
+```
 
 ---
 
