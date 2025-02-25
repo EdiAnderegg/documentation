@@ -383,6 +383,20 @@ for (int y = 0; y <= data.GetUpperBound(0); y++)
   Warum verdoppelt sich die Speicherkapazität ?  
   Handelt es sich um neue Arrays mit festen Grössen ?  
   Was geschieht mit den alten, kleineren und ihren Werten ?  
+
+```cs
+
+List<string> list = new List<sting>(); 
+list.Add("Werner");
+int anzahl = list.Count; // Anzahl gespeicherter Elemente
+
+List<string> list2 = new List<string> { "Peter", "Andreas", "Conie", "Michael", "Gerd", "Hodor", "Katara"};
+list2.Remove("Andreas");        // Entfernt Objekt Andreas
+list2.RemoveAt(0);              // Entfernt das erste Objekt in der Sammlung
+list2.Clear();                  // Löscht alle Elemente
+list2.Insert(0, "Manfred");     // Wird an erster Stelle eingefügt.
+
+```
  
 
 ---
