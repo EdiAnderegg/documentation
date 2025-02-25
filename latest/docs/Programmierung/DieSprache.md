@@ -410,12 +410,15 @@ ArrayList list = new ArrayList();
 
 ```
  
-####Dictionary
+####Dictionary + Hashtable
 - Implementiert das Interface "IDictionary"
 - Verwenden anstelle eines Index ein Schlüssel
 - Der Schlüssel darf nicht mehrfach vorkommen
 
 ```cs
+
+// Dictionary
+
 var dic = new Dictionary<string, string>();
 dic.Add("one","Dog");
 dic.Add("two","Cat");
@@ -431,7 +434,29 @@ foreach (string key in dic.Keys) {
    Console.WriteLine(key + ", ");  // Liefert Keys
 }
 
+
+
+// Hashtable
+
+Hashtable hash = new Hashtable();
+hash.Add("one", "Dog");
+hash.Add("two", "Cat");
+hash.Remove("two");
+
+// Praktisch die gleichen Funktionalitäten wie das Dictionary
+// Unterschied zum Dictionary: Schlüssel und Wert sind vom Typ Object
+
 ```
+
+**Unterschiede im Detail**
+| **Dictionary** | **Hashtable** |
+|--------------|--------------|
+| Das Wörterbuch ist ein generisches Wörterbuch `<TKey, TValue>` | Hashtable ist ein nicht generischer Typ |
+| Die Dictionary-Klasse ist ein starker Typ `<TKey, TValue>`. Daher müssen Sie die Datentypen für Schlüssel und Wert angeben. | Hashtable ist eine schwach typisierte Datenstruktur, sodass Sie Schlüssel und Werte eines beliebigen Objekttyps hinzufügen können. |
+| Boxen / Unboxen ist nicht erforderlich. | Werte müssen Boxing / Unboxing erhalten. |
+| Wenn Sie versuchen, auf ein nicht vorhandenes Schlüssel-Wörterbuch zuzugreifen, tritt ein Laufzeitfehler auf. | Wenn Sie versuchen, auf nicht vorhandene Schlüssel-Hashtable zuzugreifen, werden Nullwerte angegeben. |
+| Dictionary behält eine Reihenfolge der gespeicherten Werte bei. | Hashtable behält niemals eine Reihenfolge der gespeicherten Werte bei. |
+| Das Wörterbuch wird unter `System.Collections.Generic` Namespace definiert. | Hashtable ist im Namespace `System.Collections` definiert. |
 
 ---
 
