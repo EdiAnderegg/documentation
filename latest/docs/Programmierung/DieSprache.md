@@ -290,16 +290,51 @@ Datentyp[] bezeichner = new Datentyp[Grösse];
 
 //Werte zuweisen / auslesen 
 
+
+// Variante 1
+
 int[] data = new int[10];
 data[0] = 123;
 data[1] = 456;
 
 
+// Variante 2
+
+int[] data2 = {123, 456};
 
 TxtValue1.Text = Convert.ToString(data[0]); // Output: 123
-TxtValue2.Text = Convert.ToString(data.Length); // Output: 10
+
+TxtValue2.Text = Convert.ToString(data2.Length); // Output: 2
 
 ```
+
+| **Eigenschaft**             | **Verhalten**                             |
+|----------------------------|------------------------------------------|
+| `irgendeinArray.Length`    | Besagt, wie gross ein Array ist         |
+
+| **Methode**                              | **Verhalten**                                                |
+|------------------------------------------|-------------------------------------------------------------|
+| `irgendeinArray.Clone()`                 | Erstellt eine flache Kopie eines Arrays und liefert die Kopie |
+| `Array.IndexOf(einArray, gesuchterWert)` | Sucht einen Wert in einem Array und liefert dessen Position zurück |
+| `Array.Sort(irgendeinArray)`             | Sortiert ein Array aufsteigend |
+
+####Mehrdimensionale Arrays 
+Es wird ein zweidimensionales Array aufgebaut, in welchen eine Dimension den Orten und in der anderen Dimension den Werten zugewiesen werden.
+
+```cs
+
+//Deklarierung und Instanziierung
+
+int[,] TwoDimensionalData = new int[3, 24];
+
+// Variante 1 
+
+TwoDimensionalData[0,0] = 123;
+
+
+```
+
+---
 
 ###Typenkonvertierungen
 Wenn ein Wert eines bestimmten Typs in einen anderen Typ umgewandelt werden soll, spricht man von Typkonvertierungen oder in engl. type conversion bzw. type casting
