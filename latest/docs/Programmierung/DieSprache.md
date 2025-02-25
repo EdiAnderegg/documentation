@@ -378,7 +378,11 @@ for (int y = 0; y <= data.GetUpperBound(0); y++)
 - Erlauben den Zugriff auf Elemente über Indizes
 - Implementiert das IList-Interface.
 - Standardmässig eine Kapazität von 0, bevor ein Element hinzugefügt wird. 
-- Die Kapazität erhöht sich von 0 auf 4 und verdoppelt sich dann, bei einfügen eines Elements.
+- Die Speicherkapazität erhöht sich von 0 auf 4 und verdoppelt sich. 
+  Warum geschieht das ?
+  Warum verdoppelt sich die Speicherkapazität ?
+  Handelt es sich um neue Arrays mit festen Grössen ?
+  Was geschieht mit den alten, kleineren und ihren Werten ?
  
 
 ---
