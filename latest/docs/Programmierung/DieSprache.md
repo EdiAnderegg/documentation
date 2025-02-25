@@ -302,6 +302,8 @@ data[1] = 456;
 
 int[] data2 = {123, 456};
 
+
+// Abrufen
 TxtValue1.Text = Convert.ToString(data[0]); // Output: 123
 
 TxtValue2.Text = Convert.ToString(data2.Length); // Output: 2
@@ -325,12 +327,25 @@ Es wird ein zweidimensionales Array aufgebaut, in welchen eine Dimension den Ort
 
 //Deklarierung und Instanziierung
 
-int[,] TwoDimensionalData = new int[3, 24];
+int[,] TwoDimensionalData = new int[3, 3];
 
 // Variante 1 
 
-TwoDimensionalData[0,0] = 123;
+TwoDimensionalData[0,0] = 1;
 
+// Variante 2
+
+int[,] TwoDimensionalData2 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+//Abrufen mit GetUpperBound() Methode
+
+for (int y = 0; y <= data.GetUpperBound(0); y++)
+{
+   for (int x = 0; x <= data.GetUpperBound(1); x++)
+   {
+       TxtValue1.Text = Convert.ToString(TwoDimensionalData2[x,y]);
+   }
+}
 
 ```
 
