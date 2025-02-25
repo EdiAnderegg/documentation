@@ -448,7 +448,8 @@ hash.Remove("two");
 
 ```
 
-**Unterschiede im Detail**
+**Unterschiede im Detail**  
+
 | **Dictionary** | **Hashtable** |
 |--------------|--------------|
 | Das Wörterbuch ist ein generisches Wörterbuch `<TKey, TValue>` | Hashtable ist ein nicht generischer Typ |
