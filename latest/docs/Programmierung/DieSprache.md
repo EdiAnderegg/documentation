@@ -284,9 +284,22 @@ Eine feste Grösse ist, wie der Name schon sagt, eine Grösse, die immer gleich 
 
 ####Flexible Grösse
 Sammlungen flexibler Grösse sind Klassen, die ähnlich wie ein Array als Container für Elemente gleichen Typs dienen. 
-
 Der Unterschied besteht darin, dass diese Klassen eine dynamische Grösse haben. Sie wachsen mit der Anzahl der Einträge und haben keine "leeren" Indizes.
 Klassen werden auch Sammlungen, Auflistungen oder Listen genannt.
+
+| **Sammlung**         | **Beschreibung** |
+|----------------------|-----------------|
+| **ArrayList**       | Diese Liste ist wohl die universellste. Sie nimmt beliebige Objekte auf und gestattet den wahlfreien Zugriff auf die Listenelemente. |
+| **BitArray**        | Verwaltet ein Array von Bits. |
+| **CollectionsUtil** | Eine Auflistung, bei der keine Unterscheidung zwischen Groß- und Kleinschreibung erfolgt. |
+| **Hashtable**       | Die Elemente werden als Schlüssel-Wert-Paare gespeichert. Der Zugriff auf die Elemente erfolgt über den jeweiligen Schlüssel. |
+| **HybridDictionary** | Das Verhalten orientiert sich an der Anzahl der Listenelemente. Ist die Anzahl der Elemente gering, operiert diese Klasse als ListDictionary-Collection, wird die Anzahl größer, als Hashtable. |
+| **ListDictionary**  | Solange die Anzahl der Elemente kleiner als zehn ist, werden die Operationen mit den Elementen schneller ausgeführt als bei einer Hashtable. |
+| **NameValueCollection** | Verwaltet ein Schlüssel-Wert-Paar, wobei sowohl der Schlüssel als auch der Wert durch Zeichenfolgen beschrieben werden. Einem Schlüssel können mehrere Zeichenfolgen zugeordnet werden, d. h., der Schlüssel ist nicht eindeutig. |
+| **SortedList**      | Diese Auflistung verwaltet Schlüssel-Wert-Paare, die nach den Schlüsseln sortiert sind und auf die sowohl über Schlüssel als auch über Indizes zugegriffen werden kann. Damit vereint sie die Merkmale von Hashtable und ArrayList. |
+| **StringCollection** | Eine Auflistung, die nur Zeichenfolgen enthält. |
+| **StringDictionary** | Ähnlich einer Hashtable; der Schlüssel ist jedoch immer eine Zeichenfolge. |
+
 
 
 ####Array
@@ -358,6 +371,15 @@ for (int y = 0; y <= data.GetUpperBound(0); y++)
 }
 
 ```
+
+####ArrayList + List
+
+- `ArrayList` und `List<T>` sind dynamische Listen, die in ihrer Grösse wachsen können.
+- Erlauben den Zugriff auf Elemente über Indizes
+- Implementiert das IList-Interface.
+- Standardmässig eine Kapazität von 0, bevor ein Element hinzugefügt wird. 
+- Die Kapazität erhöht sich von 0 auf 4 und verdoppelt sich dann, bei einfügen eines Elements.
+ 
 
 ---
 
