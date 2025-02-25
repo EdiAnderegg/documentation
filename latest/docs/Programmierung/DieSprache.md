@@ -458,6 +458,17 @@ hash.Remove("two");
 | Dictionary behält eine Reihenfolge der gespeicherten Werte bei. | Hashtable behält niemals eine Reihenfolge der gespeicherten Werte bei. |
 | Das Wörterbuch wird unter `System.Collections.Generic` Namespace definiert. | Hashtable ist im Namespace `System.Collections` definiert. |
 
+####Boxing/Unboxing
+
+| **Boxing** | **Unboxing** |
+|------------|-------------|
+| **Definition:** Der Prozess, bei dem ein Werttyp (z. B. `int`) in einen Referenztyp (z. B. `object`) umgewandelt wird. | **Definition:** Hier wird das Objekt zurück in den ursprünglichen Wertetyp gewandelt. |
+| **Beispiel:** | **Beispiel:** |
+| ```csharp  | ```csharp  |
+| int y = 9; | int c = (int)obj; |
+| object obj = y; | ``` |
+| ``` |  |
+
 ---
 
 ###Typenkonvertierungen
