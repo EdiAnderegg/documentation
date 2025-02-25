@@ -410,6 +410,10 @@ ArrayList list = new ArrayList();
 
 ```
  
+####Hashtable + Dictionary
+- Implementiert das Interface "IDictionary"
+- Verwenden anstelle eines Index ein Schlüssel
+- Der Schlüssel darf nicht mehrfach vorkommen
 
 ---
 
