@@ -279,6 +279,13 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 | Array | ArrayList <br> List <br> Hashtable <br> Dictionary <br> Etc. |
 
 
+####Feste Grösse 
+Eine feste Grösse ist, wie der Name schon sagt, eine Grösse, die immer gleich bleibt, unabhängig davon, ob ein Wert eingegeben wird oder nicht. Wenn also z.B. in einem Array ein Element entfernt wird, bleibt ein leerer Index zurück.
+
+####Flexible Grösse
+
+
+
 ####Array
 Mit einem Array können Werte in einer Variablen mit einer vordefinierten Menge von Werten gespeichert werden. Deshalb spricht man von einer festen Grösse.
 
