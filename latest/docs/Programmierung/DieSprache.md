@@ -294,7 +294,11 @@ int[] data = new int[10];
 data[0] = 123;
 data[1] = 456;
 
-TxtValue1.Text = Convert.ToString(data[0]);
+
+
+TxtValue1.Text = Convert.ToString(data[0]); // Output: 123
+TxtValue2.Text = Convert.ToString(data.Length); // Output: 10
+
 ```
 
 ###Typenkonvertierungen
