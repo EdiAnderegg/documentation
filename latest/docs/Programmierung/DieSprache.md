@@ -221,6 +221,7 @@ class Program
     }
 }
 ```
+
 | **Arten** | **Beschreibung** |
 |:------|:-------------|
 |**Reproduzierbare logische Fehler** | Fehler, welcher in einer bestimmten Konstellation immmerwährend auftauchen und sich gleich immer auf identische Art und Weise zu erkennen geben. |
