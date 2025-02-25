@@ -283,10 +283,4 @@ Wenn ein Wert eines bestimmten Typs in einen anderen Typ umgewandelt werden soll
 
 
 Warum ist das so ?  
-Warum funktioniert es von ```int``` zu ```long```, aber nicht umgekehrt ?  
-
-
-
- 
-
-
+Warum funktioniert es von ```int``` zu ```long```, aber nicht umgekehrt ?
