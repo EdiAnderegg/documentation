@@ -61,6 +61,30 @@ Wochentag tagVonNummer = (Wochentag)4;  // Freitag als Wert
 
 ---
 
+###Exception Handling  
+Das Exception Handling dient zum Abfangen von Laufzeitfehlern und dem Behandeln von Ausnahmen. Diese treten auf, wenn das Programm versucht, eine unzulässige Operation durchzuführen.  
+```cs
+
+int value1 = Convert.ToInt16(TxtValue1.Text);           
+int value2 = Convert.ToInt16(TxtValue2.Text);            
+
+try
+ {                
+   double result = value1 / value2;                
+   TxtResult.Text = Convert.ToString(result);           
+}
+catch (DivideByZeroException ex)            
+{                
+   MessageBox.Show("Division durch 0 nicht erlaubt", "Fehler!", 
+   MessageBoxButtons.OK, MessageBoxIcon.Error);
+}
+```
+
+Eine umfängliche Liste aller vorhandener Exceptions, welche die .Net Bibliothek aus dem Namensraum System mitbringt:
+[Exception List](https://msdn.microsoft.com/en-us/library/system.systemexception(v=vs.110).aspx)
+
+---
+
 ###Code Konventionen
 Codierungskonventionen dienen den folgenden Zwecken:  
 
@@ -107,7 +131,7 @@ public class CodeConvention
    // Methoden
    public void MyPublicMethod(){}
 
-
+ 
    private void MyPrivateMethod(){}
    
 }
@@ -177,6 +201,7 @@ class Program
 
 ####Logischer Fehler 
 ( semantischer Fehler )  
+
 Der Code ist syntaktisch korrekt und die IDE (Integrated Development Environment) oder der Code-Editor melden keine Fehler. Erst wenn das Programm ausgeführt wird, liefert es unerwartet Ausgaben oder akzeptiert unerwartete Eingaben! 
 ```cs
 class Program
@@ -195,6 +220,10 @@ class Program
     }
 }
 ```
+| **Arten** | **Beschreibung** |
+|:------|:-------------|
+|**Reproduzierbare logische Fehler** | Fehler, welcher in einer bestimmten Konstellation immmerwährend auftauchen und sich gleich immer auf identische Art und Weise zu erkennen geben. |
+|**Sporadische logische Fehler** | Fehler, welche aufgrund komplexer Konstellationen nur ab und zu auftauchen und sich teilweise nicht immer auf die selbe Art und Weise zu erkennen geben. |
 
 ---
 
@@ -210,7 +239,7 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 
 
 ####Arithmetische Operatoren
-| Operator | Beschreibung |
+| **Operator** | **Beschreibung** |
 |----------|-------------|
 | + | Hat zwei Funktionalitäten: Als Additionsoperator bildet er die Summe zweier Operanden (x + y). Als Vorzeichenoperator beschreibt er eine positive Zahl (+x), ist also ein einstelliger (unärer) Operator. |
 | - | Hat ebenfalls zwei Funktionalitäten: Als Subtraktionsoperator eingesetzt, bildet er die Differenz zweier Operanden (x - y). Als unärer Vorzeichenoperator beschreibt er eine negative Zahl (-x). |
@@ -222,7 +251,7 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 
 
 ####Vergleichsoperatoren
-| Operator | Beschreibung |
+| **Operator** | **Beschreibung** |
 |----------|-------------|
 | a == b | Prüft, ob der Ausdruck `a` dem Ausdruck `b` entspricht, und gibt in diesem Fall `true` zurück. |
 | a != b | Ergebnis der Operation ist `true`, wenn `a` ungleich `b` ist. |
@@ -233,7 +262,7 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 
 
 ####Logische Operatoren
-| Operator | Beschreibung |
+| **Operator** | **Beschreibung** |
 |----------|-------------|
 | ! | Unärer Negationsoperator. Der Ausdruck `!a` ist `true`, wenn `a` einen unwahren Wert beschreibt, und `false`, wenn `a` wahr ist. |
 | & | (And-Operator, 1. Variante) Der Ausdruck `a & b` ist dann `true`, wenn sowohl `a` als auch `b` `true` sind. Dabei werden in jedem Fall beide Ausdrücke ausgewertet. |
@@ -247,7 +276,7 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 ###Typenkonvertierungen
 Wenn ein Wert eines bestimmten Typs in einen anderen Typ umgewandelt werden soll, spricht man von Typkonvertierungen oder in engl. type conversion bzw. type casting
 
-|Name|Beschreibung|Beispiel|
+|**Name**|**Beschreibung**|**Beispiel**|
 |:---|:---|:---|
 | **Implizite Typenkonvertierung** | Der Compiler übernimmt die Umwandlung des ursprünglichen Typs zum Zieltyp automatisch. | ```int zahl1 = 33;``` <br> ```long zahl2 = zahl1;```|
 | **Explizite Typenkonvertierung** | Der Programmierer muss den Compiler dazu "zwingen", den ursprünglichen Typen in einen Zieltypen umzuwandeln. | ```long zahl3 = 44;``` <br> ```int zahl4 = (int)zahl3;```|
