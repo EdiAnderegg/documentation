@@ -283,7 +283,10 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 Eine feste Grösse ist, wie der Name schon sagt, eine Grösse, die immer gleich bleibt, unabhängig davon, ob ein Wert eingegeben wird oder nicht. Wenn also z.B. in einem Array ein Element entfernt wird, bleibt ein leerer Index zurück.
 
 ####Flexible Grösse
+Sammlungen flexibler Grösse sind Klassen, die ähnlich wie ein Array als Container für Elemente gleichen Typs dienen. 
 
+Der Unterschied besteht darin, dass diese Klassen eine dynamische Grösse haben. Sie wachsen mit der Anzahl der Einträge und haben keine "leeren" Indizes.
+Klassen werden auch Sammlungen, Auflistungen oder Listen genannt.
 
 
 ####Array
