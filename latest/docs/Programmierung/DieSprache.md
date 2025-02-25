@@ -11,80 +11,6 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 ---
 
 
-###Enumeration
-Enumerationen erlauben es, **konstante Werte** bzw. unter einem eigenen Datentype zusammenzufassen!
-
-*Als Analogie zu Enumeration kann man den Datentype bool hinzuziehen. Diesem sind auch nur zwei reservierte Namen zuzuweisen (`true` oder `false`).  
-Intern kann der Compiler aber auch nicht mit diesen namenbasierenden Werten operieren, trotzdem stehen diese zur Vereinfachung zur Verfügung!*
-
-```cs
-
-
-enum Wochentag
-{
-    Montag,     // Standardmässig 0
-    Dienstag,   // 1
-    Mittwoch,   // 2
-    Donnerstag, // 3
-    Freitag,    // 4
-    Samstag,    // 5
-    Sonntag     // 6
-}
-
-
-/*
- Einem Enumerator explizit einen Wert zuweisen
-
-enum Wochentag : int
-{
-    Montag = 1,     //1
-    Dienstag = 2,   // 2
-    Mittwoch = 3,   // 3
-    Donnerstag = 4, // 4
-    Freitag = 5,    // 5
-    Samstag = 6,    // 6
-    Sonntag = 7     // 7
-}
-*/
-
-
-// Enum-Wert zuweisen
-Wochentag heute = Wochentag.Dienstag;  // Dienstag als Wert
-
-// Umwandlung Enum → Zahl
-int nummer = (int)heute;  // 1 als Wert
-
-// Umwandlung Zahl → Enum
-Wochentag tagVonNummer = (Wochentag)4;  // Freitag als Wert
-
-```
-
----
-
-###Exception Handling  
-Das Exception Handling dient zum Abfangen von Laufzeitfehlern und dem Behandeln von Ausnahmen. Diese treten auf, wenn das Programm versucht, eine unzulässige Operation durchzuführen.  
-```cs
-
-int value1 = Convert.ToInt16(TxtValue1.Text);           
-int value2 = Convert.ToInt16(TxtValue2.Text);            
-
-try
- {                
-   double result = value1 / value2;                
-   TxtResult.Text = Convert.ToString(result);           
-}
-catch (DivideByZeroException ex)            
-{                
-   MessageBox.Show("Division durch 0 nicht erlaubt", "Fehler!", 
-   MessageBoxButtons.OK, MessageBoxIcon.Error);
-}
-```
-
-Eine umfängliche Liste aller vorhandener Exceptions, welche die .Net Bibliothek aus dem Namensraum System mitbringt:
-[Exception List](https://msdn.microsoft.com/en-us/library/system.systemexception(v=vs.110).aspx)
-
----
-
 ###Code Konventionen
 Codierungskonventionen dienen den folgenden Zwecken:  
 
@@ -164,6 +90,81 @@ alter = 35;
 ```
 
 ---
+
+###Enumeration
+Enumerationen erlauben es, **konstante Werte** bzw. unter einem eigenen Datentype zusammenzufassen!
+
+*Als Analogie zu Enumeration kann man den Datentype bool hinzuziehen. Diesem sind auch nur zwei reservierte Namen zuzuweisen (`true` oder `false`).  
+Intern kann der Compiler aber auch nicht mit diesen namenbasierenden Werten operieren, trotzdem stehen diese zur Vereinfachung zur Verfügung!*
+
+```cs
+
+
+enum Wochentag
+{
+    Montag,     // Standardmässig 0
+    Dienstag,   // 1
+    Mittwoch,   // 2
+    Donnerstag, // 3
+    Freitag,    // 4
+    Samstag,    // 5
+    Sonntag     // 6
+}
+
+
+/*
+ Einem Enumerator explizit einen Wert zuweisen
+
+enum Wochentag : int
+{
+    Montag = 1,     //1
+    Dienstag = 2,   // 2
+    Mittwoch = 3,   // 3
+    Donnerstag = 4, // 4
+    Freitag = 5,    // 5
+    Samstag = 6,    // 6
+    Sonntag = 7     // 7
+}
+*/
+
+
+// Enum-Wert zuweisen
+Wochentag heute = Wochentag.Dienstag;  // Dienstag als Wert
+
+// Umwandlung Enum → Zahl
+int nummer = (int)heute;  // 1 als Wert
+
+// Umwandlung Zahl → Enum
+Wochentag tagVonNummer = (Wochentag)4;  // Freitag als Wert
+
+```
+
+---
+
+###Exception Handling  
+Das Exception Handling dient zum Abfangen von Laufzeitfehlern und dem Behandeln von Ausnahmen. Diese treten auf, wenn das Programm versucht, eine unzulässige Operation durchzuführen.  
+```cs
+
+int value1 = Convert.ToInt16(TxtValue1.Text);           
+int value2 = Convert.ToInt16(TxtValue2.Text);            
+
+try
+ {                
+   double result = value1 / value2;                
+   TxtResult.Text = Convert.ToString(result);           
+}
+catch (DivideByZeroException ex)            
+{                
+   MessageBox.Show("Division durch 0 nicht erlaubt", "Fehler!", 
+   MessageBoxButtons.OK, MessageBoxIcon.Error);
+}
+```
+
+Eine umfängliche Liste aller vorhandener Exceptions, welche die .Net Bibliothek aus dem Namensraum System mitbringt:
+[Exception List](https://msdn.microsoft.com/en-us/library/system.systemexception(v=vs.110).aspx)
+
+---
+
 
 ###Fehlerarten
 
