@@ -386,6 +386,8 @@ for (int y = 0; y <= data.GetUpperBound(0); y++)
 
 ```cs
 
+// Bei List
+
 List<string> list = new List<sting>(); 
 list.Add("Werner");
 int anzahl = list.Count; // Anzahl gespeicherter Elemente
@@ -395,6 +397,16 @@ list2.Remove("Andreas");        // Entfernt Objekt Andreas
 list2.RemoveAt(0);              // Entfernt das erste Objekt in der Sammlung
 list2.Clear();                  // Löscht alle Elemente
 list2.Insert(0, "Manfred");     // Wird an erster Stelle eingefügt.
+
+
+
+
+// Bei ArrayList
+
+ArrayList list = new ArrayList();
+
+// Praktisch die gleichen Funktionalitäten wie die List 
+// Unterschied zu List Speichert Elemente vom Typ Object
 
 ```
  
