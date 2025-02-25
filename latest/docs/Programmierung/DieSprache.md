@@ -465,10 +465,7 @@ hash.Remove("two");
 |------------|-------------|
 | **Definition:** Der Prozess, bei dem ein Werttyp (z. B. `int`) in einen Referenztyp (z. B. `object`) umgewandelt wird. | **Definition:** Hier wird das Objekt zurück in den ursprünglichen Wertetyp gewandelt. |
 | **Beispiel:** | **Beispiel:** |
-| ```csharp  | ```csharp  |
-| int y = 9; | int c = (int)obj; |
-| object obj = y; | ``` |
-| ``` |  |
+| `int y = 9;` <br> `object obj = y;` | `int c = (int)obj;` |
 
 ---
 
