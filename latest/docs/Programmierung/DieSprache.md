@@ -6,7 +6,7 @@
 
 Wie in jedem Beruf gibt es auch im IT-Bereich eine Sprache!
 Die Informatik hat sich in den letzten Jahrzehnten rasant entwickelt und ist zu einem grundlegenden und wichtigen Bestandteil des täglichen Lebens geworden. 
-Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontrolle zu behalten, hat sich die IT in klare Sektoren aufgeteilt. So hat jeder Sektor seine eigene Sprache entwickelt, wie z.B. der Sektor der Softwareentwicklung!
+Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontrolle zu behalten, hat sich die IT in klare Sektoren aufgeteilt. So hat jeder Sektor seine eigene Sprache weiterentwickelt, wie z.B. der Sektor der Softwareentwicklung!
 
 ---
 
@@ -272,6 +272,30 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 | \|\| | (Or-Operator, 2. Variante) Der Ausdruck `a || b` ist `true`, wenn entweder `a` oder `b` `true` ist. Zuerst wird `a` ausgewertet. Sollte `a` bereits `true` sein, ist in jedem Fall der Gesamtausdruck unabhängig von `b` auch `true`. `b` wird dann nicht mehr ausgewertet. |
 
 ---
+
+###Sammlungen
+|**Feste Grösse**|**Flexible Grösse**|
+|:---------------|:-----------------|
+| Array | ArrayList <br> List <br> Hashtable <br> Dictionary <br> Etc. |
+
+
+####Array
+Mit einem Array können Werte in einer Variablen mit einer vordefinierten Menge von Werten gespeichert werden. Deshalb spricht man von einer festen Grösse.
+
+```cs
+
+//Deklarierung und Instanziierung
+
+Datentyp[] bezeichner = new Datentyp[Grösse];
+
+//Werte zuweisen / auslesen 
+
+int[] data = new int[10];
+data[0] = 123;
+data[1] = 456;
+
+TxtValue1.Text = Convert.ToString(data[0]);
+```
 
 ###Typenkonvertierungen
 Wenn ein Wert eines bestimmten Typs in einen anderen Typ umgewandelt werden soll, spricht man von Typkonvertierungen oder in engl. type conversion bzw. type casting
