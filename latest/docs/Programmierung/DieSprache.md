@@ -229,27 +229,6 @@ class Program
 
 ---
 
-###Kopie per Wert, Kopie per Referenz
-
-####Kopie per Wert
-Werden von elementaren / Atomare Datentypen wie byte, int, string, u.s.w. an eine Methode übergeben, wird von den Werten eine KOPIE in die Parametervariablen erstellt. Man spricht vom Konzept "copy by value".
-
-´´´cs
-int x = 10;
-int y = 12;
-
-TauschWerte(x, y);
-
-private void TauschWerte(int a, int b)
-{
-   int temp = a;
-   a = b;
-   b = temp;
-}
-´´´ 
-
-
-
 ###Methode
 
 ####Parameter
@@ -311,6 +290,45 @@ public int Berechne(int a, params int[] zahlen)
   return resultat;
 }
 ´´´
+
+####Kopie per Wert
+Werden von elementaren / Atomare Datentypen wie byte, int, string, u.s.w. an eine Methode übergeben, wird von den Werten eine KOPIE in die Parametervariablen erstellt. Man spricht vom Konzept "copy by value".
+
+´´´cs
+int x = 10;
+int y = 12;
+
+TauschWerte(x, y);
+
+private void TauschWerte(int a, int b)
+{
+   int temp = a;
+   a = b;
+   b = temp;
+}
+´´´
+
+####Kopie per Referenz
+Möchte man, dass Veränderungen in der Methode eine Rückwirkung auf die originalen Variablen haben, müssen diese per REFERENZ an die Methode übergeben werden. Das Konzept lautet "copy by reference". Das notwendige Schlüsselwort vor den Parametern lautet ref.  
+
+´´´cs
+int x = 10;
+int y = 12;
+
+TauschWerte(ref x, ref y);
+
+private void TauschWerte(ref int a, ref int b)
+{
+   int temp = a;
+   a = b;
+   b = temp;
+}
+´´´
+Datenfelder/Datenstrukturen(Arrays) gehören zu den sogenannten Verweistypen. Variablen dieser Typen werden automatisch und immer per Referenz an eine Methode übergeben(copy by reference). Somit kann auf das Schlüsselwort ref verzichtet werden.
+
+Warum ist das so ?
+Warum sind die Arrays bereits referenziert?
+Sind es auch Objekte?
 
 ---
 
