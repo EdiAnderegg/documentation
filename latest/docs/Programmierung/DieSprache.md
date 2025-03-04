@@ -229,6 +229,30 @@ class Program
 
 ---
 
+###Kapselung
+
+Grundsätzlich sollten Eigenschaften einer Klasse immer den private Zugriffsmodifizierer besitzen. Man spricht hier von Datenkapselung. Die Datenkapselung ist eines der Schlüsselkonzepte der objektorientierten Programmierung. 
+
+Auch können get und set entsprechende Zugriffsmodifizierer zugewiesen werden. Allerdings gelten hier bestimmte Regeln. Ein Modifizierer eines Accessors (get oder set) muss mindestens so restriktiv sein wie das Property (Eigenschaftsmethode) selbst. 
+
+´´´cs
+class Circle
+{
+   private int radius;
+
+   public int Radius 
+   {
+      get { return radius; }
+      private set
+      {
+          if(value>=0)
+          radius=value;
+      }
+   }
+
+}
+´´´
+
 ###Methode
 
 ####Parameter
