@@ -447,7 +447,7 @@ Eine rekursive Methode muss jedoch eine Verzweigung (bedingte Anweisung) enthalt
 Es gibt Probleme, die mit rekursiven Aufrufen "eleganter" gelöst werden können als ohne.
 Die meisten Probleme lassen sich jedoch auch ohne Rekursion lösen. 
 
-´´´cs
+```cs
 private void Divide(ref double z) 
 {
    z /= 2;
@@ -458,7 +458,7 @@ private void Divide(ref double z)
       Divide(ref z);
    }
 }
-´´´
+```
 
 ---
 
@@ -495,7 +495,6 @@ Klassen werden auch Sammlungen, Auflistungen oder Listen genannt.
 Mit einem Array können Werte in einer Variablen mit einer vordefinierten Menge von Werten gespeichert werden. Deshalb spricht man von einer festen Grösse.
 
 ```cs
-
 //Deklarierung und Instanziierung
 
 Datentyp[] bezeichner = new Datentyp[Grösse];
@@ -519,7 +518,6 @@ int[] data2 = {123, 456};
 TxtValue1.Text = Convert.ToString(data[0]); // Output: 123
 
 TxtValue2.Text = Convert.ToString(data2.Length); // Output: 2
-
 ```
 
 | **Eigenschaft**             | **Verhalten**                             |
