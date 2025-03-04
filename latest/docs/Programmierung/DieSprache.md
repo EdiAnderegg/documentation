@@ -248,6 +248,28 @@ EineMethode("Argument1", "Argument2");
 
 ´´´
 
+Eine Methode kann jeweils nur einen Wert (oder eine Referenz) zurückgeben. Die Rückgabe mehrerer Werte ist nicht möglich.
+
+####Variabilität der Argumente
+
+**Optionale Parameter**
+´´´cs
+var resultat = Berechne(2, 3);
+var resultat2 = Berechne(2);
+´´´
+
+**Benannte optionale Parameter**
+´´´cs
+var resultat3 = Berechne(2, c: 55, b: 100);
+´´´
+
+´´´cs
+public int Berechne(int a, int b = 2, int c = 2)
+{
+   var resultat = a + b + c;
+   return resultat;
+}
+´´´
 
 ---
 
