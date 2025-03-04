@@ -270,6 +270,23 @@ public int Berechne(int a, int b = 2, int c = 2)
    return resultat;
 }
 ´´´
+**Beliebig viele Argumente**
+´´´cs
+var resultat = Berechne(2,3,4,1,5);
+var resultat2 = Berechne(2);
+´´´
+
+´´´cs
+public int Berechne(int a, params int[] zahlen)
+{
+  int resultat = +a;
+  foreach (var z in zahlen)
+  {
+      resultat += z;
+  }
+  return resultat;
+}
+´´´
 
 ---
 
