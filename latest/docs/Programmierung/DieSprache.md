@@ -117,7 +117,7 @@ enum Wochentag
 
 enum Wochentag : int
 {
-    Montag = 1,     //1
+    Montag = 1,     // 1
     Dienstag = 2,   // 2
     Mittwoch = 3,   // 3
     Donnerstag = 4, // 4
