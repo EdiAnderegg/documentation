@@ -253,6 +253,8 @@ class Circle
 }
 ´´´
 
+---
+
 ###Methode
 
 ####Parameter
