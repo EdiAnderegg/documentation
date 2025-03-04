@@ -229,6 +229,28 @@ class Program
 
 ---
 
+###Methode
+
+####Parameter
+Parameter sind lokale Variablen und stehen als Platzhalter für beliebige Werte (Argumente), welche zum Zeitpunkt des Aufrufs an die Methode übergeben werden. 
+
+´´´cs
+// Methode und Parameter
+
+private void EineMethode(string parameter1, string parameter2)
+{
+   // Nur der lokale Code hat Zugriff auf die lokalen Variablen(parameter1, parameter2)
+}
+
+// Aufrufs Methode und Argumenten
+
+EineMethode("Argument1", "Argument2"); 
+
+´´´
+
+
+---
+
 ###Operatoren
 Ein Ausdruck ist die kleinste ausführbare Einheit eines Programms und setzt mindestens einen Operator voraus.
 ```cs
