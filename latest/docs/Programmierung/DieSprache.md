@@ -234,7 +234,7 @@ Grundsätzlich sollten Eigenschaften einer Klasse immer den private Zugriffsmodi
 
 Auch können get und set entsprechende Zugriffsmodifizierer zugewiesen werden. Allerdings gelten hier bestimmte Regeln. Ein Modifizierer eines Accessors (get oder set) muss mindestens so restriktiv sein wie das Property (Eigenschaftsmethode) selbst. 
 
-´´´cs
+```cs
 class Circle
 {
    private int radius;
@@ -250,12 +250,12 @@ class Circle
    }
 
 }
-´´´
+```
 
 ####Auto-Property
 Nicht selten werden Objekteigenschaften benötigt, ohne dass Code in set und get notwendig ist.
 
-´´´cs
+```cs
 class Circle
 {
    private int radius;
@@ -278,7 +278,7 @@ class Circle
 
    public double YCoordinate { get; set; } = 100.0;
 }
-´´´
+```
 
 ---
 
@@ -292,7 +292,7 @@ class Circle
 ####Parameter
 Parameter sind lokale Variablen und stehen als Platzhalter für beliebige Werte (Argumente), welche zum Zeitpunkt des Aufrufs an die Methode übergeben werden. 
 
-´´´cs
+```cs
 // Methode und Parameter
 
 private void EineMethode(string parameter1, string parameter2)
@@ -303,8 +303,7 @@ private void EineMethode(string parameter1, string parameter2)
 // Aufrufs Methode und Argumenten
 
 EineMethode("Argument1", "Argument2"); 
-
-´´´
+```
 
 Eine Methode kann jeweils nur einen Wert (oder eine Referenz) zurückgeben. Die Rückgabe mehrerer Werte ist nicht möglich.
 
@@ -312,32 +311,33 @@ Eine Methode kann jeweils nur einen Wert (oder eine Referenz) zurückgeben. Die 
 
 **Optionale Parameter**
 
-´´´cs
+```cs
 var resultat = Berechne(2, 3);
 var resultat2 = Berechne(2);
-´´´
+```
 
 **Benannte optionale Parameter**
 
-´´´cs
+```cs
 var resultat3 = Berechne(2, c: 55, b: 100);
-´´´
+```
 
-´´´cs
+```cs
 public int Berechne(int a, int b = 2, int c = 2)
 {
    var resultat = a + b + c;
    return resultat;
 }
-´´´
+```
+
 **Beliebig viele Argumente**
 
-´´´cs
+```cs
 var resultat = Berechne(2,3,4,1,5);
 var resultat2 = Berechne(2);
-´´´
+```
 
-´´´cs
+```cs
 public int Berechne(int a, params int[] zahlen)
 {
   int resultat = +a;
@@ -347,12 +347,12 @@ public int Berechne(int a, params int[] zahlen)
   }
   return resultat;
 }
-´´´
+```
 
 ####Kopie per Wert
 Werden von elementaren / Atomare Datentypen wie byte, int, string, u.s.w. an eine Methode übergeben, wird von den Werten eine KOPIE in die Parametervariablen erstellt. Man spricht vom Konzept "copy by value".
 
-´´´cs
+```cs
 int x = 10;
 int y = 12;
 
@@ -364,12 +364,12 @@ private void TauschWerte(int a, int b)
    a = b;
    b = temp;
 }
-´´´
+```
 
 ####Kopie per Referenz
 Möchte man, dass Veränderungen in der Methode eine Rückwirkung auf die originalen Variablen haben, müssen diese per REFERENZ an die Methode übergeben werden. Das Konzept lautet "copy by reference". Das notwendige Schlüsselwort vor den Parametern lautet ref.  
 
-´´´cs
+```cs
 int x = 10;
 int y = 12;
 
@@ -381,7 +381,7 @@ private void TauschWerte(ref int a, ref int b)
    a = b;
    b = temp;
 }
-´´´
+```
 Datenfelder/Datenstrukturen(Arrays) gehören zu den sogenannten Verweistypen. Variablen dieser Typen werden automatisch und immer per Referenz an eine Methode übergeben(copy by reference). Somit kann auf das Schlüsselwort ref verzichtet werden.
 
 Warum ist das so ?
