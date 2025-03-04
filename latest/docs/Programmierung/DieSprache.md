@@ -378,6 +378,32 @@ Ein **Ausdruck** wird immer aus mindestens einem Operanden und einem Operator ge
 
 ---
 
+###Rekursion
+
+Methoden kapseln Code für die Wiederverwendung und vermeiden letzlich auch die Redundanz von Quellcode. 
+
+Methoden können andere Methoden aufrufen. Dies wird als verschachtelter Aufruf bezeichnet. Das Programm kehrt jeweils; aus einer beliebigen Schachtelungstiefe; zur aufgerufenen Stelle zurück.
+Methoden können sich auch selbst aufrufen!
+Dieser Vorgang wird Rekursion genannt.
+Eine rekursive Methode muss jedoch eine Verzweigung (bedingte Anweisung) enthalten, welche die die Rekursion wieder beendet,da es sonst zu einer endlosen kette von Selbstaufrufen kommen würde. 
+Es gibt Probleme, die mit rekursiven Aufrufen "eleganter" gelöst werden können als ohne.
+Die meisten Probleme lassen sich jedoch auch ohne Rekursion lösen. 
+
+´´´cs
+private void Divide(ref double z) 
+{
+   z /= 2;
+   if(z>0.1)
+   {
+      Console.WriteLine("x: " + x + "\r\n");
+
+      Divide(ref z);
+   }
+}
+´´´
+
+---
+
 ###Sammlungen
 |**Feste Grösse**|**Flexible Grösse**|
 |:---------------|:-----------------|
