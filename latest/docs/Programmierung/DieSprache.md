@@ -270,9 +270,13 @@ class Circle
       }
    }
 
+   // Auto-Property
+  
    public double XCoordinate { get; set; }
-   public double YCoordinate { get; set; }
 
+   // Auto-Property mit Initialisierer
+
+   public double YCoordinate { get; set; } = 100.0;
 }
 ´´´
 ---
