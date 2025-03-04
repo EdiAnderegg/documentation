@@ -46,7 +46,7 @@ public class CodeConvention
    public CodeConvention() {}
 
 
-   // Eigenschaftsmethoden / Accesoren
+   // Eigenschaftsmethoden / Accessors
    public string MyPublicProperty { get; set; }
 
 
