@@ -98,7 +98,6 @@ Intern kann der Compiler aber auch nicht mit diesen namenbasierenden Werten oper
 
 ```cs
 
-
 enum Wochentag
 {
     Montag,     // Standardmässig 0
@@ -141,7 +140,8 @@ Wochentag tagVonNummer = (Wochentag)4;  // Freitag als Wert
 ---
 
 ###Exception Handling  
-Das Exception Handling dient zum Abfangen von Laufzeitfehlern und dem Behandeln von Ausnahmen. Diese treten auf, wenn das Programm versucht, eine unzulässige Operation durchzuführen.  
+Das Exception Handling dient zum Abfangen von Laufzeitfehlern und dem Behandeln von Ausnahmen. Diese treten auf, wenn das Programm versucht, eine unzulässige Operation durchzuführen.
+  
 ```cs
 
 int value1 = Convert.ToInt16(TxtValue1.Text);           
@@ -170,6 +170,7 @@ Eine umfängliche Liste aller vorhandener Exceptions, welche die .Net Bibliothek
 
 ####Syntaktischer Fehler
 Dies sind Fehler, welche eine Verletzung der "Grammatik" der Sprache aufweisen.
+
 ```cs
 int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to 'int'
 ```
@@ -178,6 +179,7 @@ int number = "Hello"; // ❌ Error: Cannot implicitly convert type 'string' to '
 ####Laufzeitfehler 
 ( Runtime Error )  
 Dies ist ein Fehler, der während der Ausführung eines Programms auftritt, nachdem es erfolgreich kompiliert wurde.
+
 ```cs
 class Program
 {
