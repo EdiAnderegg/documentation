@@ -229,6 +229,27 @@ class Program
 
 ---
 
+###Kopie per Wert, Kopie per Referenz
+
+####Kopie per Wert
+Werden von elementaren / Atomare Datentypen wie byte, int, string, u.s.w. an eine Methode übergeben, wird von den Werten eine KOPIE in die Parametervariablen erstellt. Man spricht vom Konzept "copy by value".
+
+´´´cs
+int x = 10;
+int y = 12;
+
+TauschWerte(x, y);
+
+private void TauschWerte(int a, int b)
+{
+   int temp = a;
+   a = b;
+   b = temp;
+}
+´´´ 
+
+
+
 ###Methode
 
 ####Parameter
@@ -253,12 +274,14 @@ Eine Methode kann jeweils nur einen Wert (oder eine Referenz) zurückgeben. Die 
 ####Variabilität der Argumente
 
 **Optionale Parameter**
+
 ´´´cs
 var resultat = Berechne(2, 3);
 var resultat2 = Berechne(2);
 ´´´
 
 **Benannte optionale Parameter**
+
 ´´´cs
 var resultat3 = Berechne(2, c: 55, b: 100);
 ´´´
@@ -271,6 +294,7 @@ public int Berechne(int a, int b = 2, int c = 2)
 }
 ´´´
 **Beliebig viele Argumente**
+
 ´´´cs
 var resultat = Berechne(2,3,4,1,5);
 var resultat2 = Berechne(2);
