@@ -47,7 +47,7 @@ public class CodeConvention
    public CodeConvention() {}
 
 
-   // Getters und Setters
+   // Eigenschaftsmethoden
    public string MyPublicProperty { get; set; }
 
 
