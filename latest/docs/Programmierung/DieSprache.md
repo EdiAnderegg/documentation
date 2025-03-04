@@ -10,7 +10,6 @@ Um mit der heutigen Komplexität der IT Schritt zu halten und sie unter Kontroll
 
 ---
 
-
 ###Code Konventionen
 Codierungskonventionen dienen den folgenden Zwecken:  
 
@@ -47,7 +46,7 @@ public class CodeConvention
    public CodeConvention() {}
 
 
-   // Eigenschaftsmethoden
+   // Eigenschaftsmethoden / Accesoren
    public string MyPublicProperty { get; set; }
 
 
@@ -253,6 +252,29 @@ class Circle
 }
 ´´´
 
+####Auto-Property
+Nicht selten werden Objekteigenschaften benötigt, ohne dass Code in set und get notwendig ist.
+
+´´´cs
+class Circle
+{
+   private int radius;
+
+   public int Radius 
+   {
+      get { return radius; }
+      private set
+      {
+          if(value>=0)
+          radius=value;
+      }
+   }
+
+   public double XCoordinate { get; set; }
+   public double YCoordinate { get; set; }
+
+}
+´´´
 ---
 
 ###Methode
