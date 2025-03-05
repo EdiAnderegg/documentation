@@ -285,7 +285,30 @@ class Circle
 ---
 
 ###Konstruktor
+Konstruktoren sind haupsächlich konzeptioniert, um instanzen von Klassen zu erzeugen. Es gibt die Möglichkeit, Konstruktoren mit einem oder mehrere Parameter zu entwerfen, welche die Initialisierung von Eigenschaften vereinfacht.  
 
+```cs
+
+class Circle
+{
+
+   private int Radius { get; set; }
+   private double XCoordinate { get; set; }
+   private doouble YCoordinate { get; set; }
+
+
+   public Circle (int r, double x, double y){
+   
+   Radius = r;
+   XCoordinate = x;
+   YCoordinate = y;
+
+   }
+}
+
+Circle c1 = new Circle(12, 12.0, 25.0);
+
+```
 
 ---
 
