@@ -479,6 +479,7 @@ namespace Demo
 
 ```
 
+---
 
 ###Operatoren
 Ein Ausdruck ist die kleinste ausführbare Einheit eines Programms und setzt mindestens einen Operator voraus.
@@ -549,6 +550,71 @@ private void Divide(ref double z)
    }
 }
 ```
+
+---
+
+###Referenzen Vergleiche + Typen
+
+####Objekterzeugung aus Klassen
+Wenn aus Klassen Objekte erzeugt werden, sieht die allgemeine Syntax so aus:
+
+```cs
+Person p1 = new Person("Max", "Muster", 23);
+```
+- `Person` ist der **Datentyp** (die Klasse)
+- `p1` ist die **Objektvariable**
+- `new` ist das **Schlüsselwort** zur Instanziierung eines neuen Objekts
+- Der **Konstruktor** `Person("Max", "Muster", 23)` wird aufgerufen, um ein neues Objekt zu erzeugen
+
+####Wertetypen vs. Referenztypen
+In C# gibt es **Wertetypen** und **Referenztypen**:
+
+**Beispiel für einen Wertetyp:**
+```cs
+int a = 12;
+int b = a; // Kopie des Wertes von a wird in b gespeichert
+b = 99;
+// a bleibt unverändert
+```
+Hier wird der Wert von `a` direkt in `b` kopiert. Eine Änderung von `b` hat keinen Einfluss auf `a`.
+
+**Beispiel für einen Referenztyp:**
+```cs
+Person a = new Person("Max", "Muster", 23);
+Person b = a; // b speichert die Referenz auf dasselbe Objekt
+b.Firstname = "Petra";
+// Die Änderung betrifft sowohl `b` als auch `a`, da beide auf dasselbe Objekt zeigen
+```
+Hier zeigt `b` auf dasselbe Objekt wie `a`. Eine Änderung über `b` wirkt sich auch auf `a` aus.
+
+####Vergleich von Objekten
+Vergleicht man Objekte mit `==`, prüft man nur, ob beide Variablen auf dasselbe Objekt zeigen.
+Ein inhaltlicher Vergleich muss über eine eigene Methode erfolgen:
+
+```cs
+public bool Equals(Person other)
+{
+    if (other == null)
+        return false;
+    if (Firstname == other.Firstname &&
+        Lastname == other.Lastname &&
+        Age == other.Age)
+        return true;
+    return false;
+}
+```
+Diese Methode vergleicht die Werte der Felder und prüft, ob zwei Objekte inhaltlich gleich sind.
+
+####Löschen einer Referenz
+Eine Objektvariable kann durch `null` von einer Referenz getrennt werden:
+
+```cs
+Person a = new Person("Max", "Muster", 23);
+Person b = a;
+a = null; // a zeigt nun nicht mehr auf das Objekt
+// b zeigt aber weiterhin auf das Objekt
+```
+Hier wird `a` von der Referenz getrennt, aber `b` zeigt weiterhin auf das ursprüngliche Objekt.
 
 ---
 
