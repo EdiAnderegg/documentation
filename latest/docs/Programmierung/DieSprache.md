@@ -310,6 +310,41 @@ Circle c1 = new Circle(12, 12.0, 25.0);
 
 ```
 
+####Überladung (Overload)
+Innerhalb einer Klasse dürfen mehrere Konstruktoren implementiert werden, wenn sich diese in der Anzahl der Argumente oder in der Art der Datentypen ihrer Argumente unterscheiden.
+
+```cs
+
+class Circle
+{
+
+   private int Radius { get; set; }
+   private double XCoordinate { get; set; }
+   private doouble YCoordinate { get; set; }
+
+
+   public Circle (int r, double x, double y){
+   
+   Radius = r;
+   XCoordinate = x;
+   YCoordinate = y;
+
+   }
+
+   public Circle(int r, double y) : this (r, 0, y) { }
+   public Circle(int r) : this (r, 0, 0) { }
+   public Circle() : this (12, 0, 0) { }
+}
+
+
+
+Circle c1 = new Circle(12, 12.0, 25.0);
+Circle c2 = new Circle(12, 12.0);
+Circle c3 = new Circle(12);
+Circle c4 = new Circle();
+
+```
+
 ---
 
 ###Methode
