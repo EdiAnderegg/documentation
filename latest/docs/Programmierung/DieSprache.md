@@ -815,6 +815,72 @@ hash.Remove("two");
 ###Statische Elemente
 
 
+####Statische Variablen
+In C# können Werte in **statischen Elementen** einer Klasse gespeichert werden. Diese benötigen **keine Instanzierung** eines Objekts.
+
+```cs
+public class Person
+{
+    private string vorname;
+    private string nachname;
+    private string alter;
+    
+    private static int counter; // Statische Klassenvariable
+}
+```
+
+- **Normale Instanzvariablen**: Der Wert wird erst nach einer Instanziierung eines Objekts gespeichert.
+- **Statische Variablen**: Der Wert wird direkt in der Klasse gespeichert und bleibt für alle Instanzen gleich.
+
+####Statische Methoden
+Um Werte in einer statischen Variable zu speichern, benötigt man **statische Methoden**. Diese Methoden arbeiten auf Klassenebene.
+
+```cs
+public class Person
+{
+    private static int counter;
+    
+    public static int Counter
+    {
+        get { return counter; }
+        set { counter = value; }
+    }
+}
+```
+
+Ein Beispiel für die Nutzung einer statischen Methode:
+
+```cs
+Person.Counter = 12;
+TxtBox.Text = Convert.ToString(Person.Counter);
+```
+
+####Statische Methoden in der .NET-Klassenbibliothek
+Viele Methoden in .NET sind **statisch**, da sie keinen Zustand speichern müssen. Ein Beispiel ist die `Math`-Klasse:
+
+```cs
+TxtBox.Text = Math.Round(2.56).ToString(); // Gibt "3" zurück
+```
+
+- **Vorteil**: Man muss keine Instanz der Klasse erstellen, um die Methode zu nutzen.
+
+###St#atische Klassen
+Es ist möglich, ganze Klassen als `static` zu deklarieren. Diese enthalten nur statische Methoden und Felder und **können nicht instanziiert** werden.
+
+```cs
+public static class MathHelper
+{
+    public static double Add(params double[] values)
+    {
+        // Implementierung ausgelassen
+    }
+    
+    public static double Subtract(params double[] values)
+    {
+        // Implementierung ausgelassen
+    }
+}
+```
 ---
 
 ###Typenkonvertierungen
