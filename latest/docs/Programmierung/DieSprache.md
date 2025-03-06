@@ -450,6 +450,36 @@ Sind es auch Objekte?
 
 ---
 
+###Namensräume
+Namensräume kategorisieren Klassen, um das Auffinden einer bestimmten Funktionalität auf ein Minimum zu reduzieren und Mehrdeutigkeiten zu vermeiden.
+Namensräume lassen sich gut mit der Ordnerstruktur eines Dateisystems vergleichen. Dabei ähnelt ein Namenspace einem Verzeichnis.
+
+```cs
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing; 
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using SysForm = System.Windows.Froms;
+
+namespace Demo
+{
+   public partial class Form1: SysForm
+   {
+      public From1()
+      {
+         InitializeComponent();
+      }
+   }
+}
+
+```
+
+
 ###Operatoren
 Ein Ausdruck ist die kleinste ausführbare Einheit eines Programms und setzt mindestens einen Operator voraus.
 ```cs
