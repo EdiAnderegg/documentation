@@ -864,7 +864,7 @@ TxtBox.Text = Math.Round(2.56).ToString(); // Gibt "3" zurück
 
 - **Vorteil**: Man muss keine Instanz der Klasse erstellen, um die Methode zu nutzen.
 
-###St#atische Klassen
+####Statische Klassen 
 Es ist möglich, ganze Klassen als `static` zu deklarieren. Diese enthalten nur statische Methoden und Felder und **können nicht instanziiert** werden.
 
 ```cs
