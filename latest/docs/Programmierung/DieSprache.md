@@ -894,3 +894,91 @@ Wenn ein Wert eines bestimmten Typs in einen anderen Typ umgewandelt werden soll
 
 Warum ist das so ?  
 Warum funktioniert es von ```int``` zu ```long```, aber nicht umgekehrt ?
+
+---
+
+
+###Vererbung
+
+- Eine Klasse kann Eigenschaften und Methoden einer anderen Klasse erben.
+- Erhöht Code-Wiederverwendbarkeit und ermöglicht Spezialisierung.
+- In C# erfolgt die Vererbung mit `:`.
+
+####Beispiel für Vererbung
+```cs
+class Mathematic 
+{
+    public int Add(int a, int b) => a + b;
+}
+
+class ExtMath : Mathematic 
+{
+    public int Sqr(int a) => a * a;
+}
+```
+
+####Methodensuche bei Vererbung
+1. Methode wird zuerst in der aktuellen Klasse gesucht.
+2. Falls nicht vorhanden, in der Basisklasse.
+3. Suche geht weiter, bis `Object` erreicht wird.
+
+####Konstruktoren und `base`-Aufrufe
+- Konstruktoren werden nicht vererbt.
+- Muss explizit mit `base()` aufgerufen werden.
+
+```cs
+class Fahrzeug
+{
+    protected string bezeichnung;
+    public Fahrzeug(string b) { bezeichnung = b; }
+}
+
+class Pkw : Fahrzeug
+{
+    public Pkw(string b) : base(b) {}
+}
+```
+
+####Sichtbarkeit (`private`, `protected`, `public`)
+- `private`: Kein Zugriff in der Unterklasse.
+- `protected`: Zugriff in Unterklassen erlaubt.
+- `public`: Voller Zugriff.
+
+```cs
+class Fahrzeug
+{
+    protected string bezeichnung;
+}
+class Pkw : Fahrzeug
+{
+    public string GibDaten() => bezeichnung;
+}
+```
+
+####Aufruf von Basisklassenmethoden
+- `base.Methodenname()` ermöglicht den Zugriff auf eine Methode der Basisklasse.
+
+```cs
+public override string GibDaten()
+{
+    return base.GibDaten() + ", mit Erweiterung";
+}
+```
+
+####Typenumwandlung in der Vererbung
+- Objekte einer Unterklasse können einer Basisklasse zugewiesen werden (implizite Konvertierung).
+
+```cs
+DVD dvd = new DVD();
+Medium m = dvd; // Erlaubt, da DVD von Medium erbt.
+```
+
+####Polymorphismus und Vererbungsstruktur
+- Eine Sammlung kann generisch auf die Basisklasse zugreifen und unterschiedliche Subtypen enthalten.
+
+```cs
+public class Datenbank
+{
+    private Medium[] medien = new Medium[100];
+}
+```
