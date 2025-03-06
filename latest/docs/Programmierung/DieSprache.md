@@ -812,6 +812,11 @@ hash.Remove("two");
 
 ---
 
+###Statische Elemente
+
+
+---
+
 ###Typenkonvertierungen
 Wenn ein Wert eines bestimmten Typs in einen anderen Typ umgewandelt werden soll, spricht man von Typkonvertierungen oder in engl. type conversion bzw. type casting
 
