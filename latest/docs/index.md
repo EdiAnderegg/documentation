@@ -11,7 +11,7 @@
 - [Die Sprache](https://document.eduardanderegg.ch/Programmierung/DieSprache/index.html)  
 
 **Netzwerktechnik und Sicherheit**  
-- [Topologien](https://document.eduardanderegg.ch/Netzwerk/Topologien/Klasse/index.html)  
+- [Topologien](https://document.eduardanderegg.ch/Netzwerk/Topologien/index.html)  
 - 
 
 **Web-Entwicklung**  

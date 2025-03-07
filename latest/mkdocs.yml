@@ -52,7 +52,10 @@ nav:
       - DieSprache: ./Programmierung/DieSprache.md
       - Klasse: ./Programmierung/Klasse.md
       - MVC: ./Programmierung/MVC.md
+  - Netzwerk:
+      - Topologien: ./Netzwerk/Topologien.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
