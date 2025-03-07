@@ -41,8 +41,14 @@
 
 ---
 
-###Beschreibung der 7 Schichten
-- Jede Schicht hat eigene **Dienste**, **Aufgaben** und nutzt verschiedene **Protokolle**
+###Beschreibung der 7 Schichten  
+- **Schicht 1 - Bitübertragungsschicht (Physical Layer)**: Regelt die physische Übertragung von Bits über ein Medium (z. B. Kupferkabel, Glasfaser, Funk).
+- **Schicht 2 - Sicherungsschicht (Data Link Layer)**: Sorgt für eine fehlerfreie Datenübertragung auf einem einzelnen Übertragungsmedium und verwaltet MAC-Adressen.
+- **Schicht 3 - Vermittlungsschicht (Network Layer)**: Verantwortlich für das Routing und die logische Adressierung (z. B. IP-Adressen).
+- **Schicht 4 - Transportschicht (Transport Layer)**: Sorgt für eine zuverlässige oder unzuverlässige Datenübertragung (z. B. durch TCP oder UDP).
+- **Schicht 5 - Sitzungsschicht (Session Layer)**: Baut Sitzungen zwischen Kommunikationspartnern auf, hält sie aufrecht und beendet sie.
+- **Schicht 6 - Darstellungsschicht (Presentation Layer)**: Konvertiert Datenformate (z. B. Verschlüsselung, Kompression, Zeichencodierung).
+- **Schicht 7 - Anwendungsschicht (Application Layer)**: Bietet Netzwerkdienste für Anwendungen, wie Webbrowser, E-Mail oder Dateitransfer.
 
 ---
 
