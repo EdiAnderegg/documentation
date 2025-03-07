@@ -58,6 +58,19 @@ Es gibt zwei unterschiedliche Arten von Netzwerktopologien
 
 ![Stern Topologie](https://englopedia.com/wp-content/uploads/2022/12/00-56.jpg)
 
+|**Vorteile**|**Nachteile**|
+|:---|:---|
+| Sehr einfache und kostengünstige Netzsteuerung und Kontrolle | Bei Ausfall der Schaltzentrale ist keine Kommunikation mehr möglich |
+| Gleicher Datenbestand für alle Knoten | Sehr Hohe Verkabelungskosten |
+| Sehr leicht erweiterbar ||
+|Keine Störung des Netzwerks bei Ausfall eines beteiligten Rechners ||
+
+---
+
+
+
+
+
 
 
 
