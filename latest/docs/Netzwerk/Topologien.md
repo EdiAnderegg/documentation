@@ -67,6 +67,9 @@ Es gibt zwei unterschiedliche Arten von Netzwerktopologien
 
 ---
 
+###Zellen-Topologie
+
+![Zellen Topologie](https://static.vecteezy.com/system/resources/previews/019/189/934/original/access-point-icon-color-outline-vector.jpg)
 
 
 
