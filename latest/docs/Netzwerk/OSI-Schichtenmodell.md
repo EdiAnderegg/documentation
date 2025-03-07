@@ -52,10 +52,17 @@
 
 ---
 
-###OSI Encapsulation
+###OSI Encapsulation  
 - Daten werden von der Anwendungsschicht bis zur Bitübertragungsschicht weitergereicht
 - Jede Schicht fügt eigene **Header-Informationen** hinzu
 - Beim Empfänger werden diese Header entfernt (Decapsulation)
+- **Protocol Data Units (PDU):** Jede Schicht verwendet unterschiedliche PDUs für die Kommunikation:
+  - **Schicht 1 (Bitübertragungsschicht):** Bits
+  - **Schicht 2 (Sicherungsschicht):** Frames
+  - **Schicht 3 (Vermittlungsschicht):** Pakete : IP  **NPDU**
+  - **Schicht 4 (Transportschicht):** Nachricht: TCP, UDP  **TPDU**
+  - **Schicht 5-7 (Sitzung, Darstellung, Anwendung):** Daten: http, ftp, smtp  **APDU**
+- Die PDUs enthalten Steuerinformationen, die notwendig sind, um eine fehlerfreie Kommunikation sicherzustellen.
 
 ---
 
