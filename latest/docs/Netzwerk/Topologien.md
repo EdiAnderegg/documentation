@@ -8,11 +8,11 @@ Es gibt zwei unterschiedliche Arten von Netzwerktopologien
 
 
 **Topologien Einfluss**  
-- Maximale Ausdehnung 
-- Übertragungsgeschwindigkeit
-- Hinzufügen bzw. Abkoppeln von Rechnern
-- Aufbereitung der Daten 
-- Auswirkung bei Ausfällen von Netzwerkknoten
+- Maximale Ausdehnung  
+- Übertragungsgeschwindigkeit  
+- Hinzufügen bzw. Abkoppeln von Rechnern  
+- Aufbereitung der Daten  
+- Auswirkung bei Ausfällen von Netzwerkknoten  
 
 ---
 
@@ -25,8 +25,14 @@ Es gibt zwei unterschiedliche Arten von Netzwerktopologien
 ![Bus Topologie](https://thietbikythuat.com.vn/wp-content/uploads/2021/04/Linear-Bus-Topology.jpg)
 
 |**Vorteile**|**Nachteile**|
+|:---|:---|
 | Keine Störung bei Ausfall eines Rechners | Ein Kabelbruch führt zum Ausfall des gesamten Netzes |
 | Geringe Verkabelungskosten | Ein Kabelfehler ist schwer zu orten |
 | Leicht erweiterbar | Die Bandbreite/Übertragungsmediums wird geteilt |
 || Es ist nicht Abhörsicher |
+
+---
+
+###
+
 
