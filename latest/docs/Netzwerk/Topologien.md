@@ -33,6 +33,24 @@ Es gibt zwei unterschiedliche Arten von Netzwerktopologien
 
 ---
 
+###Ring Topologie 
+- Ist ein geschlossener Ring (logisch)  
+- Übertragungsrate 4, 16, 100 MBit/s  
+- Wird nur über MAC-Adresse angesprochen  
+
+![Ring Topologie](https://www.conceptdraw.com/How-To-Guide/picture/Ring-Network-Topology-diagram.png)
+
+|**Vorteile**|**Nachteile**|
+|:---|:---|
+| Alle Stationen haben die gleichen Chancen auf Zugang zum Medium | Ein Kabelbruch führt zum Ausfall des gesamten Netzes |
+| Leicht erweiterbar | Wenn die MAU ( Multistation Access Unit ) ausfällt, bedeutet dies, dass das gesamte Netz stehen bleibt. |
+| Leicht erweiterbar | Die Bandbreite/Übertragungsmediums wird geteilt |
+|| Die Datenübertragung ist abhängig von der Anzahl Stationen |
+|| Die Verkabelungskosten sind hoch |
+
+---
+
 ###
+
 
 
