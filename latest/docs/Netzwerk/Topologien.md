@@ -71,6 +71,15 @@ Es gibt zwei unterschiedliche Arten von Netzwerktopologien
 
 ![Zellen Topologie](https://static.vecteezy.com/system/resources/previews/019/189/934/original/access-point-icon-color-outline-vector.jpg)
 
+---
+
+###Baumtopologie
+Typisch für UGV (Universelle Gebäude Verkabelung)
+
+![Baum Topologie](https://www.nesabamedia.com/wp-content/uploads/2017/08/topologi-tree-1.jpg)
+
+---
+
 
 
 
