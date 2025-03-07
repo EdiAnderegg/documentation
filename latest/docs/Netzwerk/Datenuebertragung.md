@@ -28,5 +28,5 @@ Die Vermittlungsart beschreibt den Weg zwischen zwei beliebigen Teilnehmern, als
 - Länge des Paketes
 - Paketaufnummer
 - Klassifizierung des Paketes
-- Empfänger setzt die Datenpakete wieder komplett zusammen
+- Empfänger setzt die Datenpakete wieder komplett zusammen  
 
