@@ -53,9 +53,10 @@ nav:
       - Klasse: ./Programmierung/Klasse.md
       - MVC: ./Programmierung/MVC.md
   - Netzwerk:
-      - Datenübertragung: ./Netzwerk/Datenübertragung.md
+      - Datenuebertragung: ./Netzwerk/Datenuebertragung.md
       - Topologien: ./Netzwerk/Topologien.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 

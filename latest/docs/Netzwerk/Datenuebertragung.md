@@ -1,5 +1,5 @@
 #Datenübertragung
-
+ 
 ###Vermittlungsarten
 Die Vermittlungsart beschreibt den Weg zwischen zwei beliebigen Teilnehmern, also zwischen Sender und Empfänger in einem Netzwerk.
 
