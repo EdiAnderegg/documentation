@@ -13,6 +13,7 @@
 **Netzwerktechnik und Sicherheit**  
 - [Topologien](https://document.eduardanderegg.ch/Netzwerk/Topologien/index.html)  
 - [Datenübertragung](https://document.eduardanderegg.ch/Netzwerk/Datenuebertragung/index.html)  
+- [OSI Schichtenmodell](https://document.eduardanderegg.ch/Netzwerk/OSI-Schichtenmodell/index.html)
 
 **Web-Entwicklung**  
 - [MVC](https://document.eduardanderegg.ch/Server/MVC/index.html) 

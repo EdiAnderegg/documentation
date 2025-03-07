@@ -54,8 +54,10 @@ nav:
       - MVC: ./Programmierung/MVC.md
   - Netzwerk:
       - Datenuebertragung: ./Netzwerk/Datenuebertragung.md
+      - OSI-Schichtenmodell: ./Netzwerk/OSI-Schichtenmodell.md
       - Topologien: ./Netzwerk/Topologien.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
