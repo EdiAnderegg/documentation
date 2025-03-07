@@ -22,7 +22,7 @@ Die Vermittlungsart beschreibt den Weg zwischen zwei beliebigen Teilnehmern, als
 - Bandbreite eines Kommunikationskanals ist nicht konstant
 - Keine Leistungsgarantien (QoS ist notwendig)
 
-**Typischer Inhalt eines Pakets**
+**Typischer Inhalt eines Pakets**  
 - Quelle des Paketes
 - Ziel des Paketes
 - Länge des Paketes
