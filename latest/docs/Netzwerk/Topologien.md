@@ -80,6 +80,15 @@ Typisch für UGV (Universelle Gebäude Verkabelung)
 
 ---
 
+###Masche
+
+**vermascht**  
+![vermascht Topologie](https://cdn.soselectronic.com/novinky/obr/obr2075_p1779.jpg)
+
+**Voll vermascht**  
+![Voll vermascht Topologie](https://instrumentationtools.com/wp-content/uploads/2016/04/instrumentationtools.com_fully-connected-mesh.jpg)
+
+
 
 
 
