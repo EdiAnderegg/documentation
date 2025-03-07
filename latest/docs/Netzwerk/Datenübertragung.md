@@ -7,7 +7,7 @@ Die Vermittlungsart beschreibt den Weg zwischen zwei beliebigen Teilnehmern, als
 - **Definition:** (engl.: circuit switching, line switching)
 - Durchgehende physikalische Verbindung mit konstanter Bandbreite
 - Gesamte Leitungsbandbreite steht einem einzigen Kommunikationskanal zur Verfügung
-- Verbindung steht ausschließlich den Beteiligten der Kommunikation zur Verfügung
+- Verbindung steht ausschliesslich den Beteiligten der Kommunikation zur Verfügung
 - Auf- und Abbau der Verbindungen wird durch Verbindungsstellen realisiert
 - Wegfindung durch Signalisierung zwischen Verbindungsstellen
 - Verbindungsaufbau vor Kommunikation notwendig
