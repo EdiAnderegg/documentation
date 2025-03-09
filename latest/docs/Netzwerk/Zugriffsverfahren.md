@@ -31,7 +31,7 @@ Das **Zugriffsverfahren** (auch „logische Topologie“ genannt) regelt den Med
 - Wenn keine andere Station sendet, erhält sie eine **Sendeerlaubnis (CTS)**.
 - Nach der Übertragung wird das Medium freigegeben.
 
-####Token-Passing (IEEE 802.4 / IEEE 802.5)
+####Token-Passing
 **Verfahren für deterministische Netzwerke**:
 1. Ein **Token (Datenpaket)** wandert im Netzwerk.
 2. Eine sendewillige Station wartet auf das Token.
