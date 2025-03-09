@@ -57,7 +57,9 @@ nav:
       - OSI-Schichtenmodell: ./Netzwerk/OSI-Schichtenmodell.md
       - Topologien: ./Netzwerk/Topologien.md
       - Verkabelung: ./Netzwerk/Verkabelung.md
+      - Zugriffsverfahren: ./Netzwerk/Zugriffsverfahren.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
