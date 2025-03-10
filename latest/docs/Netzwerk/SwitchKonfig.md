@@ -5,21 +5,19 @@
 
 ###Grundbefehle:
 
-**Für Befehle:**  
+**Für Befehle:**   
 Zuerst in den Konfigurationsmodus wechseln, damit die Befehle eingegeben werden können.
 
 | **Befehle** | **Beschreibung**|
 |:----|:-------|
 |`config`| Konfigurationsmodus|
 |`no`| Am Anfang eines Befehls zum Deaktivieren einer Konfiguration |
-|``||
-config-if: Schnittstelle VLAN oder physikalischer Port 
-no: am Anfang eines Befehls: Wenn eine Konfiguration deaktiviert werden soll
-show running-config: Allgemeine Konfigurationen im Switch
+|`show running-config`| Allgemeine Konfigurationen im Switch|
+
 
 ###Einfache Konfiguration eines Switches mit Trunking, VLANs und Ports
 
-|Aktion| Befehle|
+|**Aktion**|**Befehle**|
 |:------------|:-------------|
 | Konfigurationsmodus | `config` |
 | Hostname setzen | `hostname xxxx` |
@@ -33,10 +31,10 @@ show running-config: Allgemeine Konfigurationen im Switch
 | Ports als Trunk Port mit VLANs  als allowed VLANs konfigurieren | `interface range GigabitEthernet5-6` `switchport mode trunk` `switchport trunk allowed vlan 15,16`|
 | Aus einer configuration rausgehen  | `exit` |
 
-Ein sinnvoller Name für den Hostnamen
-Nie mit Leerzeichen arbeiten. 
-Tabulator benutzen, um Befehle zu finden oder zu vervollständigen 
+###Tipps:
+- Ein sinnvoller Name für den Hostnamen  
+- Nie mit Leerzeichen arbeiten.  
+- Tabulator benutzen, um Befehle zu finden oder zu vervollständigen   
 
-
-Tipp mit PuTTY:
-(Rechtsklick) im PuTTY Icon ---> auf Copy all to Clipboard setzen 
+**mit PuTTY:**  
+- (Rechtsklick) im PuTTY Icon ---> auf Copy all to Clipboard setzen   
