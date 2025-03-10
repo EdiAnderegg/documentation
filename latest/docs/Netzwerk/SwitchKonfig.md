@@ -5,9 +5,6 @@
 
 ###Grundbefehle:
 
-**Für Befehle:**   
-Zuerst in den Konfigurationsmodus wechseln, damit die Befehle eingegeben werden können.
-
 | **Befehle** | **Beschreibung**|
 |:----|:-------|
 |`config`| Konfigurationsmodus|
