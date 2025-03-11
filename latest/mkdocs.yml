@@ -55,11 +55,13 @@ nav:
   - Netzwerk:
       - Datenuebertragung: ./Netzwerk/Datenuebertragung.md
       - OSI-Schichtenmodell: ./Netzwerk/OSI-Schichtenmodell.md
+      - Switch: ./Netzwerk/Switch.md
       - SwitchKonfig: ./Netzwerk/SwitchKonfig.md
       - Topologien: ./Netzwerk/Topologien.md
       - Verkabelung: ./Netzwerk/Verkabelung.md
       - Zugriffsverfahren: ./Netzwerk/Zugriffsverfahren.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
