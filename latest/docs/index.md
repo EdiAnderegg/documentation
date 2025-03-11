@@ -15,6 +15,7 @@
 - [OSI Schichtenmodell](https://document.eduardanderegg.ch/Netzwerk/OSI-Schichtenmodell/index.html)  
 - [Layer 1: Verkabelung](https://document.eduardanderegg.ch/Netzwerk/Verkabelung/index.html)  
 - [Layer 1: Zugriffsverfahren](https://document.eduardanderegg.ch/Netzwerk/Zugriffsverfahren/index.html)  
+- [Layer 2: Switch](https://document.eduardanderegg.ch/Netzwerk/Switch/index.html)    
 - [Switch Konfig](https://document.eduardanderegg.ch/Netzwerk/SwitchKonfig/index.html)  
 
 **Web-Entwicklung**  
