@@ -104,16 +104,16 @@ Netzwerkkabel verbinden Komponenten innerhalb eines Computernetzwerks und sind e
 - **Standards**: ISO/IEC 11801, EN50173, TIA 568 A/B
 
 ####Fehlerquellen und -behebung
-**Typische Fehlerquellen**  
-- **Physikalische Fehler**:
-  - Beschädigte Kabel oder Stecker
-  - Maximale Kabellängen überschritten
-  - Falsche Kabelkategorie verwendet (z. B. Mischung von CAT5 und CAT6)
-- **Konfigurationsfehler**:
-  - Falsche IP-Adressen oder Subnetze
-  - Fehlerhafte VLAN-Konfigurationen
-  - Inkorrekte Router- oder Firewall-Einstellungen
-  - **Spanning Tree Protocol (STP)** falsch konfiguriert
+**Typische Fehlerquellen**    
+- **Physikalische Fehler**:  
+  - Beschädigte Kabel oder Stecker  
+  - Maximale Kabellängen überschritten  
+  - Falsche Kabelkategorie verwendet (z. B. Mischung von CAT5 und CAT6)  
+- **Konfigurationsfehler**:  
+  - Falsche IP-Adressen oder Subnetze  
+  - Fehlerhafte VLAN-Konfigurationen  
+  - Inkorrekte Router- oder Firewall-Einstellungen  
+  - **Spanning Tree Protocol (STP)** falsch konfiguriert  
 
 ####Fehlerbehebung
 - **Ruhe** Die wohl wichtigste Regel bei der Fehler suche is Ruhig zu bleiben.
