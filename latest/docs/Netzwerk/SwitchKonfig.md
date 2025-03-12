@@ -17,9 +17,12 @@
 
 | **Befehle** | **Beschreibung**|
 |:----|:-------|
-|`config`| Konfigurationsmodus|
+|`config`| Konfigurationsmodus |
 |`no`| Am Anfang eines Befehls zum Deaktivieren einer Konfiguration |
-|`show running-config`| Allgemeine Konfigurationen im Switch|
+|`show running-config`| Allgemeine Konfigurationen im Switch |
+|`enable`| Privileged Mode |
+|`configure terminal`| Global Configuration Mode |
+|`interface xxxxxx 0/1`| Interface Configuration Mode für xxxxxx Port 1 |
 
 
 ###Einfache Konfiguration eines Switches mit Trunking, VLANs und Ports
