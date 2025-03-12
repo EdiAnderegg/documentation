@@ -1,7 +1,17 @@
 
-#Switch Konfiguration
+#Switch Konfiguration (CISCO)
  
 ----
+
+###Konfigurationsmodi
+
+|**Bedeutung**|**Konsole**|
+|:------------|:-----------------|
+|User EXEC| `Switch>`|
+|Privileged EXEC| `Switch#`|
+|Global Configuration| `Switch(config)#`|
+|Interface Configuration| `Switch(config-if)#`|
+|Config-vlan| `Switch(config-vlan)#`|
 
 ###Grundbefehle:
 
