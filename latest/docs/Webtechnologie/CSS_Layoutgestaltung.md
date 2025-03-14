@@ -1,13 +1,9 @@
 #CSS - Layoutgestaltung
 
 
-## 1. Anordnung von Blockelementen
+###Normaler Fluss
+Standardmässig werden Blockelemente untereinander im Dokumentfluss angeordnet.
 
-### 1.1 Normaler Fluss
-
-- **Erklärung:**  
-    Standardmäßig werden Blockelemente untereinander im Dokumentfluss angeordnet.
-- **Beispiel:**
 ```html
 <div>
   <h1>Überschrift</h1>
@@ -15,10 +11,12 @@
   <p>Absatz 2</p>
 </div>
 ```
-### 1.2 Relative, absolute & feste Positionierung
 
-- **Relative Positionierung:**  
-    Ein Element wird relativ zu seiner Normalposition verschoben.
+###Relative, absolute & feste Positionierung
+
+####Relative Positionierung:    
+Ein Element wird relativ zu seiner Normalposition verschoben.  
+
 ```css
 .relativ {
     position: relative;
@@ -27,8 +25,9 @@
 }
 ```
 
-- **Absolute Positionierung:**  
-    Ein Element wird aus dem Dokumentfluss herausgenommen und relativ zu seinem nächsten positionierten Vorfahren platziert.
+####Absolute Positionierung:   
+Ein Element wird aus dem Dokumentfluss herausgenommen und relativ zu seinem nächsten positionierten Vorfahren platziert.
+
 ```css
 .absolut {
     position: absolute;
@@ -38,8 +37,9 @@
 
 ```
 
-- **Feste Positionierung:**  
-    Ein Element wird relativ zum Viewport fixiert und bleibt beim Scrollen an derselben Stelle.
+####Feste Positionierung:    
+Ein Element wird relativ zum Viewport fixiert und bleibt beim Scrollen an derselben Stelle.
+
 ```css
 .fixed {
     position: fixed;
@@ -50,11 +50,13 @@
 }
 ```
 
+---
 
-### 1.3 Float, Clear & Clearfix-Hacks
+###Float, Clear & Clearfix-Hacks
 
-- **Float:**  
-    Mit `float: left;` oder `float: right;` werden Elemente aus dem normalen Fluss herausgenommen und nebeneinander angeordnet.
+####Float:  
+Mit `float: left;` oder `float: right;` werden Elemente aus dem normalen Fluss herausgenommen und nebeneinander angeordnet.
+
 ```css
 .float-left {
     float: left;
@@ -66,16 +68,18 @@
 
 ```
 
-- **Clear:**  
-    Verhindert, dass nachfolgende Elemente an schwimmenden Elementen "anhaften".
+####Clear:
+Verhindert, dass nachfolgende Elemente an schwimmenden Elementen "anhaften".
+
 ```css
 .clear {
     clear: both; /* oder clear: left; bzw. right; */
 }
 ```
 
-- **Clearfix-Hack:**  
-    Um Container korrekt um schwimmende Elemente zu legen, ohne dass deren Höhe zusammenfällt.
+####Clearfix-Hack:  
+Um Container korrekt um schwimmende Elemente zu legen, ohne dass deren Höhe zusammenfällt.
+
 ```css
 .clearfix {
     overflow: auto; /* Für moderne Browser */
@@ -88,11 +92,9 @@
 }
 ```
 
-### 1.4 Flexbox – Das neue Kastenlayout
-![[CSS Flexbox.pdf]]
-* ***Grundprinzip:**  
+###Flexbox – Das neue Kastenlayout  
 Mit Flexbox definierst du einen Container (mit `display: flex;`), in dem alle enthaltenen Elemente (Flex-Items) flexibel entlang einer Achse angeordnet werden. Flexbox löst viele Layout-Probleme, indem es die Verteilung von Raum und Ausrichtung der Items vereinfacht.
-- **Basisbeispiel:**
+
 ```html
 <div class="flex-container">
     <div>Box 1</div>
@@ -103,79 +105,44 @@ Mit Flexbox definierst du einen Container (mit `display: flex;`), in dem alle en
 ```
 ```css
 .flex-container {
-    display: flex; /* Standardmäßig in einer Zeile (flex-direction: row) angeordnet */
+    display: flex; /* Standardmässig in einer Zeile (flex-direction: row) angeordnet */
 }
 .flex-container > div {
-    flex: 1; /* Alle Boxen teilen sich gleichmäßig den verfügbaren Platz */
+    flex: 1; /* Alle Boxen teilen sich gleichmässig den verfügbaren Platz */
     padding: 10px;
     border: 1px solid #ccc;
 }
 ```
+####Besondere Eigenschaften der Flex-Items  
+Flex-Items lassen sich über die Kurzform-Eigenschaft `flex` sowie die Einzelwerte **flex-grow**, **flex-shrink** und **flex-basis** steuern:
 
-- **Besondere Eigenschaften der Flex-Items:**  
-  Flex-Items lassen sich über die Kurzform-Eigenschaft `flex` sowie die Einzelwerte **flex-grow**, **flex-shrink** und **flex-basis** steuern:
-
-- **flex-grow:**  
-    Bestimmt, wie viel ein Flex-Item im Verhältnis zu den anderen wachsen soll, wenn zusätzlicher Platz vorhanden ist.  
-    _Standardwert:_ 0 (kein Wachstum)  
-    _Beispiel:_ `flex-grow: 2;` – Dieses Item erhält doppelt so viel zusätzlichen Raum wie ein Item mit `flex-grow: 1;`
+| **Eigenschaft** |  **Beschreibung** | **Beispiel** |
+|:-----|:--------|:-------|
+|`flex-grow: `| Bestimmt, wie viel ein Flex-Item im Verhältnis zu den anderen wachsen soll, wenn zusätzlicher Platz vorhanden ist.  **Standardwert: 0 (kein Wachstum)** | `flex-grow: 2;` – Dieses Item erhält doppelt so viel zusätzlichen Raum wie ein Item mit `flex-grow: 1;` |
+|`flex-shrink: `| Legt fest, wie stark ein Flex-Item schrumpfen soll, wenn nicht genügend Platz vorhanden ist. **Standardwert: 1 (schrumpft, wenn nötig)** | `flex-shrink: 0;` – Das Item schrumpft nicht, selbst wenn der Container kleiner wird. |
+|`flex-basis: `| Gibt die anfängliche Grösse eines Flex-Items entlang der Hauptachse an, bevor Wachstum oder Schrumpfung stattfindet.  **Standardwert:** `auto` (entspricht der natürlichen Grösse des Inhalts)   | `flex-basis: 100px;` – Das Item startet mit einer Breite von 100 Pixeln. |
+|`flex`: | Kombiniert die drei Eigenschaften. | | 
     
-- **flex-shrink:**  
-    Legt fest, wie stark ein Flex-Item schrumpfen soll, wenn nicht genügend Platz vorhanden ist.  
-    _Standardwert:_ 1 (schrumpft, wenn nötig)  
-    _Beispiel:_ `flex-shrink: 0;` – Das Item schrumpft nicht, selbst wenn der Container kleiner wird.
-    
-- **flex-basis:**  
-    Gibt die anfängliche Größe eines Flex-Items entlang der Hauptachse an, bevor Wachstum oder Schrumpfung stattfindet.  
-    _Standardwert:_ `auto` (entspricht der natürlichen Größe des Inhalts)  
-    _Beispiel:_ `flex-basis: 100px;` – Das Item startet mit einer Breite von 100 Pixeln.
-    
-- **Shorthand `flex`:**  
-    Kombiniert die drei Eigenschaften.
 ```css
 .item-2 {
     flex: 2 1 100px; /* flex-grow: 2, flex-shrink: 1, flex-basis: 100px */
 }
 ```
 
-**Container-Eigenschaften zur Steuerung des Layouts:**
-- **flex-direction:**  
-    Legt die Richtung der Hauptachse fest.  
-    _Werte:_
-    - `row` (Standard, von links nach rechts)
-    - `row-reverse` (umgekehrt)
-    - `column` (von oben nach unten)
-    - `column-reverse` (umgekehrt)
+####Container-Eigenschaften zur Steuerung des Layouts
 
-- **justify-content:**  
-    Bestimmt die Verteilung der Flex-Items entlang der Hauptachse (horizontal bei row, vertikal bei column).  
-    _Werte:_
-    - `flex-start` (Standard, am Anfang ausgerichtet)
-    - `flex-end` (am Ende ausgerichtet)
-    - `center` (zentriert)
-    - `space-between` (gleichmäßiger Abstand zwischen Items, kein Abstand an den Enden)
-    - `space-around` (gleichmäßiger Abstand, mit halbem Abstand an den Enden)
+| **Eigenschaft** | **Beschreibung** | **Werte** |
+|:----------------|:----------|:----------|
+| `flex-direction: ` | Legt die Richtung der Hauptachse fest. | `row`, `row-reverse`, `column`, `column-reverse` |
+| `justify-content: ` | Bestimmt die Verteilung der Flex-Items entlang der Hauptachse. | `flex-start`, `flex-end`, `center`, `space-between`, `space-around` |
+| `align-items: ` | Steuert die Ausrichtung der Items entlang der Querachse. | `flex-start`, `flex-end`, `center`, `baseline`, `stretch` |
+| `flex-wrap: ` | Bestimmt, ob Flex-Items in einer Zeile bleiben oder umbrechen. | `nowrap`, `wrap`, `wrap-reverse` |
+| `order: ` | Bestimmt die Reihenfolge der Flex-Items. | Numerische Werte (z.B. `1`, `2`, `-1`) |
 
-- **align-items:**  
-    Steuert die Ausrichtung der Items entlang der Querachse (cross-axis).  
-    _Werte:_
-    - `flex-start` (am oberen/ linken Rand)
-    - `flex-end` (am unteren/ rechten Rand)
-    - `center` (zentriert)
-    - `baseline` (an der Textgrundlinie)
-    - `stretch` (auf die volle Höhe des Containers, Standard)
-
-- **flex-wrap:**  
-    Bestimmt, ob Flex-Items in einer Zeile bleiben oder in mehrere Zeilen umbrechen.  
-    _Werte:_
-    - `nowrap` (Standard, keine Zeilenumbrüche)
-    - `wrap` (Items umbrechen in neue Zeilen von oben nach unten)
-    - `wrap-reverse` (Items umbrechen in neue Zeilen, aber in umgekehrter Reihenfolge)
-
-- **order:**  
-    Bestimmt die Reihenfolge der Flex-Items, unabhängig von der Reihenfolge im HTML.  
-    _Beispiel:_
 ```css
+
+/* Dadurch wird das Item mit order: 1 vor dem mit order: 2 angezeigt. */
+
 .item-1{
 	order: 2;
 }
@@ -183,10 +150,9 @@ Mit Flexbox definierst du einen Container (mit `display: flex;`), in dem alle en
 	order: 1;
 }
 ```
-Dadurch wird das Item mit order: 1 vor dem mit order: 2 angezeigt.
 
+####Flexbox-Beispiel mit mehreren Eigenschaften:
 
-- **Flexbox-Beispiel mit mehreren Eigenschaften:**
 ```html
 <div class="flex-container">
     <div class="item-1">Box 1</div>
@@ -197,19 +163,19 @@ Dadurch wird das Item mit order: 1 vor dem mit order: 2 angezeigt.
 ```css
 .flex-container {
     display: flex;
-    flex-direction: row; /* Elemente werden horizontal angeordnet */
-    justify-content: space-between; /* Gleichmäßiger Abstand zwischen den Boxen */
-    align-items: center; /* Vertikale Zentrierung der Boxen */
-    flex-wrap: wrap; /* Elemente umbrechen, wenn nicht genügend Platz vorhanden ist */
+    flex-direction: row;                        /* Elemente werden horizontal angeordnet */
+    justify-content: space-between;   /* Gleichmäßiger Abstand zwischen den Boxen */
+    align-items: center;                       /* Vertikale Zentrierung der Boxen */
+    flex-wrap: wrap;                            /* Elemente umbrechen, wenn nicht genügend Platz vorhanden ist */
 }
 
 .item-1 {
-    flex: 1 1 100px; /* Grow: 1, Shrink: 1, Basis: 100px */
+    flex: 1 1 100px;                             /* Grow: 1, Shrink: 1, Basis: 100px */
     order: 2;
 }
 
 .item-2 {
-    flex: 2 1 100px; /* Box 2 erhält doppelt so viel Wachstum */
+    flex: 2 1 100px;                             /* Box 2 erhält doppelt so viel Wachstum */
     order: 1;
 }
 
@@ -219,17 +185,14 @@ Dadurch wird das Item mit order: 1 vor dem mit order: 2 angezeigt.
 }
 ```
 
-
 ---
 
-## 2. Mehrspaltige Layouts
+###Mehrspaltige Layouts
 
-### 2.1 Feste Layouts (Fixed Layout)
+####Feste Layouts (Fixed Layout)
+- Masse werden in Pixeln angegeben.
+- Layout verändert sich nicht mit der Fenstergrösse.
 
-- **Merkmale:**
-    - Maße werden in Pixeln angegeben.
-    - Layout verändert sich nicht mit der Fenstergröße.
-- **Beispiel:**
 ```html
 <div id="container">
     <div class="column">Spalte 1</div>
@@ -251,12 +214,10 @@ Dadurch wird das Item mit order: 1 vor dem mit order: 2 angezeigt.
 }
 ```
 
-### 2.2 Flüssige Layouts (Fluid Layout)
+####Flüssige Layouts (Fluid Layout)
+- Masse werden in Prozent angegeben.
+- Layout passt sich der Fenstergrösse an.
 
-- **Merkmale:**
-    - Maße werden in Prozent angegeben.
-    - Layout passt sich der Fenstergröße an.
-- **Beispiel:**
 ```css
 #container {
     width: 90%;
@@ -270,11 +231,9 @@ Dadurch wird das Item mit order: 1 vor dem mit order: 2 angezeigt.
 }
 ```
 
+####Elastische Layouts (Elastic Layout)
+- Masse in `em` oder `rem` – skalieren mit der Schriftgrösse.
 
-### 2.3 Elastische Layouts (Elastic Layout)
-- **Merkmale:**
-    - Maße in `em` oder `rem` – skalieren mit der Schriftgröße.
-- **Beispiel:**
 ```css
 body {
     font-size: 16px;
@@ -291,12 +250,10 @@ body {
 }
 ```
 
-### 2.4 Adaptive / Responsive Layouts
+####Adaptive / Responsive Layouts
+- Kombination aus flexiblen Einheiten, Media Queries und ggf. CSS Grid / Flexbox.
+- Das Layout wechselt je nach Bildschirmgrösse.
 
-- **Merkmale:**
-    - Kombination aus flexiblen Einheiten, Media Queries und ggf. CSS Grid / Flexbox.
-    - Das Layout wechselt je nach Bildschirmgröße.
-- **Beispiel (mit Flexbox):**
 ```css
 .flex-container {
     display: flex;
@@ -308,24 +265,16 @@ body {
 }
 ```
 
-
 ---
 
-## 3. Boilerplate für Webprojekte
+###Boilerplate für Webprojekte
 
-### 3.1 HTML5 Boilerplate
-- **HTML5 Boilerplate:**  
-    Ein Starter-Kit, das Best Practices, optimierte Dateistrukturen und Skripte bereitstellt.  
-    _(Download: [html5boilerplate.com](https://html5boilerplate.com))_
+####HTML5 Boilerplate  
+Ein Starter-Kit, das Best Practices, optimierte Dateistrukturen und Skripte bereitstellt.  
+_(Download: [html5boilerplate.com](https://html5boilerplate.com))_
     
-- **Normalize.css:**  
-    Vereinheitlicht die Browser-Standardwerte, sodass ein konsistenter Ausgangspunkt vorhanden ist.  
-    _(Download: [necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/))_
-### 3.2 Normalize.css
+####Normalize.css:  
+Vereinheitlicht die Browser-Standardwerte, sodass ein konsistenter Ausgangspunkt vorhanden ist.    
+_(Download: [necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/))_
 
-- **Beschreibung:**  
-    Normalize.css ist ein pragmatischer Ansatz zur Standardisierung von Styles zwischen verschiedenen Browsern, ohne alle Standardwerte auf Null zu setzen.
-- **Vorteile:**
-    - Beibehaltung sinnvoller Standardwerte, die sich gut anpassen lassen.
-- **Download:**  
-    [necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
+Normalize.css ist ein pragmatischer Ansatz zur Standardisierung von Styles zwischen verschiedenen Browsern, ohne alle Standardwerte auf Null zu setzen.
