@@ -1,11 +1,13 @@
-# CSS Basic
+#CSS Basic
 
-## 1. Einbindung von CSS in HTML-Dokumente
 
-### 1.1 Externes Stylesheet
+###Einbindung von CSS in HTML-Dokumente
 
-- **Vorteile:** Wiederverwendbar, zentrale Verwaltung, saubere Trennung von Inhalt und Design.
-- **Einbindung:**
+####Externes Stylesheet
+
+**Vorteile:**  
+Wiederverwendbar, zentrale Verwaltung, saubere Trennung von Inhalt und Design.
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -20,16 +22,17 @@
 </html>
 ```
 
-- **Medienattribute:**
+**Medienattribute:**   
 ```html
 <link rel="stylesheet" href="css/print.css" media="print">
 ```
 
+####Internes Stylesheet
 
-### 1.2 Internes Stylesheet
+**Vorteile:**  
+Schnelle Anpassungen, hilfreich für einzelne Seiten.  
 
-- **Vorteile:** Schnelle Anpassungen, hilfreich für einzelne Seiten.
-- **Einbindung im `<head>`:**
+**Einbindung im `<head>`:**  
 ```html
 <!DOCTYPE html>
 <html>
@@ -50,23 +53,24 @@
 
 ```
 
-### 1.3 Inline Styles
+####Inline Styles
 
-- **Vorteile:** Schnelle Tests, spezielle Anpassungen an einzelne Elemente.
-- **Beispiel:**
+**Vorteile:**   
+Schnelle Tests, spezielle Anpassungen an einzelne Elemente.  
+
 ```html
 <h1 style="font-family: Arial, sans-serif; color: blue;">Hallo Welt</h1>
 ```
 
-- **Hinweis:** Inline Styles haben hohe Spezifität und sollten sparsam eingesetzt werden.
+**Hinweis:** Inline Styles haben hohe Spezifität und sollten sparsam eingesetzt werden. (Sehr selten)
 
 ---
 
-## 2. Aufbau von CSS-Regeln, Selektoren und Eigenschaften
+###Aufbau von CSS-Regeln, Selektoren und Eigenschaften
 
-### 2.1 Grundstruktur einer CSS-Regel
+####Grundstruktur einer CSS-Regel
 
-- **Aufbau:**
+**Aufbau:**  
 ```css
 selektor {
     eigenschaft: wert;
@@ -74,7 +78,7 @@ selektor {
 }
 ```
 
-- **Beispiel:**
+**Beispiel:**  
 ```css
 p {
     font-size: 16px;
@@ -88,9 +92,9 @@ h1, h2, h3 {
 
 ```
 
-### 2.2 Kommentare in CSS
+####Kommentare in CSS 
 
-- **Einzeilig:**
+**Einzeilig:**  
 ```css
 /* Dies ist ein einzeiliger Kommentar /*
 
@@ -103,28 +107,29 @@ von Codeabschnitten.
 
 ---
 
-## 3. CSS-Selektoren und ihre Vielfalt
+###CSS-Selektoren und ihre Vielfalt
 
-### 3.1 Typ-, Klassen- und ID-Selektoren
 
-- **Typselektor:**
+**Typselektor:**     
 ```css 
 h1 { color: red; }
 ```
 
-- **Klassenselektor:**
+**Klassenselektor:**     
 ```css 
 .highlight { background-color: yellow; }
 ```
 
-- **ID-Selektor:**
+**ID-Selektor:**    
 ```css 
 #header { padding: 20px; }
 ```
 
-### 3.2 Kombinatoren und Vererbungsselektoren
+---
 
-- **Descendant-Selektor: **
+####Kombinatoren und Vererbungsselektoren
+
+**Descendant-Selektor:**  
 ```css
 /*
 
@@ -135,7 +140,7 @@ Wählt alle Elemente, die Nachfahren (in beliebiger Tiefe) eines übergeordneten
 article p { line-height: 1.5; }
 ```
 
-- **Kindselektor:**
+**Kindselektor:**  
 ```css
 /*
 Wählt nur die unmittelbaren (direkten) Kind-Elemente eines übergeordneten Elements.
@@ -146,7 +151,7 @@ Wählt nur die unmittelbaren (direkten) Kind-Elemente eines übergeordneten Elem
 ul > li { list-style: none; }
 ```
 
-- **Adjacent Sibling-Selektor:**
+**Adjacent Sibling-Selektor:**  
 ```css
 /*
 Wählt das erste Element, das unmittelbar nach einem bestimmten Element folgt (direkter Geschwister).
@@ -156,7 +161,7 @@ Wählt das erste Element, das unmittelbar nach einem bestimmten Element folgt (d
 h1 + p { margin-top: 0; }
 ```
 
-- **General Sibling-Selektor:**
+**General Sibling-Selektor:**  
 ```css
 /*
 Wählt alle Geschwister-Elemente, die einem bestimmten Element folgen, nicht nur das unmittelbar folgende.
@@ -167,10 +172,9 @@ Wählt alle Geschwister-Elemente, die einem bestimmten Element folgen, nicht nur
 h1 ~ p { color: gray; }
 ```
 
+####Attributselektoren
 
-### 3.3 Attributselektoren
-
-- **Beispiele:**
+**Beispiele:**  
 ```css
 /* Alle Elemente mit dem Attribut "data-info" */
 [data-info] { 
@@ -183,26 +187,25 @@ input[type^="text"] {
 }
 ```
 
-
 ---
 
-## 4. Überschreiben von CSS-Regeln, Kaskade und Spezifität
+###Überschreiben von CSS-Regeln, Kaskade und Spezifität
 
-### 4.1 Das Prinzip der Kaskade
+####Das Prinzip der Kaskade
 **Quellenpriorität von CSS-Regeln**
 
 | **Prioritätsstufe** | **Quelle**                          | **Beschreibung**                                                                                                                                 |
-| ------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| :------------------- |:----------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 1                   | Benutzerstylesheet mit `!important` | Vom Nutzer voreingestellte, individuelle Styles (über Browser-Einstellungen/Erweiterungen), die mit `!important` die höchste Priorität erhalten. |
 | 2                   | Autorenstylesheet mit `!important`  | Vom Entwickler definierte Styles, die mit `!important` markiert wurden, um sich gegenüber anderen Regeln durchzusetzen.                          |
 | 3                   | Autorenstylesheet                   | Standard CSS-Regeln, die der Webentwickler in den Stylesheets vorgibt.                                                                           |
 | 4                   | Benutzerstylesheet                  | Eigene Anpassungen des Nutzers (z. B. benutzerdefinierte CSS-Dateien, Browseroptionen), ohne `!important` markiert.                              |
 | 5                   | Browserstylesheet                   | Voreingestellte Standardstyles des Browsers, die angewendet werden, wenn keine anderen Styles vorhanden sind.                                    |
 
-- **Reihenfolge:**  
-    Bei gleichen Selektoren gewinnt die zuletzt definierte Regel.
+**Reihenfolge:**  
+Bei gleichen Selektoren gewinnt die zuletzt definierte Regel.
 
-### 4.2 Spezifität von Selektoren
+####Spezifität von Selektoren
 
 | Selektortyp      | Beispiel                 | Kurze Erklärung (Stichworte)                                  | Punkte |
 | ---------------- | ------------------------ | ------------------------------------------------------------- | ------ |
@@ -214,8 +217,9 @@ input[type^="text"] {
 | Typselektor      | `p`                      | Selektiert alle Elemente eines bestimmten Typs (z.B. Absätze) | 1      |
 | Pseudoelement    | `::before`               | Selektiert generierte Inhalte vor einem Element               | 1      |
 
-- **Beispiel:**
+**Beispiel:**  
 ```css
+
 /* 
 Spezifität Berechnung
 .main   = 0010
@@ -227,6 +231,8 @@ Summe:    0022
 .main [src=*] > li a{
 	color: blue;
 }
+
+/*===================*/
 
 /* 
 Spezifität = 0123
@@ -242,6 +248,8 @@ header.class1#class2 img .logo:before{
 	color: blue;
 }
 
+/*===================*/
+
 /* Spezifität = 0021
 .img     = 0010  (Klasse)
 img      = 0001  (Typ)
@@ -252,6 +260,8 @@ Summe:     0021
 	color: blue;
 }
 
+/*===================*/
+
 /* Spezifität = 0022
 table     = 0001  (Typ)
 h1.header = 0011 (Typ h1: 0001 + Klasse .header: 0010)
@@ -261,6 +271,8 @@ Summe:      0022
 table + h1.header > .lorem{
 	color: blue;
 }
+
+/*===================*/
 
 /* Spezifität = 0013
 a         = 0001  (Typ)
@@ -273,6 +285,8 @@ a:hover > span + span{
 	color: blue;
 }
 
+/*===================*/
+
 /* Spezifität = 0023
 ul        = 0001  (Typ)
 li.active = 0011 (Typ li: 0001 + Klasse .active: 0010)
@@ -284,12 +298,12 @@ ul > li.active > a:active{
 }
 ```
     
+####Übersteuerung von CSS-Regeln
 
-### 4.3 Übersteuerung von CSS-Regeln
+**Regeln überschreiben:**   
+Höhere Spezifität oder spätere Deklaration gewinnt.
 
-- **Regeln überschreiben:**  
-    Höhere Spezifität oder spätere Deklaration gewinnt.
-- **Beispiel:**
+**Beispiel:**  
 ```css
 p { color: black; }       /* Allgemeine Regel */
 .intro p { color: gray; }   /* Höhere Spezifität */
@@ -299,17 +313,20 @@ p { color: black; }       /* Allgemeine Regel */
 ---
 
 
-## 5. Farben
-- **Eigenschaften:**
-    - **`color`** (Vordergrundfarbe/Textfarbe)
-    - **`background-color`** (Hintergrundfarbe)
-- **Farbformate:**
-    - **Namentliche Farben:** z. B. `red`, `blue`
-    - **Hexadezimal:** z. B. `#ff0000`
-    - **RGB:** z. B. `rgb(255, 0, 0)`
-    - **RGBA:** z. B. `rgba(255, 0, 0, 0.5)` (inkl. Transparenz)
-    - **HSL:** z. B. `hsl(0, 100%, 50%)`
-    - **HSLA:** z. B. `hsla(0, 100%, 50%, 0.5)`
+###Farben
+
+####Eigenschaften:  
+- **`color`** (Vordergrundfarbe/Textfarbe)  
+- **`background-color`** (Hintergrundfarbe)
+
+####Farbformate:
+- **Namentliche Farben:** z. B. `red`, `blue`, `tomato`
+- **Hexadezimal:** z. B. `#ff0000`
+- **RGB:** z. B. `rgb(255, 0, 0)`
+- **RGBA:** z. B. `rgba(255, 0, 0, 0.5)` (inkl. Transparenz)
+- **HSL:** z. B. `hsl(0, 100%, 50%)`
+- **HSLA:** z. B. `hsla(0, 100%, 50%, 0.5)`
+
 ```css
 h1{
 	color: tomato;
@@ -322,21 +339,26 @@ p{
 }
 ```
 
-## 6. Text
-- **Typografie:**
-    - **`font-family`**: Legt die Schriftart fest
-    - **`font-size`**: Schriftgröße (z. B. `16px`, `1em`)
-    - **`font-weight`**: Schriftstärke (z. B. `normal`, `bold`)
-    - **`font-style`**: Schriftschnitt (z. B. `normal`, `italic`)
-- **Textformatierung:**
-    - **`text-transform`**: Groß-/Kleinschreibung (z. B. `uppercase`, `capitalize`)
-    - **`text-decoration`**: Dekoration wie Unterstreichung (z. B. `underline`, `none`)
-    - **`line-height`**: Zeilenhöhe
-    - **`letter-spacing`**: Abstand zwischen Buchstaben
-    - **`word-spacing`**: Abstand zwischen Wörtern
-    - **`text-align`**: Horizontale Ausrichtung (z. B. `left`, `center`, `right`)
-    - **`text-indent`**: Einrückung des Textes
-    - **`text-shadow`**: Schatteneffekt für Text
+---
+
+###Text  
+
+####Typografie:
+- **`font-family`**: Legt die Schriftart fest  
+- **`font-size`**: Schriftgröße (z. B. `16px`, `1em`)  
+- **`font-weight`**: Schriftstärke (z. B. `normal`, `bold`)  
+- **`font-style`**: Schriftschnitt (z. B. `normal`, `italic`)
+
+####Textformatierung:  
+- **`text-transform`**: Gross-/Kleinschreibung (z. B. `uppercase`, `capitalize`)  
+- **`text-decoration`**: Dekoration wie Unterstreichung (z. B. `underline`, `none`)  
+- **`line-height`**: Zeilenhöhe  
+- **`letter-spacing`**: Abstand zwischen Buchstaben  
+- **`word-spacing`**: Abstand zwischen Wörtern  
+- **`text-align`**: Horizontale Ausrichtung (z. B. `left`, `center`, `right`)  
+- **`text-indent`**: Einrückung des Textes  
+- **`text-shadow`**: Schatteneffekt für Text
+
 ```css
 p {
     font-family: "Verdana", sans-serif;
@@ -348,29 +370,33 @@ p {
 }
 ```
 
-## 7. Masseinheiten
-- **Pixel (px):**  
-    Absolut; abhängig von der Pixeldichte des Ausgabegeräts.
+---
+
+####Masseinheiten  
+- **Pixel (px):**    
+    Absolut; abhängig von der Pixeldichte des Ausgabegeräts.  
 - **Prozent (%):**  
-    Relativ; bezieht sich auf das übergeordnete Element oder einen anderen Kontext.
+    Relativ; bezieht sich auf das übergeordnete Element oder einen anderen Kontext.  
 - **EM (em):**  
-    Relativ zur Schriftgröße des aktuellen Elements; nützlich für skalierbare Layouts.
+    Relativ zur Schriftgrösse des aktuellen Elements; nützlich für skalierbare Layouts.  
 - **REM (rem):**  
-    Relativ zur Schriftgröße des Root-Elements (`<html>`); vereinfacht konsistente Skalierung.
+    Relativ zur Schriftgrösse des Root-Elements (`<html>`); vereinfacht konsistente Skalierung.   
+
 ```css
 .container {
-    width: 80%;      /* 80% der Breite des übergeordneten Elements */
-    padding: 1em;    /* 1x der aktuellen Schriftgröße */
-    font-size: 1rem; /* entspricht der Schriftgröße des Root-Elements */
+    width: 80%;           /* 80% der Breite des übergeordneten Elements */
+    padding: 1em;       /* 1x der aktuellen Schriftgröße */
+    font-size: 1rem;     /* entspricht der Schriftgröße des Root-Elements */
 }
 ```
 
-## 8. Pseudo-Klassen & Pseudoelemente
-### 9.1 Pseudo-Klassen
-- **Definition:**  
-    Wählen Elemente basierend auf ihrem Zustand oder ihrer Position aus.
+---
 
-#### **Interaktions-/Zustands-Pseudoklassen** (basieren auf Nutzerinteraktion oder Link-Zustand)
+
+###Pseudo-Klassen
+Wählen Elemente basierend auf ihrem Zustand oder ihrer Position aus.
+
+####Interaktions-/Zustands-Pseudoklassen (basieren auf Nutzerinteraktion oder Link-Zustand)
 
 | **Selektor** | **Beschreibung**                                                                |
 | ------------ | ------------------------------------------------------------------------------- |
@@ -380,26 +406,30 @@ p {
 | `:active`    | Ein Element, das gerade **aktiviert** wird (z. B. beim Mausklick).              |
 | `:focus`     | Ein Element, das den **Fokus** hat (z. B. ein aktives Eingabefeld im Formular). |
 
-#### **Struktur-Pseudoklassen** (basieren auf Dokumentstruktur)
+####Struktur-Pseudoklassen (basieren auf Dokumentstruktur)
 
-| **Selektor**      | **Beschreibung**                                                                                                                                      |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `:root`           | Das Wurzelelement (typischerweise `<                                                                                                                  |
-| `:empty`          | Ein Element ohne Inhalt (keine Kinder,                                                                                                                |
-| `:first-child`    | Das **erste** Kind eines                                                                                                                              |
-| `:last-child`     | Das **letzte** Kind e                                                                                                                                 Das **n-te** Kind eines Elternelements <br>(z. B. <br>`:nth-child(even)`)  (Alle geraden Elemente),<br>`:nth-child(odd`  (Alle ungerade Elemente) (odd`  (odd`  ), ``  ), ``  |
-| `:only-child`     | Das **einzige*                                                                                                                                        |
-| `:first-of-type`  | Das **erste** Element eines bestimmt                                                                                                                  |
-| `:last-of-type`   | Das **letzte** Element eines bestim                                                                                                                   |
-| `:nth-of-type(n)` | Das                                                                                                                                                   |
-| `:only-of-type`   | Da                                                                                                                                                    |
-### 9.2 Pseudoelemente
-- **Definition:**  
-    Ermöglichen es, Teile eines Elements zu stylen, die nicht explizit im HTML vorhanden sind.
-- **Beispiele:**
+| **Selektor**      | **Beschreibung**                                                                                                             |
+| :---------------- |:------------------------------------------------------------------------------------------- |
+| `:root`           | Das Wurzelelement (typischerweise `<html>` in einem HTML-Dokument                       |
+| `:empty`          |  Ein Element ohne Inhalt (keine Kinder, weder Text noch andere Elemente   |
+| `:first-child`    | Das **erste** Kind eines Elternelement  |
+| `:last-child`     | Das **letzte** Kind eines Elternelement       |                                           
+| `:nth.child(n)`| Das | Das **n-te** Kind eines Elternelements    |
+|`:nth-child(even)`|  Alle geraden Elemente |
+|`:nth-child(odd)`  | Alle ungerade Elemente | 
+| `:only-child`     | Wählt ein Element aus, das das einzige Kind seines Elternteils ist.  |
+| `:first-of-type`  | Wählt das **erste** Element seines Typs innerhalb des Eltern-Elements  |
+| `:last-of-type`   | Wählt das **letzte** Element seines Typs innerhalb des Eltern-Elements |
+| `:nth-of-type(n)` | Wählt das n-te Element eines bestimmten Typs innerhalb des Eltern-Elements |
+| `:only-of-type`   | Wählt ein Element aus, das das einzige Kind seines Elternteils ist. |
+
+---
+
+###Pseudoelemente  
+Ermöglichen es, Teile eines Elements zu stylen, die nicht explizit im HTML vorhanden sind.
 
 | **Selektor**     | **Selektiert**                                               |
-| ---------------- | ------------------------------------------------------------ |
+|:---------------- |:------------------------------------------------------------ |
 | `::first-letter` | Das erste Zeichen eines Elements                             |
 | `::first-line`   | Die erste Zeile eines Elements                               |
 | `::before`       | Generiert Inhalt vor dem eigentlichen Inhalt eines Elements  |
@@ -412,10 +442,11 @@ p::first-letter {
 }
 ```
 
-## 9. Attributselektoren
-- **Definition:**  
-    Wählen Elemente basierend auf dem Vorhandensein oder dem Wert eines Attributs.
-- **Beispiele:**
+---
+
+###Attributselektoren
+Wählen Elemente basierend auf dem Vorhandensein oder dem Wert eines Attributs.
+
 ```css
 /* Alle Elemente, die ein Attribut "data-info" besitzen */
 [data-info] {
@@ -433,8 +464,7 @@ input[type^="text"] {
 }
 ```
 
-- **Weitere Varianten:**
-
+**Weitere Varianten:**  
 | **Selektor**     | **Beschreibung**                                                                                                          |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `[attr]`         | Wählt alle Elemente aus, die das Attribut `attr` besitzen.                                                                |
@@ -445,12 +475,11 @@ input[type^="text"] {
 | `[attr~="wert"]` | Wählt Elemente, deren `attr`-Wert **"wert" als isoliertes Wort** (d.h. als ganzes, durch Leerzeichen abgegrenzt) enthält. |
 
 
-Diese Tabelle fasst die verschiedenen Varianten der Attributselektore
-## 10. Open Fonts einbinden und anwenden
+---
 
-### 10.1 Einbindung von Open Fonts (z. B. Google Fonts)
+###Open Fonts einbinden und anwenden
 
-- **Mit `<link>` im HTML:**
+####Mit `<link>` im HTML  
 ```html
 <!DOCTYPE html>
 <html>
@@ -464,21 +493,21 @@ Diese Tabelle fasst die verschiedenen Varianten der Attributselektore
 </body>
 </html>
 ```
-    
-- **Mit `@import` im CSS:**
+
+####Mit `@import` im CSS  
 ```css
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 ```
 
-### 10.2 Anwendung der Web Fonts mittels CSS
-
-- **Beispiel:**
+####Anwendung der Web Fonts mittels CSS
 ```css
 body {
     font-family: 'Roboto', sans-serif;
 }
+
 ```
 
+---
 
 # Box Modell & Gestaltung von Listen Tabellen und Formularen
 ![[Css für Listen, Tabellen und das Box-Modell.pdf]]
