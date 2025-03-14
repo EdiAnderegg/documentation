@@ -465,13 +465,13 @@ input[type^="text"] {
 ```
 
 **Weitere Varianten:**  
-| **Selektor**     | **Beschreibung**                                                                                                          |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `[attr]`         | Wählt alle Elemente aus, die das Attribut `attr` besitzen.                                                                |
-| `[attr="wert"]`  | Wählt Elemente, deren `attr`-Wert exakt **"wert"** entspricht.                                                            |
-| `[attr^="wert"]` | Wählt Elemente, deren `attr`-Wert **mit "wert" beginnt**.                                                                 |
-| `[attr$="wert"]` | Wählt Elemente, deren `attr`-Wert **mit "wert" endet**.                                                                   |
-| `[attr*="wert"]` | Wählt Elemente, deren `attr`-Wert **"wert" enthält**.                                                                     |
+| **Selektor**     | **Beschreibung**  |
+| :---------- | :------------------------------------------ |
+| `[attr]`  |  Wählt alle Elemente aus, die das Attribut `attr` besitzen.   |
+| `[attr="wert"]`  | Wählt Elemente, deren `attr`-Wert exakt **"wert"** entspricht.     |
+| `[attr^="wert"]` | Wählt Elemente, deren `attr`-Wert **mit "wert" beginnt**.         |
+| `[attr$="wert"]` | Wählt Elemente, deren `attr`-Wert **mit "wert" endet**.         |
+| `[attr*="wert"]` | Wählt Elemente, deren `attr`-Wert **"wert" enthält**.                      |
 | `[attr~="wert"]` | Wählt Elemente, deren `attr`-Wert **"wert" als isoliertes Wort** (d.h. als ganzes, durch Leerzeichen abgegrenzt) enthält. |
 
 
@@ -697,7 +697,7 @@ Das `<form>`-Element fasst alle Steuerelemente zusammen.
 
 **Textfelder, Buttons, und Dropdowns:**  
 - **Breiten und Höhen:** Mit `width`, `height` sowie relativen Einheiten (`em`, `%`).  
-- **Padding und Margin:** Zum Festlegen von Innen- und Außenabständen.  
+- **Padding und Margin:** Zum Festlegen von Innen- und Aussenabständen.  
 - **Hover-Effekte:** Für interaktive Rückmeldungen (z. B. Hintergrundfarbe ändern, Schatten hinzufügen).  
 - **Validation-Effekte:** Mit Pseudoklassen wie `:required`, `:valid` zur Darstellung von Pflichtfeldern (z. B. rotes Kreuz, grüner Haken).
 
