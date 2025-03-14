@@ -509,38 +509,41 @@ body {
 
 ---
 
-# Box Modell & Gestaltung von Listen Tabellen und Formularen
-![[Css für Listen, Tabellen und das Box-Modell.pdf]]
-## 1. Box-Modell und Abstände
+###Box-Modell
 
-### 1.1 Das klassische Box-Modell
+####Das klassische Box-Modell
+Jedes HTML-Element wird als rechteckige Box dargestellt. 
 
-- **Grundidee:**  
-    Jedes HTML-Element wird als rechteckige Box dargestellt. Diese Box setzt sich zusammen aus:
-    - **Inhaltsbereich:** Der eigentliche Inhalt (Text, Bilder, etc.)
-    - **Innenabstand (Padding):** Abstand zwischen Inhalt und Rahmen (border)
-    - **Rahmen (Border):** Umrandung des Elements
-    - **Außenabstand (Margin):** Abstand zwischen dem Element und benachbarten Elementen
+**Diese Box setzt sich zusammen aus:**  
+- **Inhaltsbereich:** Der eigentliche Inhalt (Text, Bilder, etc.)  
+- **Innenabstand (Padding):** Abstand zwischen Inhalt und Rahmen (border)  
+- **Rahmen (Border):** Umrandung des Elements  
+- **Aussenabstand (Margin):** Abstand zwischen dem Element und benachbarten Elementen  
 - **Berechnung der tatsächlichen Größe:**  
-    Die Gesamtabmessungen einer Box ergeben sich aus:
-    - **Breite:** `width` + `padding-left` + `padding-right` + `border-left` + `border-right` + `margin-left` + `margin-right`
-    - **Höhe:** `height` + `padding-top` + `padding-bottom` + `border-top` + `border-bottom` + `margin-top` + `margin-bottom`
-- **Besondere Eigenschaften:**
-    - **Collapsing Margins:** 
-     Vertikale Außenabstände, die sich berühren, fallen zusammen (größter Wert).
-    - **Overflow:** 
-      Bestimmt, wie mit überlaufendem Inhalt umgegangen wird (z. B. `scroll`, `hidden`, `visible`, `auto`).
-
-
-### 1.2 Das alternative Box-Modell (CSS3)
-
-- **box-sizing: border-box;**  
-    Mit dieser Eigenschaft wird die festgelegte Breite und Höhe einer Box inklusive Padding und Border festgelegt. Somit werden Innenabstände und Rahmen von der definierten Gesamtgröße abgezogen. Außenabstände (margin) bleiben davon unberührt.
     
-- **Beispiel:**
+**Die Gesamtabmessungen einer Box ergeben sich aus:**    
+- **Breite:** `width` + `padding-left` + `padding-right` + `border-left` + `border-right` + `margin-left` + `margin-right`  
+- **Höhe:** `height` + `padding-top` + `padding-bottom` + `border-top` + `border-bottom` + `margin-top` + `margin-bottom`
+
+**Besondere Eigenschaften:**  
+- **Collapsing Margins:**  
+	Vertikale Aussenabstände, die sich berühren, fallen zusammen (grösster Wert).  
+- **Overflow:**  
+	Bestimmt, wie mit überlaufendem Inhalt umgegangen wird (z. B. `scroll`, `hidden`, `visible`, `auto`).  
+
+
+####Das alternative Box-Modell (CSS3)
+
+**`box-sizing: border-box;`**    
+Mit dieser Eigenschaft wird die festgelegte Breite und Höhe einer Box inklusive Padding und Border festgelegt. Somit werden Innenabstände und Rahmen von der definierten Gesamtgrösse abgezogen. Aussenabstände (margin) bleiben davon unberührt.
+    
+**Beispiel:**  
 ```css
-/* Standardverhalten: content-box (Default)
-   - content-box: Die festgelegte Breite gilt ausschließlich für den Inhalt.
+/*
+=============================== 
+Standardverhalten: content-box (Default)
+===============================
+   - content-box: Die festgelegte Breite gilt ausschliesslich für den Inhalt.
      Padding und Border werden zur Gesamtbreite hinzugerechnet.
    - Beispiel:
      Content Width: 300px
@@ -548,14 +551,19 @@ body {
      Border: 5px links + 5px rechts
      => Gesamtbreite = 300px + 40px + 10px = 350px
 */
+
 .box-content {
     /* box-sizing: content-box (Default, falls nicht anders definiert) */
     width: 300px;  /* Content-Breite = 300px */
-    padding: 20px;
-    border: 5px solid blue;
+    padding: 20px;  /* + 40px */
+    border: 5px solid blue;  /* + 10px */ 
+
 }
 
-/* Alternative: border-box
+/* 
+=========================
+Alternative: border-box
+=========================
    - border-box: Die festgelegte Breite umfasst Inhalt, Padding und Border.
      Dadurch wird die eigentliche Content-Breite automatisch kleiner, damit die Gesamtbreite 300px beträgt.
    - Beispiel:
@@ -564,6 +572,7 @@ body {
      Border: 5px links + 5px rechts (10px insgesamt)
      => Content Width = 300px - 40px - 10px = 250px
 */
+
 .box-border {
     box-sizing: border-box;  /* Hier wird das neue Box-Modell aktiviert */
     width: 300px;  /* Border-box Breite = 300px (inklusive Padding und Border) */
@@ -572,90 +581,94 @@ body {
 }
 
 ```
-    
 
-### 1.3 Übersicht: Wichtige Eigenschaften im Box-Modell
+####Übersicht: Wichtige Eigenschaften im Box-Modell
 
-|Eigenschaft|Beschreibung|Beispielwerte|
-|---|---|---|
-|width / height|Breite/Höhe des Inhaltsbereichs|`400px`, `75%`|
-|padding|Innenabstand (alle Seiten, oder individuell: top, right, bottom, left)|`10px`, `10px 5px`|
-|border|Rahmen (Breite, Stil, Farbe – alle Seiten oder individuell)|`5px solid blue`|
-|margin|Außenabstand (alle Seiten, oder individuell)|`20px`, `10px 5px`|
-|min-/max-width/height|Mindest-/Maximalwerte für Breite/Höhe|`min-width:200px;`|
-|overflow|Umgang mit überlaufendem Inhalt|`scroll`, `hidden`, `auto`|
+| **Eigenschaft** | **Beschreibung** | **Beispielwerte** |
+|:---|:---|:---|
+| width / height | Breite/Höhe des Inhaltsbereichs | `400px`, `75%` |
+| padding | Innenabstand (alle Seiten, oder individuell: top, right, bottom, left) | `10px`, `10px 5px` |
+| border | Rahmen (Breite, Stil, Farbe – alle Seiten oder individuell) | `5px solid blue` |
+| margin | Aussenabstand (alle Seiten, oder individuell) | `20px`, `10px 5px` |
+| min-/max-width/height|Mindest-/Maximalwerte für Breite/Höhe | `min-width:200px;` |
+| overflow | Umgang mit überlaufendem Inhalt | `scroll`, `hidden`, `auto` |
 
 ---
-## 2. Listen mit CSS gestalten
 
-### 2.1 Standardlisten und deren Eigenschaften
+###Listen mit CSS gestalten
+Listen werden häufig als Grundlage für Navigationsmenüs (vertikal, horizontal oder als Dropdown) genutzt.
 
-- **Ungeordnete Listen (`<ul>`):**  
-    Standardmäßig werden Aufzählungszeichen (bullet points) angezeigt.
-    - **list-style-type:** Ändert das Aussehen der Aufzählungszeichen (z. B. `disc`, `circle`, `square`, `none`).
-    - **list-style-image:** Ersetzt Aufzählungszeichen durch ein Bild.
-    - **list-style-position:** Bestimmt, ob das Zeichen innerhalb oder außerhalb des Listen-Containers steht.
-- **Geordnete Listen (`<ol>`):**  
-    Werden nummeriert.
-    - **list-style-type:** Bestimmt das Nummerierungssystem (z. B. `decimal`, `decimal-leading-zero`, `lower-alpha`, `upper-roman`).
+####Standardlisten und deren Eigenschaften
 
-### 2.2 Beispiel-Tabelle: Wichtige CSS-Eigenschaften für Listen
+**Ungeordnete Listen (`<ul>`):**    
+Standardmässig werden Aufzählungszeichen (bullet points) angezeigt.  
+- **list-style-type:** Ändert das Aussehen der Aufzählungszeichen (z. B. `disc`, `circle`, `square`, `none`).  
+- **list-style-image:** Ersetzt Aufzählungszeichen durch ein Bild.  
+- **list-style-position:** Bestimmt, ob das Zeichen innerhalb oder außerhalb des Listen-Containers steht.
+
+**Geordnete Listen (`<ol>`):**    
+Werden nummeriert.  
+- **list-style-type:** Bestimmt das Nummerierungssystem (z. B. `decimal`, `decimal-leading-zero`, `lower-alpha`, `upper-roman`).
+
+####Wichtige CSS-Eigenschaften für Listen
 
 | Eigenschaft         | Beschreibung                                       | Beispielwert                       |
-| ------------------- | -------------------------------------------------- | ---------------------------------- |
-| list-style-type     | Art der Aufzählungszeichen bzw. Nummerierung       | `disc`, `circle`, `square`, `none` |
-| list-style-image    | Bild als Aufzählungszeichen                        | `url("bullet.png")`                |
-| list-style-position | Position der Aufzählungszeichen (inside / outside) | `inside` oder `outside`            |
+| :----------------- | :------------------------------------------------ | :------------------------------ |
+|  `list-style-type: `     |  Art der Aufzählungszeichen bzw. Nummerierung       | `disc`, `circle`, `square`, `none` |
+|  `list-style-image: `  |  Bild als Aufzählungszeichen                        | `url("bullet.png")`      |
+| `list-style-position: ` |  Position der Aufzählungszeichen (inside / outside) | `inside` oder `outside`     |
 
-### 2.3 Gestaltung von verschachtelten Listen
-- **Hover-Effekte:**  
-    Beispiel: Äußere Listenelemente werden beim Überfahren rot, innere (Inline-)Liste gelb.
+
+####Gestaltung von verschachtelten Listen
+
+**Hover-Effekte:**    
 ```css
+
+/* Äussere Listenelemente werden beim Überfahren rot, innere (Inline-)Liste gelb. */
+
 ul li:hover {
     background-color: red;
 }
 ul li ul li:hover {
     background-color: yellow;
 }
-```
-    
-- **Navigation:**  
-    Listen werden häufig als Grundlage für Navigationsmenüs (vertikal, horizontal oder als Dropdown) genutzt.
+```  
 
 ---
 
-## 3. Tabellen mit CSS gestalten
+###Tabellen mit CSS gestalten
 
-### 3.1 Grundlegende Tabellenformatierung
 
-- **Grundstruktur:**  
-    Eine Tabelle wird mit `<table>`, `<tr>` (Zeile) und `<td>` (Zelle) bzw. `<th>` (Headerzelle) erstellt.
-- **Rahmen und Abstände:**
-    - **border, border-collapse, border-spacing:** Bestimmen Rahmen und Abstände zwischen Zellen.
-    - **empty-cells:** Steuert, ob leere Zellen angezeigt werden sollen.
+####Grundlegende Tabellenformatierung
+  
+Eine Tabelle wird mit `<table>`, `<tr>` (Zeile) und `<td>` (Zelle) bzw. `<th>` (Headerzelle) erstellt.
 
-### 3.2 Beispiel-Tabelle: Wichtige CSS-Eigenschaften für Tabellen
+**Rahmen und Abstände:**  
+- **border, border-collapse, border-spacing:** Bestimmen Rahmen und Abstände zwischen Zellen.  
+- **empty-cells:** Steuert, ob leere Zellen angezeigt werden sollen.
+
+
+####CSS-Eigenschaften für Tabellen
 
 | Eigenschaft      | Beschreibung                                           | Beispielwert               |
 | ---------------- | ------------------------------------------------------ | -------------------------- |
-| border           | Rahmen der Tabelle (auch über CSS oder HTML-Attribut)  | `1px solid #000`           |
-| border-collapse  | Zusammenfallen der Zellrahmen (Collapse vs. Separate)  | `collapse` oder `separate` |
-| border-spacing   | Abstand zwischen den Zellen (nur bei separate borders) | `5px 10px`                 |
-| padding          | Innenabstand innerhalb der Zellen                      | `7px 10px`                 |
-| text-align       | Textausrichtung in Zellen                              | `left`, `center`, `right`  |
-| background-color | Hintergrundfarbe der Zellen oder Zeilen                | `#efefef`, `#c3e6e5`       |
+| `border: `           | Rahmen der Tabelle (auch über CSS oder HTML-Attribut)  | `1px solid #000`           |
+| `border-collapse: `  | Zusammenfallen der Zellrahmen (Collapse vs. Separate)  | `collapse` oder `separate` |
+| `border-spacing: `   | Abstand zwischen den Zellen (nur bei separate borders) | `5px 10px`                 |
+| `padding: `         | Innenabstand innerhalb der Zellen                      | `7px 10px`                 |
+| `text-align: `       | Textausrichtung in Zellen                              | `left`, `center`, `right`  |
+| `background-color: ` | Hintergrundfarbe der Zellen oder Zeilen                | `#efefef`, `#c3e6e5`       |
 
-### 3.3 Beispiele für Tabellen mit Hover-Effekten
+####Tabellen mit Hover-Effekten
 
-- **Zeilen-Hover:**
+**Zeilen-Hover:**  
 ```css
 tr:hover {
     background-color: red;
 }
 ```
 
-    
-- **Zellen-Hover (im Tabellenkörper):**
+**Zellen-Hover (im Tabellenkörper):**  
 ```css
 tbody td:hover {
     background-color: green;
@@ -664,30 +677,32 @@ tbody td:hover {
 
 ---
 
-## 4. Formulare mit CSS gestalten
+###Formulare mit CSS gestalten
 
-### 4.1 Grundlegende Formularelemente
+####Grundlegende Formularelemente
 
-- **Container:**  
-    Das `<form>`-Element fasst alle Steuerelemente zusammen.
-- **Typische Steuerelemente:**  
-	- `<input>`
-	- `<textarea>`
-	- `<select>`
-	- `<button>`
-	- `<label>`
-	- `<fieldset>`
-	- `<legend>`
+**Container:**  
+Das `<form>`-Element fasst alle Steuerelemente zusammen.
 
-### 4.2 Styling von Formularelementen
+**Typische Steuerelemente:**   
+- `<input>`  
+- `<textarea>`  
+- `<select>`  
+- `<button>`  
+- `<label>`  
+- `<fieldset>`  
+- `<legend>`
 
-- **Textfelder, Buttons, und Dropdowns:**
-    - **Breiten und Höhen:** Mit `width`, `height` sowie relativen Einheiten (`em`, `%`).
-    - **Padding und Margin:** Zum Festlegen von Innen- und Außenabständen.
-    - **Hover-Effekte:** Für interaktive Rückmeldungen (z. B. Hintergrundfarbe ändern, Schatten hinzufügen).
-    - **Validation-Effekte:** Mit Pseudoklassen wie `:required`, `:valid` zur Darstellung von Pflichtfeldern (z. B. rotes Kreuz, grüner Haken).
+####Styling von Formularelementen
 
-### 4.3 Beispiel: Formular mit CSS-Hover und Validierungseffekten
+**Textfelder, Buttons, und Dropdowns:**  
+- **Breiten und Höhen:** Mit `width`, `height` sowie relativen Einheiten (`em`, `%`).  
+- **Padding und Margin:** Zum Festlegen von Innen- und Außenabständen.  
+- **Hover-Effekte:** Für interaktive Rückmeldungen (z. B. Hintergrundfarbe ändern, Schatten hinzufügen).  
+- **Validation-Effekte:** Mit Pseudoklassen wie `:required`, `:valid` zur Darstellung von Pflichtfeldern (z. B. rotes Kreuz, grüner Haken).
+
+####Formular mit CSS-Hover und Validierungseffekten
+  
 ```html
 <form id="myForm" method="post">
   <fieldset>
@@ -708,7 +723,6 @@ tbody td:hover {
   <button type="submit">Absenden</button>
 </form>
 ```
-
 ```css
 /* Allgemeines Formular-Styling */
 form {
