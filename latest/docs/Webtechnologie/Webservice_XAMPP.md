@@ -63,7 +63,8 @@ Bei Konflikten Ports wechseln (z. B. 8080 oder 8888)
 Ein virtueller Webserver in Apache ist **eine eigenständige Webserver-Konfiguration, welche auf eine bestimmte URL reagiert**. Virtuelle Webserver können unter einer gemeinsamen IP-Adresse betrieben werden und werden aufgrund der URL voneinander unterschieden. Dies ist ab HTTP/1.1 möglich, vorausgesetzt, dass in der Request-Message der Hostname des gewünschten Webservers gesendet wird.
 
 **Funktionsweise:**  
-- Der Client sendet im Request den `Host:`-Header (z. B. `Host: www.customer1.local`), der dem Server mitteilt, welche Webseite ausgeliefert werden soll.  
+Der Client sendet im Request den Host:  
+- Header (z. B. `Host: www.customer1.local`), der dem Server mitteilt, welche Webseite ausgeliefert werden soll.  
 
 
 ####Erstellung und Konfiguration eigener virtueller Webserver (Virtual Hosts)
