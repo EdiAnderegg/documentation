@@ -49,6 +49,7 @@ Nutzen Elemente, die den Inhalt in sinnvolle Bereiche gliedern
     <a href="../b/b1.html">Wechsel zur Ebene B</a>
 </nav>
 ```
+
 ---
 
 ###Syntax vs. Semantik
@@ -113,13 +114,12 @@ Semantik gibt den Elementen eine inhaltliche Bedeutung – sie macht den Code ma
 </body>
 </html>
 ```
+
 ---
 
-###Strukturieren von Inhalten: Text und Listen
+###Textauszeichnungen und Formatierung
 
-####Textauszeichnungen und Formatierung
-
-#####Grundlegende Tags  
+####Grundlegende Tags  
 - **Überschriften:** `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`  
 - **Absätze:** `<p>`    
 - **Fett:** `<b>`  
@@ -134,7 +134,7 @@ Tags, die im öffnenden Tag gleich wieder geschlossen werden (wie `<br />` und `
 Alle genannten Tags haben eine semantische Bedeutung, auch wenn diese manchmal nicht visuell umgesetzt wird.
 
 
-#####Weitere Textformatierung (Semantische Auszeichnungen)  
+####Weitere Textformatierung (Semantische Auszeichnungen)  
 - **Starke Betonung:** `<strong>`  
 - **Hervorhebung:** `<em>`  
 - **Blockzitat:** `<blockquote>`  
@@ -147,9 +147,11 @@ Alle genannten Tags haben eine semantische Bedeutung, auch wenn diese manchmal n
 - **Löschen:** `<del>`  
 - **Durchstreichen:** `<s>`
 
-####Listen
+---
 
-#####Geordnete Listen   
+###Listen
+
+####Geordnete Listen   
 `<ol>` mit `<li>` (nummerierte Liste)
 
 ```html
@@ -160,7 +162,7 @@ Alle genannten Tags haben eine semantische Bedeutung, auch wenn diese manchmal n
 </ol
 ```
 
-#####Ungeordnete Listen  
+####Ungeordnete Listen  
 `<ul>` mit `<li>` (Aufzählungspunkte)  
 
 ```html
@@ -171,7 +173,7 @@ Alle genannten Tags haben eine semantische Bedeutung, auch wenn diese manchmal n
 </ul>
 ```
 
-#####Definitionslisten  
+####Definitionslisten  
 `<dl>`, `<dt>`, `<dd>`  
 
 ```html 
@@ -183,7 +185,7 @@ Alle genannten Tags haben eine semantische Bedeutung, auch wenn diese manchmal n
 </dl>
 ```
 
-#####Erläuterung:  
+####Erläuterung:  
 Listen können beliebig verschachtelt werden, um komplexe Informationsstrukturen abzubilden. Sie eignen sich nicht nur zur Darstellung von Texten, sondern auch für Navigationselemente wie Drop-Down-Menüs. Dabei wird CSS zur Gestaltung intensiv genutzt.
 
  ---
@@ -400,6 +402,7 @@ Wird häufig in Kombination mit `<figure>` genutzt.
   </tr>
 </table>
 ```
+
 ---
 
 ###Formulare
