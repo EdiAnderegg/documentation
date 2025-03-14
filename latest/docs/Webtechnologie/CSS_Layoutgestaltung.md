@@ -54,7 +54,7 @@ Ein Element wird relativ zum Viewport fixiert und bleibt beim Scrollen an dersel
 
 ###Float, Clear & Clearfix-Hacks
 
-####Float:  
+####Float  
 Mit `float: left;` oder `float: right;` werden Elemente aus dem normalen Fluss herausgenommen und nebeneinander angeordnet.
 
 ```css
@@ -68,7 +68,7 @@ Mit `float: left;` oder `float: right;` werden Elemente aus dem normalen Fluss h
 
 ```
 
-####Clear:
+####Clear
 Verhindert, dass nachfolgende Elemente an schwimmenden Elementen "anhaften".
 
 ```css
@@ -77,7 +77,7 @@ Verhindert, dass nachfolgende Elemente an schwimmenden Elementen "anhaften".
 }
 ```
 
-####Clearfix-Hack:  
+####Clearfix-Hack  
 Um Container korrekt um schwimmende Elemente zu legen, ohne dass deren Höhe zusammenfällt.
 
 ```css
@@ -151,7 +151,7 @@ Flex-Items lassen sich über die Kurzform-Eigenschaft `flex` sowie die Einzelwer
 }
 ```
 
-####Flexbox-Beispiel mit mehreren Eigenschaften:
+####Flexbox-Beispiel mit mehreren Eigenschaften
 
 ```html
 <div class="flex-container">
@@ -273,7 +273,7 @@ body {
 Ein Starter-Kit, das Best Practices, optimierte Dateistrukturen und Skripte bereitstellt.  
 _(Download: [html5boilerplate.com](https://html5boilerplate.com))_
     
-####Normalize.css:  
+####Normalize.css  
 Vereinheitlicht die Browser-Standardwerte, sodass ein konsistenter Ausgangspunkt vorhanden ist.    
 _(Download: [necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/))_
 
