@@ -163,19 +163,19 @@ Flex-Items lassen sich über die Kurzform-Eigenschaft `flex` sowie die Einzelwer
 ```css
 .flex-container {
     display: flex;
-    flex-direction: row;                        /* Elemente werden horizontal angeordnet */
-    justify-content: space-between;   /* Gleichmäßiger Abstand zwischen den Boxen */
-    align-items: center;                       /* Vertikale Zentrierung der Boxen */
-    flex-wrap: wrap;                            /* Elemente umbrechen, wenn nicht genügend Platz vorhanden ist */
+    flex-direction: row;    /* Elemente werden horizontal angeordnet */
+    justify-content: space-between;   /* Gleichmässiger Abstand zwischen den Boxen */
+    align-items: center;   /* Vertikale Zentrierung der Boxen */
+    flex-wrap: wrap;         /* Elemente umbrechen, wenn nicht genügend Platz vorhanden ist */
 }
 
 .item-1 {
-    flex: 1 1 100px;                             /* Grow: 1, Shrink: 1, Basis: 100px */
+    flex: 1 1 100px;  /* Grow: 1, Shrink: 1, Basis: 100px */
     order: 2;
 }
 
 .item-2 {
-    flex: 2 1 100px;                             /* Box 2 erhält doppelt so viel Wachstum */
+    flex: 2 1 100px;   /* Box 2 erhält doppelt so viel Wachstum */
     order: 1;
 }
 
