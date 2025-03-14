@@ -18,6 +18,7 @@ Jedes HTML-Dokument beginnt mit einer Deklaration des Dokumententyps, gefolgt vo
 	</body>	
 </html>
 ```
+
 ---
 
 ###Strukturieren, Gruppieren und Verlinken von Informationen
