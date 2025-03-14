@@ -1,9 +1,9 @@
 #CSS - Responsive Web Design
 
 ###Grundlagen des Responsive Web Designs
-Gestaltung von Webseiten, die sich flexibel an verschiedene Bildschirmgrößen anpassen.  
-   
- ####Wichtige Konzepte  
+Gestaltung von Webseiten, die sich flexibel an verschiedene Bildschirmgrössen anpassen.  
+
+####Wichtige Konzepte  
 - **Mobile First:** Beginne mit einem Design für kleine Geräte und erweitere es mit Media Queries für grössere Viewports.  
 - **Progressive Enhancement:** Inhalte stehen im Vordergrund; zusätzliche Styles werden für leistungsfähigere Browser ergänzt.  
 - **Graceful Degradation:** Entwickle für moderne Systeme und passe dann für ältere Geräte an.
