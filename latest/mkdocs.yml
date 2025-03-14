@@ -47,6 +47,7 @@ nav:
       - index: ./index.md
   - Webtechnologie:
       - CSS_Basic: ./Webtechnologie/CSS_Basic.md
+      - CSS_Layoutgestaltung: ./Webtechnologie/CSS_Layoutgestaltung.md
       - HTML: ./Webtechnologie/HTML.md
       - Webprotokolle: ./Webtechnologie/Webprotokolle.md
       - Webservice_XAMPP: ./Webtechnologie/Webservice_XAMPP.md
@@ -63,6 +64,7 @@ nav:
       - Verkabelung: ./Netzwerk/Verkabelung.md
       - Zugriffsverfahren: ./Netzwerk/Zugriffsverfahren.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
