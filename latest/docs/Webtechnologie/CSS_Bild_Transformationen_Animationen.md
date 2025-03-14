@@ -75,36 +75,37 @@ body {
 }
 ```
 
-### 2.3 Lineare Farbverläufe
+####Lineare Farbverläufe
+Mit `linear-gradient` kann ein Farbverlauf erzeugt werden.
 
-- **Syntax:**  
-    Mit `linear-gradient` kann ein Farbverlauf erzeugt werden.
 ```css
 background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
 ```
 
-- **Beispiel:**
+**Beispiel:**  
 ```css
+
+/* Der Verlauf verläuft horizontal (90deg) von Weiss zu deepskyblue. */
+
 .gradient {
     background-image: linear-gradient(90deg, #fff, deepskyblue);
 }
 ```
-_Erklärung:_ Der Verlauf verläuft horizontal (90deg) von Weiß zu deepskyblue.
 
 ---
 
-## 3. Übergänge und Animationen
+###Übergänge (Transitions)
+Übergänge sorgen für sanfte, weiche Zustandswechsel, z. B. beim Hover über ein Element.
 
-### 3.1 Übergänge (Transitions)
+| Eigenschaft                 | Beschreibung |
+|:------------------------|:------------|
+| `transition-property: `      | Bestimmt, welche CSS-Eigenschaften animiert werden (`all`, einzelne Eigenschaften wie `opacity`, `background-color` etc.). |
+| `transition-duration: `      | Gibt die Dauer der Animation an (`0.5s`, `1s`, `200ms`). |
+| `transition-timing-function: `  | Definiert das Beschleunigungsprofil der Animation (`ease`, `linear`, `ease-in`, `ease-out`, `ease-in-out`). |
+| `transition-delay: `          | Legt eine Verzögerung vor Beginn der Animation fest (`0.2s`, `1s`). |
 
-- **Zweck:**  
-    Übergänge sorgen für sanfte, weiche Zustandswechsel, z. B. beim Hover über ein Element.
-- **Wichtige Eigenschaften:**
-    - **transition-property:** Welche Eigenschaft(en) animiert werden sollen (z. B. `all` oder einzelne Eigenschaften)
-    - **transition-duration:** Dauer des Übergangs (z. B. `0.5s`, `1s`)
-    - **transition-timing-function:** Beschleunigungsprofil (z. B. `ease`, `linear`, `ease-in`, `ease-out`, `ease-in-out`)
-    - **transition-delay:** Verzögerung vor Beginn des Übergangs (z. B. `0.2s`)
-- **Beispiel:**
+
+**Beispiel:**  
 ```css
 .btn {
     background-color: blue;
@@ -116,20 +117,27 @@ _Erklärung:_ Der Verlauf verläuft horizontal (90deg) von Weiß zu deepskyblue.
 
 ```
 
-### 3.2 Animationen
-- **Zweck:**  
-    Animationen können komplexe, mehrstufige Bewegungen und Effekte erzeugen.
-- **Wichtige Eigenschaften:**
-    - **@keyframes:** Definiert die einzelnen Schritte (Wegpunkte) der Animation.
-    - **animation-name:** Verweist auf den Namen der @keyframes-Regel.
-    - **animation-duration:** Gesamtdauer der Animation.
-    - **animation-timing-function:** Beschleunigungsprofil der Animation.
-    - **animation-delay:** Verzögerung vor Start der Animation.
-    - **animation-iteration-count:** Anzahl der Wiederholungen (z. B. `infinite`).
-    - **animation-direction:** Animationsrichtung (z. B. `normal`, `reverse`).
-    - **animation-fill-mode:** Bestimmt, wie sich das Element nach der Animation verhält (z. B. `forwards`).
-- **Ein einfaches Beispiel:**
+---
+
+###Animationen  
+Animationen können komplexe, mehrstufige Bewegungen und Effekte erzeugen.
+
+| Eigenschaft                  | Beschreibung |
+|:----------------------------|:------------|
+| **@keyframes**               | Definiert die einzelnen Schritte (Wegpunkte) einer Animation. |
+| **animation-name**           | Verweist auf den Namen der `@keyframes`-Regel. |
+| **animation-duration**       | Gibt die Gesamtdauer der Animation an (`1s`, `2s`, etc.). |
+| **animation-timing-function** | Bestimmt das Beschleunigungsprofil (`ease`, `linear`, `ease-in`, `ease-out`, `ease-in-out`). |
+| **animation-delay**          | Legt eine Verzögerung vor Start der Animation fest (`0.5s`, `1s`). |
+| **animation-iteration-count** | Gibt die Anzahl der Wiederholungen an (`1`, `3`, `infinite`). |
+| **animation-direction**      | Bestimmt die Animationsrichtung (`normal`, `reverse`, `alternate`, `alternate-reverse`). |
+| **animation-fill-mode**      | Definiert, wie sich das Element nach der Animation verhält (`none`, `forwards`, `backwards`, `both`). |
+
+**Beispiel:**  
 ```css
+
+/* Beim Hover über den Container wird die Hintergrundfarbe von Rot zu Weiß über 3 Sekunden animiert. */
+
 #box {
     width: 400px;
     height: 200px;
@@ -152,22 +160,26 @@ _Erklärung:_ Der Verlauf verläuft horizontal (90deg) von Weiß zu deepskyblue.
 }
 
 ```
-_Erklärung:_ Beim Hover über den Container wird die Hintergrundfarbe von Rot zu Weiß über 3 Sekunden animiert.
 
-### 3.3 Kombination von Transformationen, Übergängen und Animationen
+---
 
-- **Transformationen:**  
-    Mit `transform` können Elemente skaliert, rotiert, verschoben oder geneigt werden.
-    - **scale(), rotate(), skew(), translate()**  
-        _Beispiel:_
+###Kombination von Transformationen, Übergängen und Animationen
+
+####Transformationen:  
+Mit `transform` können Elemente skaliert, rotiert, verschoben oder geneigt werden.  
+- **scale(), rotate(), skew(), translate()**  
+
+**Beispiel:**  
 ```css
 .transform:hover {
     transform: scale(1.2) rotate(10deg) translate(20px, 10px);
 }
 
 ```
-- **Kombination mit Transition:**  
-    Übergänge lassen die Transformation sanft erfolgen.
+
+####Kombination mit Transition:  
+Übergänge lassen die Transformation sanft erfolgen.
+
 ```css
 .transform {
     transition: transform 0.5s ease, opacity 0.5s ease;
@@ -177,12 +189,14 @@ _Erklärung:_ Beim Hover über den Container wird die Hintergrundfarbe von Rot z
     opacity: 0.8;
 }
 ```
-### 3.4 Sprites
-- **Konzept:** Mehrere Icons/Button-Zustände in einer Bilddatei; Ausschnitte werden via `background-position` angezeigt.
-- **Vorteil:** Weniger HTTP-Anfragen, bessere Performance.
-- **Beispiel (Hover-Zustände):**
+---
 
-```css
+###Sprites
+Mehrere Icons/Button-Zustände in einer Bilddatei; Ausschnitte werden via `background-position` angezeigt.  
+- **Vorteil:** Weniger HTTP-Anfragen, bessere Performance.
+
+**Beispiel:  
+  ```css
 .button {
     display: inline-block;
     width: 125px; height: 40px;
