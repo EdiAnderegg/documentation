@@ -196,8 +196,8 @@ Mit `transform` können Elemente skaliert, rotiert, verschoben oder geneigt werd
 Mehrere Icons/Button-Zustände in einer Bilddatei; Ausschnitte werden via `background-position` angezeigt.  
 - **Vorteil:** Weniger HTTP-Anfragen, bessere Performance.
 
-**Beispiel:  
-  ```css
+**Beispiel:**  
+```css
 .button {
     display: inline-block;
     width: 125px; height: 40px;
