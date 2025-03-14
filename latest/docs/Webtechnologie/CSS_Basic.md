@@ -465,14 +465,15 @@ input[type^="text"] {
 ```
 
 **Weitere Varianten:**  
-| **Selektor**     | **Beschreibung**  |
-| :---------- | :------------------------------------------ |
+
+| **Selektor** | **Beschreibung**  |
+| :---------- | :-------------------------- |
 | `[attr]`  |  Wählt alle Elemente aus, die das Attribut `attr` besitzen.   |
 | `[attr="wert"]`  | Wählt Elemente, deren `attr`-Wert exakt **"wert"** entspricht.     |
-| `[attr^="wert"]` | Wählt Elemente, deren `attr`-Wert **mit "wert" beginnt**.         |
-| `[attr$="wert"]` | Wählt Elemente, deren `attr`-Wert **mit "wert" endet**.         |
-| `[attr*="wert"]` | Wählt Elemente, deren `attr`-Wert **"wert" enthält**.                      |
-| `[attr~="wert"]` | Wählt Elemente, deren `attr`-Wert **"wert" als isoliertes Wort** (d.h. als ganzes, durch Leerzeichen abgegrenzt) enthält. |
+| `[attr^="wert"]`  | Wählt Elemente, deren `attr`-Wert **mit "wert" beginnt**.         |
+| `[attr$="wert"]`  | Wählt Elemente, deren `attr`-Wert **mit "wert" endet**.         |
+| `[attr*="wert"]`  | Wählt Elemente, deren `attr`-Wert **"wert" enthält**.                      |
+| `[attr~="wert"]`  |  Wählt Elemente, deren `attr`-Wert **"wert" als isoliertes Wort** (d.h. als ganzes, durch Leerzeichen abgegrenzt) enthält.  |
 
 
 ---
