@@ -39,14 +39,15 @@ Bei Konflikten Ports wechseln (z. B. 8080 oder 8888)
 **httpd.conf:**  
 - Haupt-Konfigurationsdatei (z. B. in `XAMPP\apache\conf\httpd.conf`)
 
-**Wichtige Direktiven:**  
-|**Befehl**|**Beschreibung**|
+**Wichtige Direktiven:**
+  
+| **Befehl** | **Beschreibung** |
 |:----|:-----|
-|`ServerRoot`|Verzeichnis der Serverprogramme|
-|`Listen`|Port, auf dem der Webserver lauscht|
-|`DocumentRoot`|Root-Verzeichnis für auszuliefernde Dateien, z. B. `htdocs`|
-|`ErrorLog` und `AccessLog`|Protokollierung von Fehlern und Zugriffen|
-|`Include`|Einbindung weiterer Konfigurationsdateien|
+| `ServerRoot` | Verzeichnis der Serverprogramme |
+| `Listen` | Port, auf dem der Webserver lauscht |
+| `DocumentRoot` |Root-Verzeichnis für auszuliefernde Dateien, z. B. `htdocs` |
+| `ErrorLog` und `AccessLog` | Protokollierung von Fehlern und Zugriffen |
+| `Include` | Einbindung weiterer Konfigurationsdateien |
 
 **httpd-vhosts.conf:**  
 - Datei für die Konfiguration virtueller Hosts (normalerweise im Ordner `extra`)  
