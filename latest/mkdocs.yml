@@ -49,6 +49,7 @@ nav:
       - CSS_Basic: ./Webtechnologie/CSS_Basic.md
       - CSS_Bild_Transformationen_Animationen: ./Webtechnologie/CSS_Bild_Transformationen_Animationen.md
       - CSS_Layoutgestaltung: ./Webtechnologie/CSS_Layoutgestaltung.md
+      - CSS_Responsive_Web_Design: ./Webtechnologie/CSS_Responsive_Web_Design.md
       - HTML: ./Webtechnologie/HTML.md
       - Webprotokolle: ./Webtechnologie/Webprotokolle.md
       - Webservice_XAMPP: ./Webtechnologie/Webservice_XAMPP.md
@@ -65,6 +66,7 @@ nav:
       - Verkabelung: ./Netzwerk/Verkabelung.md
       - Zugriffsverfahren: ./Netzwerk/Zugriffsverfahren.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
