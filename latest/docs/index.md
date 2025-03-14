@@ -21,3 +21,4 @@
 ####Web-Entwicklung  
 - [Webprotokolle](https://document.eduardanderegg.ch/Webtechnologie/Webprotokolle/index.html)  
 - [Webservice XAMPP](https://document.eduardanderegg.ch/Webtechnologie/Webservice_XAMPP/index.html)  
+- [HTML](https://document.eduardanderegg.ch/Webtechnologie/HTML/index.html)  
