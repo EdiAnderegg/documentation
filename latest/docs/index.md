@@ -19,4 +19,4 @@
 - [Switch Konfig](https://document.eduardanderegg.ch/Netzwerk/SwitchKonfig/index.html)  
 
 **Web-Entwicklung**  
-- [MVC](https://document.eduardanderegg.ch/Server/MVC/index.html)  
+- [Webprotokolle](https://document.eduardanderegg.ch/Webtechnologie/Webprotokolle/index.html)  

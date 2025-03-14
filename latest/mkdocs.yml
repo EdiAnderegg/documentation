@@ -45,9 +45,8 @@ markdown_extensions:
 nav:
   - Home:
       - index: ./index.md
-  - Server:
-      - API: ./Server/API.md
-      - MVC: ./Server/MVC.md
+  - Webtechnologie:
+      - Webprotokolle: ./Webtechnologie/Webprotokolle.md
   - Programmierung:
       - DieSprache: ./Programmierung/DieSprache.md
       - Klasse: ./Programmierung/Klasse.md
@@ -61,6 +60,7 @@ nav:
       - Verkabelung: ./Netzwerk/Verkabelung.md
       - Zugriffsverfahren: ./Netzwerk/Zugriffsverfahren.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
