@@ -70,8 +70,8 @@ Nicht erwähnte Eigenschaften (z.B. background-color) übernehmen den Standard
 
 body {
 	background: url("img/fadenkreuz.png") no-repeat fixed top right,
-	              url("img/fadenkreuz.png") no-repeat fixed bottom right;
-	              margin: 0 200px 0 10px;
+	          url("img/fadenkreuz.png") no-repeat fixed bottom right;
+	          margin: 0 200px 0 10px;
 }
 ```
 
