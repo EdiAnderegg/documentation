@@ -40,3 +40,4 @@
   - Gimp (GNU Image Manipulation Program)
   - und mehr...
 - Linux ist nicht Teil des GNU Projekts, aber eng verbunden.
+
