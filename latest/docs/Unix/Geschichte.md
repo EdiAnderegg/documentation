@@ -7,7 +7,7 @@
 - Anfänglich in Minicomputern (PC) in der Finanzbranche oder an Universitäten genutzt. 
 
 ###1987:
-- 
+-  
 
 ###Heute:
 - Heute steht UNIX allgemein für Betriebssysteme, die entweder auf das UNIX-System von AT&T (ursprünglich Bell Laboratories ) zurückgeben oder dessen Konzepte implementieren. 
