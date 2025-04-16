@@ -58,7 +58,9 @@ nav:
       - Klasse: ./Programmierung/Klasse.md
       - MVC: ./Programmierung/MVC.md
   - Unix:
+      - Aufbau: ./Unix/Aufbau.md
       - Geschichte: ./Unix/Geschichte.md
+      - Linux: ./Unix/Linux.md
   - Netzwerk:
       - Datenuebertragung: ./Netzwerk/Datenuebertragung.md
       - OSI-Schichtenmodell: ./Netzwerk/OSI-Schichtenmodell.md
@@ -68,6 +70,7 @@ nav:
       - Verkabelung: ./Netzwerk/Verkabelung.md
       - Zugriffsverfahren: ./Netzwerk/Zugriffsverfahren.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
