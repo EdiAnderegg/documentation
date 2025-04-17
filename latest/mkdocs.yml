@@ -63,6 +63,7 @@ nav:
       - Linux: ./Unix/Linux.md
   - Netzwerk:
       - Datenuebertragung: ./Netzwerk/Datenuebertragung.md
+      - IP-Adresse: ./Netzwerk/IP-Adresse.md
       - OSI-Schichtenmodell: ./Netzwerk/OSI-Schichtenmodell.md
       - Switch: ./Netzwerk/Switch.md
       - SwitchKonfig: ./Netzwerk/SwitchKonfig.md
@@ -70,6 +71,7 @@ nav:
       - Verkabelung: ./Netzwerk/Verkabelung.md
       - Zugriffsverfahren: ./Netzwerk/Zugriffsverfahren.md
 copyright: "Version: ${BUILD_VERSION}"
+
 
 
 
