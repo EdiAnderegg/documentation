@@ -18,6 +18,7 @@ Binär ( für Berechnungen/Subnetting wichtig )
 ---
 
 ###Adressklassen
+
 |*Klasse*|*Präfix*|*Adressbereich*|*Netzmaske*|*Netzlänge(mit Präfix)*|*Host-länge*|*Netze*|*Hosts pro Netz*|*CIDR Suffix*|  
 |:----|:----|:----|:---|:---|:---|:---|:---|
 | A | 0... | 0.0.0.0 - 127.255.255.255 | 255.0.0.0 |8 Bit|24 Bit|128|16.777.214|/8|
@@ -26,14 +27,17 @@ Binär ( für Berechnungen/Subnetting wichtig )
 | D | 1110... | 224.0.0.0 - 239.255.255 | Verwendung für Multicast-Anwendungen ||||||
 | E | 1111... | reserviert ( für zukünftige Zwecke ) |||||||
 
+
 ---
 
 ###Adressklassen: Privat
 
 |*Netzklasse*|*Adressbereich*|*Privater Bereich*|*Anzahl Adressen*|*CIDR Suffix*|
+|:---|:---|:---|:---|:---|
 | A | 0.0.0.0 - 127.255.255.255 | 10.0.0.0 - 10.255.255.255 | 16.777.216 | /8 |
 | B | 128.0.0.0 - 191.255.255.255 | 172.16.0.0 - 172.31.255.255 | 1.048.576 | /12 |
 | C | 192.0.0.0 - 223.255.255.255 | 192.168.0.0 - 192.168.255.255 | 65.536 | /16 |
+
 
 Private IP-Adressen werden von Internet Router nicht geroutet.
 
