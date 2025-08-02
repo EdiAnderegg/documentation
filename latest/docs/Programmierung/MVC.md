@@ -202,3 +202,33 @@
 	}
 
 	``` 
+=== "Utils"
+	```cs
+	// =================
+	// message.cs
+	// =================
+
+
+
+	using System.Windows.Forms;
+
+	namespace MVC.Utils
+	{
+	    public static class Meldung
+	    {
+ 
+	        public static void ZeigeMessage(string message, string caption)
+	        {
+	            MessageBox.Show(
+	                message,
+	                caption,
+	                MessageBoxButtons.OK,
+	                MessageBoxIcon.Warning
+	            );
+	        }
+	    }
+
+	}
+
+
+	```
