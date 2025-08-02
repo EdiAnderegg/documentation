@@ -1,0 +1,2 @@
+Set WshShell = CreateObject("WScript.Shell")
+WshShell.Run "powershell.exe -ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden -File ""C:\Users\eduard\Local\Project\blog\documentation\Scripts\nomkgit\Notepad_MKDocs_Push_to_Github.ps1""", 0, False
