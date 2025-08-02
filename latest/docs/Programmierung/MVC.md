@@ -28,73 +28,45 @@
 	
 
 
-	using Meldung = MVC.Utils.Meldung;
+
+	using System;
 
 	namespace MVC.Models
 	{
 	    public class ModelClass
 	    {
 	        private static int _counter;
-	        private string _someString;
-	        private int _someInteger;
+
+	        public string String { get; }
+	        public int Integer { get; }
+	        public static int Counter => _counter;
 
 	        public ModelClass(string someString, int someInteger)
 	        {
+	            if (string.IsNullOrWhiteSpace(someString)) 
+	            {
+	                throw new ArgumentException("someString darf nicht leer sien.");
+	            }
+
+	            if (someInteger <= 0)
+	            {
+	                throw new ArgumentException("someInteger muss > 0 sien.");
+	            }
 	            String = someString;
 	            Integer = someInteger;
-	            Counter++;
+	            _counter++;
 	        }
 
-	        public static int Counter
-	        {
-	            get => _counter;
-	            private set => _counter = value;
-	        }
-
-	        public string String 
-	        {
-	            get => _someString;
-	            set 
-	            {
-	                if (_someString == null)
-	                {
-	                    Meldung.ZeigeMessage(" someString kann nicht leer sein", "Warning");
-	                    Counter--;
-	                    return;
-	                }
-	                 _someString = value;
-	            }
-	        }
-	        public int Integer
-	        {
-	            get => _someInteger;
-	            set 
-	            {
-	                if(value <= 0) 
-	                {
-	                    Meldung.ZeigeMessage(" someInteger kann nicht 0 oder -n sein", "Warning");
-	                    Counter--;
-	                    return;
-	                }
-	                _someInteger = value;
-	            }
-	        }
 
 	        public bool Equals(ModelClass other)
 	        {
-	            if (other == null)
-	            {
-	                return false;
-	            }
-	            else if (String == other.String && Integer == other.Integer)
-	            {
-	                Counter--;
-	                return true;
-	            }
-	            return false;
+	            return other != null && 
+	                   String == other.String &&
+	                   Integer == other.Integer;
 	        } 
 	    }
 	}
+
 
 	```
 === "View" 
@@ -121,18 +93,22 @@
 
 	        private void ObjekteErstellenUndSpeichern_Click(object sender, EventArgs e)
 	        {
-	            BaueObjektVonInput(SomeString.Text, (int)SomeInteger.Value);
-	            AnzahlObjekte.Text = ZeigeAnzahlGespeicherteObjekte();
-	            ClearInputs(ref SomeString, ref SomeInteger);
+	            // Baue und speichere Objekt
+	            var erfolgreich = BaueObjektVonInput(SomeString.Text, (int)SomeInteger.Value);
+
+	            // Nur bei Erfolg die Anzeige aktualisieren und Eingaben löschen
+	            if (!erfolgreich)
+	            {
+	                AnzahlObjekte.Text = ZeigeAnzahlGespeicherteObjekte();
+	                ClearInputs(ref SomeString, ref SomeInteger);
+	            }
+
+
 	        }
 
-	        private void BaueObjektVonInput(string inputString, int inputInteger)
+	        private bool BaueObjektVonInput(string inputString, int inputInteger)
 	        {
-	            bool objekt = Control.Add(inputString, inputInteger);
-	            if (objekt)
-	            {
-	                Meldung.ZeigeMessage("Es gibt ein Objekt mit den gleichen Werten", "Warning");
-	            }
+	            return Control.Add(inputString, inputInteger);
 	        }
 
 	        private string ZeigeAnzahlGespeicherteObjekte()
@@ -145,9 +121,9 @@
 	            text.Text = string.Empty;
 	            zahl.Value = 0;
 	        }
-
 	    }
 	}
+
 
  
 	```
@@ -162,6 +138,7 @@
 	using MVC.Models;
 	using System;
 	using System.Collections.Generic;
+	using Meldung = MVC.Utils.Meldung;
 
 	namespace MVC.Controllers
 	{
@@ -173,14 +150,30 @@
 	        // Neues Objekt anlegen
 	        public static bool Add(string someString, int someInteger)
 	        {
-	            Console.WriteLine(Speicher.Count);
+
+	            // Validierung vor Object erstellung
+	            if (string.IsNullOrWhiteSpace(someString)) 
+	            {
+	                Meldung.ZeigeMessage("someString kann nicht leer sein", "Warning");
+	                return true;
+	            }
+
+	            if(someInteger <= 0)
+	            {
+	                Meldung.ZeigeMessage("someInteger kann nicht 0 oder negativ sein", "Warning");
+	                return true;
+	            }
+
 	            var objekt = new ModelClass(someString, someInteger);
 
-	            if (EinDuplikat(objekt)) return true;
-            
+	            if (EinDuplikat(objekt))
+	            {
+	                Meldung.ZeigeMessage("Es gibt ein Objekt mit den gleichen Werten", "Warning");
+	                return true;
+	            }
+
 	            Speicher.Add(objekt);
 	            return false;
-        
 	        }
 
 	        // Anzahl erstellte Objekte
@@ -200,6 +193,7 @@
 	        }
 	    }
 	}
+
 
 	``` 
 === "Utils"
