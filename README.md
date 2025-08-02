@@ -1,3 +1,5 @@
+[![🚀 Deploy Website and Release WebSite](https://github.com/EdiAnderegg/documentation/actions/workflows/main.yaml/badge.svg)](https://github.com/EdiAnderegg/documentation/actions/workflows/main.yaml)
+
 # Meine Begleitdokumentation für meine Weiterbildung in Informatik
 --------
 ### Dieses Repository wurde mit dem Wissen und den Erfahrungen, die ich bei GBS gesammelt habe, erstellt. 
